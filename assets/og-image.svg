@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06060f"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow circle -->
+  <ellipse cx="600" cy="315" rx="420" ry="260" fill="url(#glow)"/>
+
+  <!-- Top border accent -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#grad)"/>
+
+  <!-- Logo -->
+  <text x="80" y="170" font-family="Georgia, serif" font-size="72" font-weight="900" fill="white">Insight</text>
+  <text x="366" y="170" font-family="Georgia, serif" font-size="72" font-weight="900" fill="url(#grad)">Rx</text>
+
+  <!-- Divider line -->
+  <rect x="80" y="188" width="220" height="2" fill="url(#grad)" rx="1"/>
+
+  <!-- Tagline -->
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="26" fill="#94a3b8" letter-spacing="1">AI-POWERED MARKETING INTELLIGENCE</text>
+
+  <!-- Description -->
+  <text x="80" y="310" font-family="Arial, sans-serif" font-size="20" fill="#64748b">Agentic AI platform that ingests live GA4, GSC, SEMrush &amp; Meta data</text>
+  <text x="80" y="345" font-family="Arial, sans-serif" font-size="20" fill="#64748b">to generate strategic recommendations across SEO, AEO, and GEO.</text>
+
+  <!-- Pill badges -->
+  <rect x="80" y="400" width="100" height="34" rx="17" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="130" y="422" font-family="Arial, sans-serif" font-size="13" fill="#3b82f6" text-anchor="middle" font-weight="700">SEO</text>
+
+  <rect x="196" y="400" width="100" height="34" rx="17" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="246" y="422" font-family="Arial, sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle" font-weight="700">AEO</text>
+
+  <rect x="312" y="400" width="100" height="34" rx="17" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="1"/>
+  <text x="362" y="422" font-family="Arial, sans-serif" font-size="13" fill="#22d3ee" text-anchor="middle" font-weight="700">GEO</text>
+
+  <rect x="428" y="400" width="160" height="34" rx="17" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="1"/>
+  <text x="508" y="422" font-family="Arial, sans-serif" font-size="13" fill="#4ade80" text-anchor="middle" font-weight="700">Agentic AI</text>
+
+  <!-- Byline -->
+  <text x="80" y="580" font-family="Arial, sans-serif" font-size="16" fill="#475569">Elizabeth McCuan · DePaul University MKT 399</text>
+
+  <!-- Right side visual accent — abstract data bars -->
+  <rect x="880" y="180" width="28" height="200" rx="4" fill="url(#grad)" opacity="0.6"/>
+  <rect x="920" y="240" width="28" height="140" rx="4" fill="url(#grad)" opacity="0.5"/>
+  <rect x="960" y="200" width="28" height="180" rx="4" fill="url(#grad)" opacity="0.7"/>
+  <rect x="1000" y="270" width="28" height="110" rx="4" fill="url(#grad)" opacity="0.4"/>
+  <rect x="1040" y="215" width="28" height="165" rx="4" fill="url(#grad)" opacity="0.65"/>
+  <rect x="1080" y="290" width="28" height="90" rx="4" fill="url(#grad)" opacity="0.35"/>
+  <rect x="1120" y="230" width="28" height="150" rx="4" fill="url(#grad)" opacity="0.55"/>
+  <!-- Baseline -->
+  <rect x="870" y="380" width="310" height="2" fill="rgba(255,255,255,0.08)" rx="1"/>
+</svg>
