@@ -1,0 +1,828 @@
+InsightRx by Elizabeth McCuan
+Problem Agents SEO/AEO/GEO Grounding Demo Roadmap
+Get in Touch
+
+DePaul University · Elizabeth McCuan
+Marketing Intelligence Powered by Agentic AI
+InsightRx is a multi-agent AI system that ingests live data from GA4, Search Console, SEMrush, and Meta — then deploys six specialized agents to surface SEO, AEO, and GEO opportunities and produce a ranked strategic action plan. No dashboards. No manual analysis. Pure intelligence.
+View System Demo → Explore Agent Architecture
+Agentic AI SEO · AEO · GEO Grounding APIs A2A Pipeline LangGraph Python
+
+
+
+insightrx — agent_pipeline.py
+▸python run_pipeline.py --brand "client_demo"
+Initializing InsightRx agent pipeline...
+Grounding APIs: GA4 ✓ GSC ✓ SEMrush ✓ Meta ✓
+Spawning agents:
+AnalyticsAgent → pulling GA4 sessions, events, conversions
+SEOAgent → scanning GSC + SEMrush for gaps
+AEO_GEO_Agent → evaluating AI search readiness
+SocialAgent → analyzing Meta performance signals
+StrategyAgent → synthesizing cross-channel signals
+RecoAgent → generating ranked action plan
+A2A handoffs complete. Compiling output...
+✓ Pipeline complete — 9 recommendations generated
+
+9
+Recommendations
+6
+Agents Active
+4
+Live APIs
+Technology Stack
+Modern AI & Engineering Stack
+InsightRx is built with the same tools used by production AI engineering teams — not academic toy frameworks.
+
+OpenAI API
+GPT-4o for agent reasoning & synthesis
+AI Core
+
+Claude
+Strategy & recommendation agent reasoning
+AI Core
+
+LangGraph
+Agent-to-agent orchestration framework
+Orchestration
+
+Python
+Core pipeline, API clients, data processing
+Infrastructure
+
+Streamlit
+Interactive dashboard & demo interface
+Interface
+
+Figma Make
+UI prototyping & system design
+Design
+
+Claude Code
+AI-assisted development & debugging
+Dev Tools
+
+GitHub
+Version control & project management
+Infrastructure
+
+pandas
+Data wrangling, normalization & transformation
+Data Layer
+>_
+Codex CLI
+OpenAI terminal agent for code generation
+Dev Tools
+The Problem
+Marketing Analytics Is Broken.
+Marketing teams spend the majority of their time on data gathering, formatting, and interpretation — before a single strategic decision is made. InsightRx was built to eliminate this entirely.
+⏳
+Time Lost to Manual Analysis
+Marketing teams waste hours exporting, cleaning, and stitching data before strategy can even begin.
+40%+
+of marketing time spent on data prep, not strategy
+🔀
+Siloed, Disconnected Data
+SEO, social, paid, and website data remain fragmented—hiding cross-channel growth opportunities.
+4+
+disconnected platforms the average marketing team manually bridges
+📉
+Stale Data, Late Decisions
+By the time reports are reviewed, strategic decisions are often based on outdated performance.
+3–7
+days average lag between data and strategic action
+🧊
+Dashboards That Report, Not Recommend
+Traditional analytics tools show performance but fail to prioritize actions or next steps.
+0
+traditional BI tools that tell you what to do next
+
+Why InsightRx Matters
+The Search Landscape Is Changing Faster Than Most Realize
+Three converging shifts are rewriting the rules of marketing intelligence. InsightRx is built for all three simultaneously.
+01 / SEARCH
+Traditional SEO Is Now Table Stakes
+Google rankings alone are no longer enough. AI Overviews, zero-click search, and answer engines are reshaping discovery — requiring brands to optimize beyond traditional SEO.
+02 / AI SEARCH
+AEO and GEO Are the New Frontier
+AI-driven platforms like ChatGPT and Google AI increasingly control discovery. Brands must now optimize for machine readability, authority, and answer visibility.
+03 / AGENTS
+Agentic AI Is Transforming Marketing Work
+AI's biggest marketing impact isn't faster content — it's automating analysis, surfacing strategic opportunities, and accelerating decision-making.
+Data Layer
+Four Live Data Sources. One Unified Intelligence.
+InsightRx connects to live marketing APIs — not static exports. Every agent is grounded in real-time data from the platforms that define modern marketing performance.
+
+Web Analytics
+Google Analytics 4
+The Analytics Agent ingests sessions, users, conversion events, traffic sources, engagement rate, and behavioral funnel data — detecting anomalies and surfacing performance shifts in real time.
+sessionsconversionsengagement_ratetraffic_sourceevent_count
+
+Search Intelligence
+Google Search Console
+The SEO Agent pulls keyword-level impressions, click-through rates, average position, and page-level performance — identifying ranking opportunities, content gaps, and technical indexation issues.
+queriesimpressionsclicksctrposition
+
+Competitive SEO
+SEMrush
+Provides competitive keyword data, backlink intelligence, domain authority metrics, and content gap analysis — giving the SEO Agent a complete picture of where organic opportunities exist relative to competitors.
+keyword_rankingsdomain_scorebacklinksgap_analysis
+
+Social & Paid Media
+Meta Graph API
+The Social Agent consumes ad performance, audience insights, post engagement, reach, and creative-level metrics from Facebook and Instagram — identifying what's working and where budget is being wasted.
+impressionsreachctrroasaudience_insights
+
+
+Facebook & Instagram
+System Architecture
+How InsightRx Actually Works
+A six-stage pipeline from live data ingestion to ranked strategic output — designed to replace the manual analysis workflow entirely.
+📡
+01
+API Grounding
+Live data pulled from GA4, GSC, SEMrush & Meta
+🤖
+02
+Agent Spawn
+Six specialized agents initialized with domain context
+🔍
+03
+Parallel Analysis
+Agents analyze independently: SEO, AEO/GEO, social, analytics
+🔄
+04
+A2A Handoffs
+Agents pass structured findings to each other via LangGraph
+🧠
+05
+Strategy Synthesis
+Cross-channel patterns scored & prioritized
+🎯
+06
+Action Output
+Ranked recommendations with rationale & impact scores
+🔄Agent-to-Agent Communication
+Unlike standalone AI tools that operate in isolation, InsightRx uses LangGraph to orchestrate structured handoffs between agents. Each agent produces a machine-readable output that downstream agents consume as input context.
+AnalyticsAgent anomaly signals shape SEOAgent priority queue
+AEO/GEO gaps inform StrategyAgent's content recommendations
+SocialAgent engagement data calibrates RecoAgent's channel weighting
+⚡Workflow Transformation Impact
+InsightRx maps the existing marketing analysis workflow, identifies every manual step, and replaces it with an automated agent sequence. The transformation is measurable.
+Manual report pull: 3–5 hours → Agent pipeline: ~90 seconds
+Cross-channel synthesis: hours → instantaneous A2A handoffs
+Strategic output: static chart → ranked, rationale-backed action plan
+Agent Architecture
+Six Specialized Agents. One Coordinated System.
+Each agent has a defined role, a defined data source, and a defined output schema. They don't just run in sequence — they communicate. This is what makes InsightRx an intelligence system, not a pipeline of isolated AI calls.
+📊
+Analytics Agent
+DATA LAYER · GA4 API
+Ingests GA4 sessions, conversion events, traffic sources, and behavioral data. Runs anomaly detection algorithms to surface performance shifts, then encodes findings as structured signals for downstream agents to consume.
+ga4_apianomaly_detectionconversion_analysis
+🔍
+SEO Agent
+SEARCH INTELLIGENCE · GSC + SEMRUSH
+Combines Google Search Console query data with SEMrush competitive intelligence to identify keyword ranking gaps, content cannibalization, technical health issues, and high-opportunity content angles.
+gsc_apisemrush_apigap_analysistechnical_audit
+✦
+AEO / GEO Agent
+AI SEARCH READINESS
+Audits brand readiness for Answer Engine Optimization (AI assistant citations) and Generative Engine Optimization (AI-generated recommendations). Identifies entity clarity gaps, schema coverage, and content structure deficiencies invisible to traditional SEO tools.
+entity_auditschema_analysisai_visibility
+📱
+Social Media Agent
+SOCIAL INTELLIGENCE · META API
+Pulls Meta Graph API data to analyze ad performance, audience engagement patterns, content decay rates, and creative performance scoring — feeding social signal context into the cross-channel strategy synthesis.
+meta_graph_apiengagement_analysisroas_scoring
+🧠
+Strategy Agent
+CROSS-CHANNEL SYNTHESIS
+Receives structured JSON outputs from all four upstream agents via LangGraph handoffs. Identifies cross-channel correlations invisible from any single-platform view, scores opportunities by strategic priority, and prepares ranked input for the Recommendation Agent.
+a2a_inputpriority_scoringpattern_recognition
+🎯
+Recommendation Agent
+ACTION OUTPUT LAYER
+Produces the final deliverable: a ranked list of strategic marketing actions, each with a rationale, expected impact score, effort estimate, responsible channel, and implementation notes. Output feeds directly into the Streamlit dashboard.
+ranked_outputimpact_scoringstreamlit_render
+🔄
+Agent-to-Agent (A2A) Handoffs via LangGraph
+InsightRx uses LangGraph to orchestrate structured communication between agents — not string concatenation or prompt chaining, but typed, schema-validated outputs that downstream agents consume as first-class input. This is the architectural decision that separates InsightRx from a set of sequential AI prompts: agents genuinely inform each other, creating emergent cross-channel intelligence that no single-agent system can produce.
+Search Intelligence Layer
+SEO. AEO. GEO. Three Layers. One System.
+Modern search visibility has three distinct layers. Most brands optimize only for one. InsightRx analyzes all three simultaneously — identifying exactly where a brand surfaces, where it disappears, and what to do about it.
+🔍 SEO
+Search Engine Optimization
+The foundational layer — ranking in Google and Bing for high-intent keywords through technical health, content authority, and strategic link architecture. InsightRx's SEO Agent covers this comprehensively using live GSC and SEMrush data.
+Real-time keyword ranking gap analysis vs. competitors
+Technical health: Core Web Vitals, crawlability, schema coverage
+Content opportunity scoring from live GSC impression data
+Internal linking and on-page optimization recommendations
+🤖 AEO
+Answer Engine Optimization
+The AI assistant layer — structuring content so ChatGPT, Perplexity, and Google AI Overviews extract and cite your brand as the authoritative answer. This requires a fundamentally different optimization approach than traditional SEO.
+Identifying high-intent queries that AI assistants answer directly
+Content structure for machine extractability: Q&A, schema, FAQs
+Auditing whether brand content is cited in AI-generated answers
+Topical authority clusters that LLMs recognize and trust
+✦ GEO
+Generative Engine Optimization
+The frontier layer — ensuring brands surface when AI engines proactively recommend products and services in conversational responses, without a user clicking a link. This is where M2M brand evaluation begins.
+Brand presence audit in generative AI responses across platforms
+Machine-legible brand signals: entity definitions, structured data
+Positioning content to influence AI retrieval and training patterns
+Share-of-voice monitoring in zero-click AI recommendations
+SEO Layer
+Human searchers clicking blue links
+Google · Bing · SERPs
+AEO Layer
+AI assistants citing brand as the answer
+ChatGPT · Perplexity · AI Overviews
+GEO Layer
+Agents recommending brands without search
+All Generative AI · M2M Evaluation
+Grounding Layer
+Live API Connections
+📊
+Google Analytics 4 API
+Sessions · Events · Conversions · Audiences
+● Live
+🔍
+Google Search Console API
+Queries · Impressions · CTR · Position
+● Live
+📈
+SEMrush API
+Rankings · Competitor Gaps · SERP Features
+● Live
+📘
+Meta Graph API
+Ad Performance · Audience · Engagement
+● Live
+✦
+AI Answer Monitoring
+Perplexity · AI Overview citation tracking
+◌ Roadmap
+🔗
+Live SERP Snapshots
+Real-time competitive SERP positioning
+◌ Roadmap
+Why Grounding APIs
+Change Everything
+Traditional marketing AI tools analyze exports — last week's CSV, last month's report. Grounding APIs change the equation: InsightRx agents query live data sources directly, so every recommendation reflects current conditions, not historical snapshots.
+⚡
+Always-Current Intelligence
+Because agents query live APIs, every insight reflects what's happening right now. A traffic anomaly that started yesterday surfaces in today's recommendation — not in next week's report review.
+🔗
+Cross-Source Correlation
+When agents combine live GA4 data with live GSC rankings and live Meta performance, they identify correlations that static, siloed reporting can never surface. The pattern between a ranking drop and a traffic anomaly becomes visible in real time.
+🔮
+Foundation for M2M Intelligence
+Grounding APIs are the infrastructure that will ultimately power machine-to-machine brand evaluation — where AI agents query brand data directly to make recommendations on behalf of users, without any human search behavior involved.
+Forward Direction
+Agent-to-Agent & M2M Brand Decisions
+The most significant shift in marketing isn't happening in ad platforms or SEO tools. It's happening in the infrastructure layer — where AI agents are beginning to evaluate, compare, and recommend brands without any human directing the search.
+🤖
+What A2A Means for Brands
+When a user asks an AI assistant to recommend the best solution for a problem, that assistant doesn't search — it retrieves structured knowledge and evaluates options autonomously. Brands that aren't structured for machine-readability are invisible in this evaluation. InsightRx is designed to identify and close those gaps before competitors do.
+🔄
+Machine-to-Machine Evaluation
+M2M brand evaluation describes the process by which one AI system queries another to validate or compare a brand — a scheduling agent checking vendor trustworthiness, a purchasing agent comparing supplier signals, a recommendation engine evaluating brand authority. The brand that wins is the one that speaks the machine's language: structured, authoritative, and entity-clear.
+🏗️
+What InsightRx Is Building Toward
+InsightRx's AEO/GEO Agent already audits brand readiness for AI-mediated discovery. The roadmap extends this to active monitoring of brand citations across AI platforms, automated entity optimization, and GEO-specific content recommendations — preparing brands not just for today's search, but for tomorrow's agent-evaluated ecosystem.
+📡
+Zero-Click, AI-First Brand Presence
+In AI-mediated discovery, recommendations arrive before a user sees a list of links. The brands that appear in those recommendations share one characteristic: their digital presence is structured for machine comprehension. InsightRx maps those structural requirements and builds optimization workflows around them — making brands legible to both humans and machines.
+🔍
+Machine-Legible Brand Signals
+Structured data, entity clarity, and consistent brand signals that AI systems can parse and evaluate reliably when making recommendations.
+🎯
+Topical Authority Clusters
+Deep content ecosystems establishing domain expertise — the authority signals LLMs prioritize when deciding which source to cite or recommend.
+⚡
+Proactive AI Positioning
+Rather than reacting to algorithm shifts, InsightRx helps brands proactively build the technical and content infrastructure that positions them favorably in AI-mediated discovery — before competitors do.
+Inside the InsightRx System
+A Visual Walkthrough of the Working System
+From data ingestion to AI-generated recommendations — a screen-by-screen tour of the live InsightRx application running on real healthcare marketing data.
+
+
+
+localhost:8501 · InsightRx — Data Sources
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+📁 Data Sources
+Upload and manage your marketing data inputs
+Load Previous Run
+04-15-2026 (GA4, GSC)▾
+Current Run
+04-15-2026 (GA4, GSC)▾
+Comparison Run
+04-15-2026 (GA4, GSC)▾
+Compare Two Saved Runs
+📁 Upload CSV Files
+GA4 Page Title Report: page-level behavior such as top pages, sessions, and engagement.
+Upload GA4 Page Title Report CSV
+200MB per file · CSV↑ Upload
+Upload GA4 Session Source / Medium CSV
+200MB per file · CSV↑ Upload
+Upload Google Search Console CSV
+200MB per file · CSV↑ Upload
+
+
+
+localhost:8501 · InsightRx — Marketing Intelligence Dashboard
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+📊 Marketing Intelligence Dashboard
+Real-time insights and opportunities
+Opportunity Score
+5.37
+Top Opportunity
+botox savings
+CTR Gap
+4.27%
+Top Traffic Source
+google / organic
+📊 Performance Overview
+Top search queries by impression volume from the loaded run.
+
+botox savings
+
+migraine quiz
+
+the headache lab
+
+blepharospasm botox
+
+headache lab
+
+
+
+localhost:8501 · InsightRx — Dashboard Detail
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+🔍 Top Queries
+Highest-visibility queries from the loaded GSC data.
+query
+ctr
+impressions
+position
+botox savings
+0.73%
+137
+15.2
+migraine quiz
+2.70%
+37
+17.54
+blepharospasm botox...
+4.00%
+25
+1
+the headache lab
+37.84%
+37
+1.03
+headache lab
+46.15%
+13
+1.46
+🌐 User Behavior Signals
+Behavior metrics from the loaded GA4 reports.
+Sessions
+
+353.0
+Active Users
+
+263.0
+Engagement Rate
+
+73.65%
+
+
+
+localhost:8501 · InsightRx — Analysis
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+📈 Analysis
+Performance data from GA4 + GSC
+🔎 Traffic Distribution
+Acquisition mix from the loaded GA4 source and medium report.
+
+google / organic
+
+(direct)/(none)
+
+(not set)
+
+bing/organic
+
+l.facebook
+source_medium
+metric
+value
+google / organic
+sessions
+141
+(direct) / (none)
+sessions
+77
+(not set)
+sessions
+8
+bing / organic
+sessions
+7
+l.facebook.com / referral
+sessions
+4
+
+
+
+localhost:8501 · InsightRx — Social Analysis
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+📱 Social Analysis
+Instagram + Facebook performance insights
+Best Post Type
+IG reel
+Worst Post Type
+IG image
+Top Topic
+Patient Conversion
+Weak Topic
+Symptom Awareness
+📱 Top Performing Content
+The strongest-performing Meta content from the current loaded run.
+Hook
+Post type
+Topic
+Reach
+Eng. Rate
+Neck pulling, stiffness, or involuntary head movement?
+IG reel
+provider spotlight
+188
+6.91
+Meet one of the providers...
+IG image
+provider spotlight
+231
+14.72
+Considering Botox for migraines...
+IG carousel
+patient conversion
+214
+5.61
+Headaches aren't something...
+IG carousel
+patient conversion
+184
+5.43
+Westmont — something new...
+IG reel
+patient conversion
+789
+4.69
+
+
+
+localhost:8501 · InsightRx — Opportunities
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+🚀 Opportunities
+Combined website + social growth opportunities
+🌐 Website Opportunities
+Keyword Opportunities
+SEO Opportunity
+Medium Priority
+Opportunity Type: SEO Opportunity
+Target: the headache clinic
+Supporting Data: Position: 4 · Signals: SEO Opportunity
+📌 Why this is an opportunity: the headache clinic is visible in search and still has room to capture more qualified traffic.
+💡 Best Recommendation: Refresh the page targeting the headache clinic so the headline, snippet language, and supporting content align more tightly with search intent.
+SEO Opportunity
+High Priority
+Opportunity Type: Quick-Win On-Page SEO
+Target: will botox keep my eyes from clicking
+Supporting Data: Position: 10 · Signals: Quick-Win On-Page SEO
+
+
+
+localhost:8501 · InsightRx — Recommendations
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+🎯 Recommendations
+Combined website + social action plan
+🎯 Recommendations
+High engagement rate but low conversion
+High Priority
+Opportunity Score: 34/100 Business Impact: 55/100 Confidence: 88/100
+⚠️ Insight: Visitors are engaging with the page, but they are not converting.
+📌 Why it matters: Interest exists, but something in the conversion path is blocking users from taking action.
+💡 Recommendation: Reduce friction, strengthen CTA placement and clarity, and review whether the offer and next step are obvious.
+UX   UX Conversion Take Action
+CTA Rewrites
+	•	Book Your Migraine Evaluation
+	•	See If This Treatment Is Right For You
+	•	Start With a Quick Patient Next Step
+
+
+
+localhost:8501 · InsightRx — Reports
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+📋 Reports
+Export and client-ready report views
+Executive Summary
+The strongest current opportunity is botox savings. The page with the clearest strategic importance is Migraine Specialist In Evergreen Park | The Headache Lab. The leading traffic source in the uploaded data is google / organic. The current readiness score is 3/5.
+Key Insights
+	•	Branded demand is present, but it should not drive the main growth strategy: the headache lab, headache lab.
+	•	Top non-branded opportunities are: botox savings, migraine quiz, blepharospasm botox injection sites.
+	•	Top traffic sources in the uploaded GA4 source/medium report are: google / organic, (direct) / (none), (not set).
+	•	High-impression, low-click gaps suggest weak SERP performance for: botox savings.
+Recommended Actions
+SEO
+Priority: High  ·  Issue: Low CTR and untapped visibility for botox savings
+
+
+
+localhost:8501 · InsightRx — Chat with AI Agent
+Live
+InsightRx
+AI-Powered Marketing Intelligence
+Navigation
+
+📁 Data Sources
+
+📊 Dashboard
+
+📈 Analysis
+
+📱 Social Analysis
+
+🚀 Opportunities
+
+🎯 Recommendations
+
+📋 Reports
+
+🤖 Chat with AI Agent
+🤖 Chat with AI Agent
+Ask your AI Marketing Strategist about your loaded website, SEO, and social data.
+Choose a suggested prompt or type your own question.
+🧠 AI Insights Feed
+A quick strategist read on the strongest patterns in the current run.
+Insight 1
+Branded demand is present, but it should not drive the main growth strategy: the headache lab, headache lab.
+Insight 2
+Top non-branded opportunities are: botox savings, migraine quiz, blepharospasm botox injection sites.
+Insight 3
+Top traffic sources in the uploaded GA4 source/medium report are: google / organic, (direct) / (none), (not set).
+What are my biggest SEO opportunities?
+Which queries have high impressions but low CTR?
+What pages should I update first?
+What content topics could drive more traffic?
+What are the biggest issues in my social content?
+Summarize the top recommendations from this dataset.
+Ask about your marketing data...↑
+←
+
+
+→
+Output Layer
+The Recommendations Engine
+InsightRx doesn't produce reports. It produces a ranked, rationale-backed action plan — ready to execute, not interpret.
+📥
+Agent Outputs Collected
+All 5 upstream agents submit structured JSON findings
+→
+🧮
+Opportunity Scoring
+Each signal scored by impact, effort, and strategic alignment
+→
+🎯
+Ranked Action Plan
+Prioritized recommendations with rationale and channel
+Sample Output — Ranked Recommendations
+1
+Optimize title tags on 14 high-impression, low-CTR pages — estimated +18% click-through improvement based on GSC data patterns
+SEO ↑ High
+2
+Implement FAQ schema markup on top 8 product pages — brand currently absent from AI Overview responses for 23 target queries
+AEO ↑ High
+3
+Shift 22% of Meta ad budget from broad audiences to retargeting — ROAS 3.1x vs. 1.4x differential identified by Social Agent
+Paid ↑ Med
+4
+Publish 3 topical cluster articles to build entity authority for generative AI visibility — 0% GEO presence currently detected for primary category
+GEO ↑ Strategic
+5
+Fix 3 crawlability issues blocking 12% of content from Google indexing — technical debt flag surfaced by SEO Agent audit
+Technical ↑ Med
+Reflection
+What Building InsightRx Actually Taught Me
+The technical work was the easy part. These were the real lessons.
+🏗️
+Systems Think Differently Than Campaigns
+Designing InsightRx forced me to think in data contracts, schemas, and agent interfaces — not just marketing tactics. The shift from "what should I do?" to "how do I architect a system that answers that question automatically?" changed how I approach marketing strategy entirely. Every campaign now looks like a system waiting to be optimized.
+🔗
+Grounding Is the Hardest Part of AI
+Getting agents to produce useful output is straightforward. Getting them grounded in real, live, clean data — handling API authentication, rate limits, data normalization, and schema mismatches — is where most AI marketing projects fail. InsightRx forced me to solve this at every layer, which gave me a practical understanding of production AI engineering that no course could provide.
+🔮
+AEO and GEO Are Already Real
+I came into this project thinking AEO and GEO were theoretical. After auditing actual brands against AI assistant responses across ChatGPT, Perplexity, and Google AI Overviews, it became clear: brands are already winning and losing in these layers — they just don't know it yet. The window to build early advantage is narrow, and InsightRx is designed to identify it.
+🎯
+Strategy and Engineering Can't Be Separated
+The best marketing strategy in the world is only as useful as the system that can execute and iterate it. And the most sophisticated AI pipeline is worthless if it isn't anchored in real strategic marketing questions. InsightRx forced me to hold both simultaneously — and that's the intersection I want to spend my career operating in.
+Future Direction
+InsightRx Development Roadmap
+InsightRx is a working prototype with a clear path to production. Each phase extends the agent architecture, data coverage, and intelligence depth.
+PHASE 01
+Foundation
+✓Six-agent pipeline architecture
+✓GA4, GSC, SEMrush, Meta APIs
+✓LangGraph A2A orchestration
+✓Streamlit dashboard v1
+✓Recommendation output layer
+Complete
+PHASE 02
+Intelligence Depth
+◐AEO citation monitoring (Perplexity)
+◐GEO brand presence tracking
+◐Competitor agent integration
+◐Enhanced impact scoring model
+◐Historical trend memory
+In Progress
+PHASE 03
+SaaS Architecture
+○Multi-brand workspace support
+○Scheduled pipeline runs
+○Email/Slack recommendation delivery
+○User authentication & billing
+○API access for agency clients
+Next
+PHASE 04
+M2M Intelligence
+○Agent-to-agent brand evaluation
+○AI ecosystem brand scoring
+○Predictive opportunity forecasting
+○M2M readiness audit product
+○Commercial launch
+Future
+Get In Touch
+Interested in InsightRx? Let's Connect.
+Whether you're a recruiter, a professor, a potential collaborator, or a brand that wants early access — I'd love to hear from you.
+// reach out directly
+Elizabeth.a.mccuan@gmail.com
+📧 Email 💼 LinkedIn 🌐 Website
+Elizabeth McCuan · DePaul University MKT 399 · Digital Marketing + AI Systems
+InsightRx
+Agentic AI SEO · AEO · GEO Grounding APIs A2A Pipeline LangGraph MKT 399
+© 2026 Elizabeth McCuan · DePaul University Independent Study
