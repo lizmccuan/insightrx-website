@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>InsightRx — AI-Powered Marketing Intelligence System</title>
-<meta name="description" content="InsightRx is an agentic AI marketing intelligence platform that ingests live data from GA4, Google Search Console, SEMrush, and Meta to generate strategic recommendations across SEO, AEO, and GEO."/>
+<meta name="description" content="InsightRx is an agentic AI marketing intelligence platform that ingests live data from GA4, Google Search Console, keyword intelligence tools, and Meta to generate strategic recommendations across SEO, AEO, and GEO."/>
 <meta name="keywords" content="AI marketing intelligence, agentic AI, SEO automation, AEO, GEO, marketing dashboard, GA4, InsightRx, Elizabeth McCuan, DePaul University"/>
 <meta name="author" content="Elizabeth McCuan"/>
 <link rel="canonical" href="https://insightrx.vercel.app/"/>
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://insightrx.vercel.app/"/>
 <meta property="og:title" content="InsightRx — AI-Powered Marketing Intelligence System"/>
-<meta property="og:description" content="An agentic AI platform that ingests live GA4, GSC, SEMrush, and Meta data — then generates strategic marketing recommendations across SEO, AEO, and GEO."/>
+<meta property="og:description" content="An agentic AI platform that ingests live GA4, GSC, search intelligence, and Meta data — then generates strategic marketing recommendations across SEO, AEO, and GEO."/>
 <meta property="og:image" content="/assets/og-image.svg"/>
 <meta property="og:site_name" content="InsightRx"/>
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="InsightRx — AI-Powered Marketing Intelligence System"/>
-<meta name="twitter:description" content="An agentic AI platform that ingests live GA4, GSC, SEMrush, and Meta data to generate strategic marketing recommendations."/>
+<meta name="twitter:description" content="An agentic AI platform that ingests live GA4, GSC, search intelligence, and Meta data to generate strategic marketing recommendations."/>
 <meta name="twitter:image" content="/assets/og-image.svg"/>
 <meta name="twitter:creator" content="@elizabethmccuan"/>
 
@@ -71,7 +71,7 @@
           Marketing Intelligence<br/>
           <span class="grad-text">Powered by<br/>Agentic AI</span>
         </h1>
-        <p class="hero-sub">InsightRx is a multi-agent AI system that ingests live data from GA4, Search Console, SEMrush, and Meta — then deploys six specialized agents to surface SEO, AEO, and GEO opportunities and produce a ranked strategic action plan. No dashboards. No manual analysis. Pure intelligence.</p>
+        <p class="hero-sub">InsightRx is a multi-agent AI system that ingests live data from GA4, Search Console, search intelligence tools, and Meta — then deploys six specialized agents to surface SEO, AEO, and GEO opportunities and produce a ranked strategic action plan. No dashboards. No manual analysis. Pure intelligence.</p>
         <div class="hero-btns">
           <a href="#demo" class="btn btn-primary">View System Demo →</a>
           <a href="#agents" class="btn btn-ghost">Explore Agent Architecture</a>
@@ -96,10 +96,10 @@
         <div class="ht-body">
           <div class="ht-line"><span class="ht-prompt">▸</span><span class="ht-cmd">python run_pipeline.py --brand <span class="ht-highlight">"client_demo"</span></span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Initializing InsightRx agent pipeline...</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Grounding APIs: <span class="ht-green">GA4 ✓  GSC ✓  SEMrush ✓  Meta ✓</span></span></div>
+          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Grounding APIs: <span class="ht-green">GA4 ✓  GSC ✓  Search Intel ✓  Meta ✓</span></span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Spawning agents:</span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">AnalyticsAgent</span>  → pulling GA4 sessions, events, conversions</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">SEOAgent</span>        → scanning GSC + SEMrush for gaps</span></div>
+          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">SEOAgent</span>        → scanning GSC + ranking data for gaps</span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">AEO_GEO_Agent</span>   → evaluating AI search readiness</span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">SocialAgent</span>     → analyzing Meta performance signals</span></div>
           <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">StrategyAgent</span>   → synthesizing cross-channel signals</span></div>
@@ -388,11 +388,11 @@
         </div>
       </div>
       <div class="source-card fade-up">
-        <div class="source-icon si-sem"><img src="https://cdn.simpleicons.org/semrush/FF642D" alt="SEMrush"></div>
+        <div class="source-icon si-sem"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF642D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="11 8 11 11 13 13"/></svg></div>
         <div>
           <div class="source-type">Competitive SEO</div>
-          <div class="source-name">SEMrush</div>
-          <div class="source-desc">Provides competitive keyword data, backlink intelligence, domain authority metrics, and content gap analysis — giving the SEO Agent a complete picture of where organic opportunities exist relative to competitors.</div>
+          <div class="source-name">Search Intelligence</div>
+          <div class="source-desc">Provides competitive keyword rankings, backlink intelligence, domain authority metrics, and content gap analysis — giving the SEO Agent a complete picture of where organic opportunities exist relative to competitors.</div>
           <div class="source-fields">
             <span class="sf">keyword_rankings</span><span class="sf">domain_score</span><span class="sf">backlinks</span><span class="sf">gap_analysis</span>
           </div>
@@ -437,7 +437,7 @@
         <div class="ws-bubble">📡</div>
         <div class="ws-num">01</div>
         <div class="ws-title">API Grounding</div>
-        <div class="ws-desc">Live data pulled from GA4, GSC, SEMrush &amp; Meta</div>
+        <div class="ws-desc">Live data pulled from GA4, GSC, search intelligence &amp; Meta</div>
       </div>
       <div class="ws">
         <div class="ws-bubble">🤖</div>
@@ -531,12 +531,12 @@
           <div class="agent-icon-wrap">🔍</div>
           <div>
             <div class="agent-name">SEO Agent</div>
-            <div class="agent-type">SEARCH INTELLIGENCE · GSC + SEMRUSH</div>
+            <div class="agent-type">SEARCH INTELLIGENCE · GSC + RANKING DATA</div>
           </div>
         </div>
-        <div class="agent-desc">Combines Google Search Console query data with SEMrush competitive intelligence to identify keyword ranking gaps, content cannibalization, technical health issues, and high-opportunity content angles.</div>
+        <div class="agent-desc">Combines Google Search Console query data with keyword ranking intelligence to identify keyword gaps, content cannibalization, technical health issues, and high-opportunity content angles.</div>
         <div class="agent-tags">
-          <span class="at">gsc_api</span><span class="at">semrush_api</span><span class="at">gap_analysis</span><span class="at">technical_audit</span>
+          <span class="at">gsc_api</span><span class="at">ranking_api</span><span class="at">gap_analysis</span><span class="at">technical_audit</span>
         </div>
       </div>
       <div class="agent a-aeogeo">
@@ -691,7 +691,7 @@
       <div class="layer layer-seo fade-up">
         <div class="layer-badge lb-seo">🔍 SEO</div>
         <div class="layer-title">Search Engine Optimization</div>
-        <div class="layer-desc">The foundational layer — ranking in Google and Bing for high-intent keywords through technical health, content authority, and strategic link architecture. InsightRx's SEO Agent covers this comprehensively using live GSC and SEMrush data.</div>
+        <div class="layer-desc">The foundational layer — ranking in Google and Bing for high-intent keywords through technical health, content authority, and strategic link architecture. InsightRx's SEO Agent covers this comprehensively using live GSC and search ranking data.</div>
         <div class="layer-points">
           <div class="lp lp-seo"><span class="lp-dot"></span>Real-time keyword ranking gap analysis vs. competitors</div>
           <div class="lp lp-seo"><span class="lp-dot"></span>Technical health: Core Web Vitals, crawlability, schema coverage</div>
@@ -766,7 +766,7 @@
       </div>
       <div class="g-row">
         <div class="g-icon">📈</div>
-        <div><div class="g-name">SEMrush API</div><div class="g-type">Rankings · Competitor Gaps · SERP Features</div></div>
+        <div><div class="g-name">Search Intelligence API</div><div class="g-type">Rankings · Competitor Gaps · SERP Features</div></div>
         <span class="g-badge g-live">● Live</span>
       </div>
       <div class="g-row">
@@ -1163,7 +1163,7 @@
         <div class="phase-title">Foundation</div>
         <div class="phase-items">
           <div class="pi"><span class="pi-check">✓</span>Six-agent pipeline architecture</div>
-          <div class="pi"><span class="pi-check">✓</span>GA4, GSC, SEMrush, Meta APIs</div>
+          <div class="pi"><span class="pi-check">✓</span>GA4, GSC, search intelligence, Meta APIs</div>
           <div class="pi"><span class="pi-check">✓</span>LangGraph A2A orchestration</div>
           <div class="pi"><span class="pi-check">✓</span>Streamlit dashboard v1</div>
           <div class="pi"><span class="pi-check">✓</span>Recommendation output layer</div>
