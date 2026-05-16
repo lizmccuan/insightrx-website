@@ -1,51 +1,5 @@
 /* ── InsightRx — script.js ── */
 
-/* Carousel */
-(function(){
-  var slides=[
-    {label:'01 / Data Sources',caption:'Upload and compare marketing data runs across time periods'},
-    {label:'02 / Dashboard',caption:'View real-time marketing intelligence KPIs at a glance'},
-    {label:'03 / Dashboard Detail',caption:'Analyze search, traffic, and user behavior signals in depth'},
-    {label:'04 / Analysis',caption:'Break down GA4 and GSC acquisition and performance patterns'},
-    {label:'05 / Social Analysis',caption:'Identify Meta content strengths and conversion patterns'},
-    {label:'06 / Opportunities',caption:'Surface prioritized SEO and growth opportunities from live data'},
-    {label:'07 / Recommendations',caption:'Translate AI insights into prioritized, actionable plans'},
-    {label:'08 / Reports',caption:'Generate executive-ready marketing summaries and briefings'},
-    {label:'09 / AI Agent',caption:'Ask questions and receive strategic marketing guidance in real time'}
-  ];
-  var cur=0;
-  var track=document.getElementById('carTrack');
-  var dotsEl=document.getElementById('carDots');
-  var cap=document.getElementById('carCaption');
-
-  // build dots
-  slides.forEach(function(_,i){
-    var d=document.createElement('div');
-    d.className='car-pip'+(i===0?' active':'');
-    d.onclick=function(){carGoTo(i)};
-    dotsEl.appendChild(d);
-  });
-
-  function carGoTo(n){
-    cur=Math.max(0,Math.min(n,slides.length-1));
-    track.style.transform='translateX(-'+cur*100+'%)';
-    document.querySelectorAll('.car-pip').forEach(function(p,i){p.classList.toggle('active',i===cur)});
-    cap.innerHTML='<strong>'+slides[cur].label+'</strong> — '+slides[cur].caption;
-    document.getElementById('carPrev').disabled=cur===0;
-    document.getElementById('carNext').disabled=cur===slides.length-1;
-  }
-
-  window.carMove=function(dir){carGoTo(cur+dir)};
-  carGoTo(0);
-
-  // keyboard nav
-  document.addEventListener('keydown',function(e){
-    if(e.key==='ArrowLeft')carGoTo(cur-1);
-    if(e.key==='ArrowRight')carGoTo(cur+1);
-  });
-})();
-
-/* Nav + Fade-up observer */
 // Nav scroll
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
@@ -61,23 +15,86 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-// Active nav highlighting
-const secs = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  secs.forEach(s => { if (scrollY >= s.offsetTop - 90) cur = s.id; });
-  links.forEach(a => {
-    const on = a.getAttribute('href') === `#${cur}`;
-    a.style.color = on ? '#f1f5f9' : '';
-    a.style.fontWeight = on ? '600' : '';
+// ── TAB NAVIGATION ──────────────────────────────────────────────────────────
+(function(){
+  var tabs   = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.tab-panel');
+
+  function showTab(id) {
+    tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.tab === id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.id === 'tab-' + id); });
+    history.replaceState(null, '', '#tab-' + id);
+    // scroll to top of content (below fixed nav + tab bar)
+    var tabNav = document.getElementById('tab-nav');
+    var navH   = (document.getElementById('navbar')  || {offsetHeight:62}).offsetHeight;
+    var tabH   = (tabNav || {offsetHeight:0}).offsetHeight;
+    window.scrollTo({ top: navH + tabH - 2, behavior: 'instant' });
+    // trigger fade-ups for newly visible content
+    setTimeout(function(){
+      document.querySelectorAll('.tab-panel.active .fade-up:not(.visible)').forEach(function(el){
+        obs.observe(el);
+      });
+    }, 50);
+  }
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ showTab(t.dataset.tab); });
+  });
+
+  // honour hash on page load
+  var hash  = location.hash.replace('#tab-', '');
+  var valid = Array.from(tabs).map(function(t){ return t.dataset.tab; });
+  showTab(valid.indexOf(hash) >= 0 ? hash : 'overview');
+
+  // expose for onclick= nav links
+  window.showTab = showTab;
+})();
+
+// ── ACCORDION ───────────────────────────────────────────────────────────────
+document.querySelectorAll('.accordion-header').forEach(function(hdr){
+  hdr.addEventListener('click', function(){
+    hdr.closest('.accordion').classList.toggle('open');
   });
 });
 
-// Dashboard nav interactivity
-document.querySelectorAll('.df-nav-item').forEach(item => {
-  item.addEventListener('click', () => {
-    document.querySelectorAll('.df-nav-item').forEach(i => i.classList.remove('active'));
-    item.classList.add('active');
+// ── DESKTOP / MOBILE VIEW TOGGLE ────────────────────────────────────────────
+function setView(v) {
+  document.getElementById('viewDesktop').classList.toggle('active', v === 'desktop');
+  document.getElementById('viewMobile').classList.toggle('active', v === 'mobile');
+  document.getElementById('vtDesktop').classList.toggle('active', v === 'desktop');
+  document.getElementById('vtMobile').classList.toggle('active', v === 'mobile');
+}
+// On narrow screens, start in mobile view and keep in sync on resize
+(function initViewToggle(){
+  function syncView(){
+    if(window.innerWidth <= 640){
+      // CSS forces phone view; keep JS state aligned so vtMobile stays .active
+      document.getElementById('vtMobile').classList.add('active');
+      document.getElementById('vtDesktop').classList.remove('active');
+    }
+  }
+  syncView();
+  window.addEventListener('resize', syncView);
+})();
+
+// ── DESKTOP APP INNER TABS ──────────────────────────────────────────────────
+document.querySelectorAll('.app-tab').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var panel = btn.dataset.panel;
+    btn.closest('.app-inner-tabs').querySelectorAll('.app-tab').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    btn.closest('.app-main').querySelectorAll('.app-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.getElementById(panel).classList.add('active');
+  });
+});
+
+// ── PHONE TABS ───────────────────────────────────────────────────────────────
+document.querySelectorAll('.ph-tab').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var panel = btn.dataset.phanel;
+    btn.closest('.phone-tabs').querySelectorAll('.ph-tab').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    btn.closest('.phone-screen').querySelectorAll('.phone-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.getElementById(panel).classList.add('active');
   });
 });

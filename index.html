@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<body>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -45,17 +46,16 @@
       <span class="nav-logo-sub">by Elizabeth McCuan</span>
     </div>
     <div class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#agents">Agents</a>
-      <a href="#search-layers">SEO/AEO/GEO</a>
-      <a href="#grounding">Grounding</a>
-      <a href="#demo">Demo</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#tab-overview" onclick="showTab('overview');return false;">Overview</a>
+      <a href="#tab-problem" onclick="showTab('problem');return false;">Problem</a>
+      <a href="#tab-system" onclick="showTab('system');return false;">System</a>
+      <a href="#tab-ai-search" onclick="showTab('ai-search');return false;">AI Search</a>
+      <a href="#tab-demo" onclick="showTab('demo');return false;">Demo</a>
+      <a href="#tab-learnings" onclick="showTab('learnings');return false;">Learnings</a>
     </div>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <a href="#tab-contact" onclick="showTab('contact');return false;" class="nav-cta">Get in Touch</a>
   </div>
 </nav>
-
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
@@ -128,6 +128,22 @@
 </section>
 
 
+
+
+<div class="tab-nav-wrap" id="tab-nav">
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" data-tab="overview" role="tab">Overview</button>
+    <button class="tab-btn" data-tab="problem" role="tab">Problem</button>
+    <button class="tab-btn" data-tab="system" role="tab">System</button>
+    <button class="tab-btn" data-tab="ai-search" role="tab">AI Search</button>
+    <button class="tab-btn" data-tab="demo" role="tab">Demo</button>
+    <button class="tab-btn" data-tab="learnings" role="tab">Learnings</button>
+    <button class="tab-btn" data-tab="contact" role="tab">Contact</button>
+  </nav>
+</div>
+<div class="tab-panels">
+
+<div id="tab-overview" class="tab-panel active">
 <!-- ═══ TECH STACK ═══ -->
 <section id="tech-stack" class="section-sm">
   <div class="container">
@@ -242,13 +258,46 @@
 </section>
 
 
+<!-- ═══ WHY THIS MATTERS ═══ -->
+<section id="why-matters" class="section">
+  <div class="dot-grid" style="opacity:.4"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="fade-up text-center">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Why InsightRx Matters<span class="eyebrow-line"></span></div>
+      <h2 class="section-title mx-auto">The Search Landscape Is<br/><span class="grad-text">Changing Faster Than Most Realize</span></h2>
+      <p class="section-sub mx-auto" style="text-align:center">Three converging shifts are rewriting the rules of marketing intelligence. InsightRx is built for all three simultaneously.</p>
+    </div>
+    <div class="why-grid" style="margin-top:48px">
+      <div class="why-card fade-up">
+        <div class="wc-num">01 / SEARCH</div>
+        <div class="wc-title">Traditional SEO Is Now Table Stakes</div>
+        <div class="wc-desc">Google rankings alone are no longer enough. AI Overviews, zero-click search, and answer engines are reshaping discovery — requiring brands to optimize beyond traditional SEO.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="wc-num">02 / AI SEARCH</div>
+        <div class="wc-title">AEO and GEO Are the New Frontier</div>
+        <div class="wc-desc">AI-driven platforms like ChatGPT and Google AI increasingly control discovery. Brands must now optimize for machine readability, authority, and answer visibility.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="wc-num">03 / AGENTS</div>
+        <div class="wc-title">Agentic AI Is Transforming Marketing Work</div>
+        <div class="wc-desc">AI's biggest marketing impact isn't faster content — it's automating analysis, surfacing strategic opportunities, and accelerating decision-making.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<div id="tab-problem" class="tab-panel">
 <!-- ═══ PROBLEM ═══ -->
 <section id="problem" class="section">
   <div class="container">
     <div class="fade-up">
       <div class="eyebrow"><span class="eyebrow-line"></span>The Problem</div>
-      <h2 class="section-title">Marketing Analytics<br/><span class="grad-text">Is Broken.</span></h2>
-      <p class="section-sub">Marketing teams spend the majority of their time on data gathering, formatting, and interpretation — before a single strategic decision is made. InsightRx was built to eliminate this entirely.</p>
+      <h2 class="section-title">The Future of Marketing Intelligence<br/>Is <span class="grad-text">Agentic.</span></h2>
+      <p class="section-sub">InsightRx uses AI-driven workflows and specialized agents to transform fragmented marketing data into strategic insights and operational efficiency.</p>
     </div>
     <div class="problem-grid">
       <div class="prob-card fade-up">
@@ -284,36 +333,9 @@
 </section>
 
 
-<!-- ═══ WHY THIS MATTERS ═══ -->
-<section id="why-matters" class="section">
-  <div class="dot-grid" style="opacity:.4"></div>
-  <div class="container" style="position:relative;z-index:1">
-    <div class="fade-up text-center">
-      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Why InsightRx Matters<span class="eyebrow-line"></span></div>
-      <h2 class="section-title mx-auto">The Search Landscape Is<br/><span class="grad-text">Changing Faster Than Most Realize</span></h2>
-      <p class="section-sub mx-auto" style="text-align:center">Three converging shifts are rewriting the rules of marketing intelligence. InsightRx is built for all three simultaneously.</p>
-    </div>
-    <div class="why-grid" style="margin-top:48px">
-      <div class="why-card fade-up">
-        <div class="wc-num">01 / SEARCH</div>
-        <div class="wc-title">Traditional SEO Is Now Table Stakes</div>
-        <div class="wc-desc">Google rankings alone are no longer enough. AI Overviews, zero-click search, and answer engines are reshaping discovery — requiring brands to optimize beyond traditional SEO.</div>
-      </div>
-      <div class="why-card fade-up">
-        <div class="wc-num">02 / AI SEARCH</div>
-        <div class="wc-title">AEO and GEO Are the New Frontier</div>
-        <div class="wc-desc">AI-driven platforms like ChatGPT and Google AI increasingly control discovery. Brands must now optimize for machine readability, authority, and answer visibility.</div>
-      </div>
-      <div class="why-card fade-up">
-        <div class="wc-num">03 / AGENTS</div>
-        <div class="wc-title">Agentic AI Is Transforming Marketing Work</div>
-        <div class="wc-desc">AI's biggest marketing impact isn't faster content — it's automating analysis, surfacing strategic opportunities, and accelerating decision-making.</div>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
-
+<div id="tab-system" class="tab-panel">
 <!-- ═══ DATA SOURCES ═══ -->
 <section id="data-sources" class="section">
   <div class="container">
@@ -397,7 +419,12 @@
 </section>
 
 
-<!-- ═══ WORKFLOW ═══ -->
+<div class="accordion open">
+  <div class="accordion-header">
+    <span class="accordion-title">⚙️ Pipeline Workflow</span>
+    <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </div>
+  <div class="accordion-body"><div class="accordion-content"><!-- ═══ WORKFLOW ═══ -->
 <section id="workflow" class="section">
   <div class="container">
     <div class="fade-up">
@@ -466,8 +493,14 @@
   </div>
 </section>
 
-
-<!-- ═══ AGENTS ═══ -->
+</div></div>
+</div>
+<div class="accordion open">
+  <div class="accordion-header">
+    <span class="accordion-title">🤖 AI Agents</span>
+    <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </div>
+  <div class="accordion-body"><div class="accordion-content"><!-- ═══ AGENTS ═══ -->
 <section id="agents" class="section">
   <div class="container">
     <div class="agents-header-row fade-up">
@@ -569,7 +602,83 @@
   </div>
 </section>
 
+</div></div>
+</div>
+<div class="accordion open">
+  <div class="accordion-header">
+    <span class="accordion-title">📊 Recommendations Engine</span>
+    <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </div>
+  <div class="accordion-body"><div class="accordion-content"><!-- ═══ RECOMMENDATIONS ENGINE ═══ -->
+<section id="recommendations" class="section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Output Layer</div>
+      <h2 class="section-title">The Recommendations<br/><span class="grad-text">Engine</span></h2>
+      <p class="section-sub">InsightRx doesn't produce reports. It produces a ranked, rationale-backed action plan — ready to execute, not interpret.</p>
+    </div>
+    <div class="rec-flow fade-up">
+      <div class="rec-step">
+        <div class="rec-step-icon">📥</div>
+        <div class="rec-step-title">Agent Outputs Collected</div>
+        <div class="rec-step-desc">All 5 upstream agents submit structured JSON findings</div>
+      </div>
+      <div class="rec-arrow">→</div>
+      <div class="rec-step">
+        <div class="rec-step-icon">🧮</div>
+        <div class="rec-step-title">Opportunity Scoring</div>
+        <div class="rec-step-desc">Each signal scored by impact, effort, and strategic alignment</div>
+      </div>
+      <div class="rec-arrow">→</div>
+      <div class="rec-step">
+        <div class="rec-step-icon">🎯</div>
+        <div class="rec-step-title">Ranked Action Plan</div>
+        <div class="rec-step-desc">Prioritized recommendations with rationale and channel</div>
+      </div>
+    </div>
+    <div class="rec-output fade-up">
+      <div class="ro-title">Sample Output — Ranked Recommendations</div>
+      <div class="ro-items">
+        <div class="ro-item">
+          <div class="ro-num" style="background:rgba(248,113,113,.2);color:#f87171">1</div>
+          <div class="ro-text">Optimize title tags on 14 high-impression, low-CTR pages — estimated +18% click-through improvement based on GSC data patterns</div>
+          <span class="ro-channel">SEO</span>
+          <span class="ro-impact">↑ High</span>
+        </div>
+        <div class="ro-item">
+          <div class="ro-num" style="background:rgba(248,113,113,.2);color:#f87171">2</div>
+          <div class="ro-text">Implement FAQ schema markup on top 8 product pages — brand currently absent from AI Overview responses for 23 target queries</div>
+          <span class="ro-channel">AEO</span>
+          <span class="ro-impact">↑ High</span>
+        </div>
+        <div class="ro-item">
+          <div class="ro-num" style="background:rgba(251,191,36,.2);color:#fbbf24">3</div>
+          <div class="ro-text">Shift 22% of Meta ad budget from broad audiences to retargeting — ROAS 3.1x vs. 1.4x differential identified by Social Agent</div>
+          <span class="ro-channel">Paid</span>
+          <span class="ro-impact">↑ Med</span>
+        </div>
+        <div class="ro-item">
+          <div class="ro-num" style="background:rgba(251,191,36,.2);color:#fbbf24">4</div>
+          <div class="ro-text">Publish 3 topical cluster articles to build entity authority for generative AI visibility — 0% GEO presence currently detected for primary category</div>
+          <span class="ro-channel">GEO</span>
+          <span class="ro-impact">↑ Strategic</span>
+        </div>
+        <div class="ro-item">
+          <div class="ro-num" style="background:rgba(74,222,128,.2);color:#4ade80">5</div>
+          <div class="ro-text">Fix 3 crawlability issues blocking 12% of content from Google indexing — technical debt flag surfaced by SEO Agent audit</div>
+          <span class="ro-channel">Technical</span>
+          <span class="ro-impact">↑ Med</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+</div></div>
+</div>
+</div>
+
+<div id="tab-ai-search" class="tab-panel">
 <!-- ═══ SEO / AEO / GEO ═══ -->
 <section id="search-layers" class="section">
   <div class="container">
@@ -634,7 +743,12 @@
 </section>
 
 
-<!-- ═══ GROUNDING APIs ═══ -->
+<div class="accordion open">
+  <div class="accordion-header">
+    <span class="accordion-title">🔗 Grounding APIs</span>
+    <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </div>
+  <div class="accordion-body"><div class="accordion-content"><!-- ═══ GROUNDING APIs ═══ -->
 <section id="grounding" class="section">
   <div class="container grounding-grid">
     <div class="g-sources fade-up">
@@ -701,8 +815,14 @@
   </div>
 </section>
 
-
-<!-- ═══ A2A / M2M ═══ -->
+</div></div>
+</div>
+<div class="accordion open">
+  <div class="accordion-header">
+    <span class="accordion-title">🔄 A2A / M2M Communication</span>
+    <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </div>
+  <div class="accordion-body"><div class="accordion-content"><!-- ═══ A2A / M2M ═══ -->
 <section id="a2a-m2m" class="section">
   <div class="container">
     <div class="fade-up">
@@ -753,529 +873,248 @@
 </section>
 
 
+</div></div>
+</div>
+</div>
 
-<!-- ═══ SYSTEM WALKTHROUGH CAROUSEL ═══ -->
-<section id="system-walkthrough" class="section carousel-section">
+<div id="tab-demo" class="tab-panel">
+<!-- ═══ DEMO ═══ -->
+<section id="system-walkthrough" class="demo-section">
   <div class="container">
-    <div class="fade-up text-center">
-      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Inside the InsightRx System<span class="eyebrow-line"></span></div>
-      <h2 class="section-title mx-auto">A Visual Walkthrough of the<br/><span class="grad-text">Working System</span></h2>
-      <p class="section-sub mx-auto" style="text-align:center">From data ingestion to AI-generated recommendations — a screen-by-screen tour of the live InsightRx application running on real healthcare marketing data.</p>
+    <div class="demo-header fade-up">
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Live Product Preview<span class="eyebrow-line"></span></div>
+      <h2 class="section-title mx-auto">InsightRx in <span class="grad-text">Action</span></h2>
+      <p class="section-sub mx-auto" style="text-align:center;max-width:540px">Explore the real InsightRx interface — click tabs to switch views, toggle between desktop and mobile.</p>
     </div>
-    <div class="carousel-wrap fade-up">
-      <div class="carousel-viewport">
-        <div class="carousel-track" id="carTrack">
+    <div class="view-toggle fade-up">
+      <button class="vt-btn active" id="vtDesktop" onclick="setView('desktop')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Desktop
+      </button>
+      <button class="vt-btn" id="vtMobile" onclick="setView('mobile')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>Mobile
+      </button>
+    </div>
+    <div class="mockup-stage fade-up">
 
-          <!-- ── SLIDE 1: DATA SOURCES ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Data Sources</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">📁 Data Sources</div>
-                  <div class="st2-page-sub">Upload and manage your marketing data inputs</div>
-                  <div style="max-width:680px">
-                    <div class="st2-field-label">Load Previous Run</div>
-                    <div class="st2-dropdown">04-15-2026 (GA4, GSC)<span class="st2-dropdown-arrow">▾</span></div>
-                    <div class="st2-field-label">Current Run</div>
-                    <div class="st2-dropdown">04-15-2026 (GA4, GSC)<span class="st2-dropdown-arrow">▾</span></div>
-                    <div class="st2-field-label">Comparison Run</div>
-                    <div class="st2-dropdown">04-15-2026 (GA4, GSC)<span class="st2-dropdown-arrow">▾</span></div>
-                    <button class="st2-cmp-btn" style="margin-bottom:22px">Compare Two Saved Runs</button>
-                    <div class="st2-section-head">📁 Upload CSV Files</div>
-                    <div class="st2-section-sub" style="margin-bottom:12px">GA4 Page Title Report: page-level behavior such as top pages, sessions, and engagement.</div>
-                    <div class="st2-field-label">Upload GA4 Page Title Report CSV</div>
-                    <div class="st2-upload-area"><span class="st2-upload-label">200MB per file · CSV</span><button class="st2-upload-btn">↑ Upload</button></div>
-                    <div class="st2-field-label">Upload GA4 Session Source / Medium CSV</div>
-                    <div class="st2-upload-area"><span class="st2-upload-label">200MB per file · CSV</span><button class="st2-upload-btn">↑ Upload</button></div>
-                    <div class="st2-field-label">Upload Google Search Console CSV</div>
-                    <div class="st2-upload-area"><span class="st2-upload-label">200MB per file · CSV</span><button class="st2-upload-btn">↑ Upload</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 2: DASHBOARD KPIs ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Marketing Intelligence Dashboard</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">📊 Marketing Intelligence Dashboard</div>
-                  <div class="st2-page-sub">Real-time insights and opportunities</div>
-                  <div class="st2-kpi-row">
-                    <div class="st2-kpi"><div class="st2-kpi-label">Opportunity Score</div><div class="st2-kpi-value">5.37</div></div>
-                    <div class="st2-kpi"><div class="st2-kpi-label">Top Opportunity</div><div class="st2-kpi-value" style="font-size:14px">botox savings</div></div>
-                    <div class="st2-kpi"><div class="st2-kpi-label">CTR Gap</div><div class="st2-kpi-value">4.27%</div></div>
-                    <div class="st2-kpi"><div class="st2-kpi-label">Top Traffic Source</div><div class="st2-kpi-value" style="font-size:13px">google / organic</div></div>
-                  </div>
-                  <div class="st2-card">
-                    <div class="st2-section-head">📊 Performance Overview</div>
-                    <div class="st2-section-sub">Top search queries by impression volume from the loaded run.</div>
-                    <div style="display:flex;align-items:flex-end;gap:2px;padding:8px 0">
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:120px"></div><div style="font-size:8px;color:#6b7280;text-align:center">botox savings</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:33px"></div><div style="font-size:8px;color:#6b7280;text-align:center">migraine quiz</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:32px"></div><div style="font-size:8px;color:#6b7280;text-align:center">the headache lab</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:22px"></div><div style="font-size:8px;color:#6b7280;text-align:center">blepharospasm botox</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:11px"></div><div style="font-size:8px;color:#6b7280;text-align:center">headache lab</div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 3: DASHBOARD DETAIL ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Dashboard Detail</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-two-col" style="gap:14px">
-                    <div class="st2-card">
-                      <div class="st2-section-head">🔍 Top Queries</div>
-                      <div class="st2-section-sub">Highest-visibility queries from the loaded GSC data.</div>
-                      <table class="st2-table">
-                        <thead><tr><th>query</th><th>ctr</th><th>impressions</th><th>position</th></tr></thead>
-                        <tbody>
-                          <tr><td>botox savings</td><td>0.73%</td><td>137</td><td>15.2</td></tr>
-                          <tr><td>migraine quiz</td><td>2.70%</td><td>37</td><td>17.54</td></tr>
-                          <tr><td>blepharospasm botox...</td><td>4.00%</td><td>25</td><td>1</td></tr>
-                          <tr><td>the headache lab</td><td>37.84%</td><td>37</td><td>1.03</td></tr>
-                          <tr><td>headache lab</td><td>46.15%</td><td>13</td><td>1.46</td></tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="st2-card">
-                      <div class="st2-section-head">🌐 User Behavior Signals</div>
-                      <div class="st2-section-sub">Behavior metrics from the loaded GA4 reports.</div>
-                      <div class="st2-metric"><div class="st2-metric-label">Sessions</div><div class="st2-metric-bar"><div class="st2-metric-fill" style="width:72%"></div></div><div class="st2-metric-value">353.0</div></div>
-                      <div class="st2-metric"><div class="st2-metric-label">Active Users</div><div class="st2-metric-bar"><div class="st2-metric-fill" style="width:55%"></div></div><div class="st2-metric-value">263.0</div></div>
-                      <div class="st2-metric"><div class="st2-metric-label">Engagement Rate</div><div class="st2-metric-bar"><div class="st2-metric-fill" style="width:73%"></div></div><div class="st2-metric-value">73.65%</div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 4: ANALYSIS ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Analysis</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">📈 Analysis</div>
-                  <div class="st2-page-sub">Performance data from GA4 + GSC</div>
-                  <div class="st2-card">
-                    <div class="st2-section-head">🔎 Traffic Distribution</div>
-                    <div class="st2-section-sub">Acquisition mix from the loaded GA4 source and medium report.</div>
-                    <div style="display:flex;align-items:flex-end;gap:4px;height:120px;padding:0 4px">
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:2"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:100%"></div><div style="font-size:8px;color:#6b7280;text-align:center">google / organic</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:2"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:55%"></div><div style="font-size:8px;color:#6b7280;text-align:center">(direct)/(none)</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:6%"></div><div style="font-size:8px;color:#6b7280;text-align:center">(not set)</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:5%"></div><div style="font-size:8px;color:#6b7280;text-align:center">bing/organic</div></div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1"><div style="background:#7c3aed;border-radius:3px 3px 0 0;width:100%;height:3%"></div><div style="font-size:8px;color:#6b7280;text-align:center">l.facebook</div></div>
-                    </div>
-                    <table class="st2-table" style="margin-top:10px">
-                      <thead><tr><th>source_medium</th><th>metric</th><th style="text-align:right">value</th></tr></thead>
-                      <tbody>
-                        <tr><td>google / organic</td><td>sessions</td><td style="text-align:right">141</td></tr>
-                        <tr><td>(direct) / (none)</td><td>sessions</td><td style="text-align:right">77</td></tr>
-                        <tr><td>(not set)</td><td>sessions</td><td style="text-align:right">8</td></tr>
-                        <tr><td>bing / organic</td><td>sessions</td><td style="text-align:right">7</td></tr>
-                        <tr><td>l.facebook.com / referral</td><td>sessions</td><td style="text-align:right">4</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 5: SOCIAL ANALYSIS ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Social Analysis</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">📱 Social Analysis</div>
-                  <div class="st2-page-sub">Instagram + Facebook performance insights</div>
-                  <div class="st2-4kpi">
-                    <div class="st2-4kpi-card"><div class="label">Best Post Type</div><div class="value">IG reel</div></div>
-                    <div class="st2-4kpi-card"><div class="label">Worst Post Type</div><div class="value">IG image</div></div>
-                    <div class="st2-4kpi-card"><div class="label">Top Topic</div><div class="value" style="font-size:13px">Patient Conversion</div></div>
-                    <div class="st2-4kpi-card"><div class="label">Weak Topic</div><div class="value" style="font-size:13px">Symptom Awareness</div></div>
-                  </div>
-                  <div class="st2-card">
-                    <div class="st2-section-head">📱 Top Performing Content</div>
-                    <div class="st2-section-sub">The strongest-performing Meta content from the current loaded run.</div>
-                    <table class="st2-table">
-                      <thead><tr><th>Hook</th><th>Post type</th><th>Topic</th><th>Reach</th><th>Eng. Rate</th></tr></thead>
-                      <tbody>
-                        <tr><td style="max-width:160px;overflow:hidden">Neck pulling, stiffness, or involuntary head movement?</td><td>IG reel</td><td>provider spotlight</td><td>188</td><td>6.91</td></tr>
-                        <tr><td>Meet one of the providers...</td><td>IG image</td><td>provider spotlight</td><td>231</td><td>14.72</td></tr>
-                        <tr><td>Considering Botox for migraines...</td><td>IG carousel</td><td>patient conversion</td><td>214</td><td>5.61</td></tr>
-                        <tr><td>Headaches aren't something...</td><td>IG carousel</td><td>patient conversion</td><td>184</td><td>5.43</td></tr>
-                        <tr><td>Westmont — something new...</td><td>IG reel</td><td>patient conversion</td><td>789</td><td>4.69</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 6: OPPORTUNITIES ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Opportunities</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">🚀 Opportunities</div>
-                  <div class="st2-page-sub">Combined website + social growth opportunities</div>
-                  <div class="st2-section-head" style="margin-bottom:10px">🌐 Website Opportunities</div>
-                  <div style="font-size:11px;font-weight:700;color:#374151;margin-bottom:8px">Keyword Opportunities</div>
-                  <div class="st2-opp-card">
-                    <div class="st2-opp-row"><div class="st2-opp-title">SEO Opportunity</div><span class="st2-badge st2-badge-amber">Medium Priority</span></div>
-                    <div class="st2-opp-field"><strong>Opportunity Type:</strong> SEO Opportunity</div>
-                    <div class="st2-opp-field"><strong>Target:</strong> the headache clinic</div>
-                    <div class="st2-opp-field"><strong>Supporting Data:</strong> Position: 4 · Signals: SEO Opportunity</div>
-                    <div class="st2-opp-field">📌 <strong>Why this is an opportunity:</strong> the headache clinic is visible in search and still has room to capture more qualified traffic.</div>
-                    <div class="st2-opp-field">💡 <strong>Best Recommendation:</strong> Refresh the page targeting the headache clinic so the headline, snippet language, and supporting content align more tightly with search intent.</div>
-                  </div>
-                  <div class="st2-opp-card">
-                    <div class="st2-opp-row"><div class="st2-opp-title">SEO Opportunity</div><span class="st2-badge st2-badge-red">High Priority</span></div>
-                    <div class="st2-opp-field"><strong>Opportunity Type:</strong> Quick-Win On-Page SEO</div>
-                    <div class="st2-opp-field"><strong>Target:</strong> will botox keep my eyes from clicking</div>
-                    <div class="st2-opp-field"><strong>Supporting Data:</strong> Position: 10 · Signals: Quick-Win On-Page SEO</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 7: RECOMMENDATIONS ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Recommendations</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">🎯 Recommendations</div>
-                  <div class="st2-page-sub">Combined website + social action plan</div>
-                  <div class="st2-section-head" style="margin-bottom:10px">🎯 Recommendations</div>
-                  <div class="st2-rec-card">
-                    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-                      <div class="st2-rec-title">High engagement rate but low conversion</div>
-                      <span class="st2-badge st2-badge-red">High Priority</span>
-                    </div>
-                    <div class="st2-rec-scores">
-                      <span><strong>Opportunity Score:</strong> 34/100</span>
-                      <span><strong>Business Impact:</strong> 55/100</span>
-                      <span><strong>Confidence:</strong> 88/100</span>
-                    </div>
-                    <div class="st2-rec-field">⚠️ <strong>Insight:</strong> Visitors are engaging with the page, but they are not converting.</div>
-                    <div class="st2-rec-field">📌 <strong>Why it matters:</strong> Interest exists, but something in the conversion path is blocking users from taking action.</div>
-                    <div class="st2-rec-field">💡 <strong>Recommendation:</strong> Reduce friction, strengthen CTA placement and clarity, and review whether the offer and next step are obvious.</div>
-                  </div>
-                  <div style="margin-top:14px">
-                    <div class="st2-section-head" style="margin-bottom:8px">UX &nbsp; UX Conversion Take Action</div>
-                    <div style="font-size:11px;font-weight:700;color:#374151;margin-bottom:6px">CTA Rewrites</div>
-                    <ul class="st2-bullet-list">
-                      <li>Book Your Migraine Evaluation</li>
-                      <li>See If This Treatment Is Right For You</li>
-                      <li>Start With a Quick Patient Next Step</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 8: REPORTS ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Reports</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">📋 Reports</div>
-                  <div class="st2-page-sub">Export and client-ready report views</div>
-                  <div class="st2-card">
-                    <div style="font-size:14px;font-weight:700;color:#111827;margin-bottom:8px">Executive Summary</div>
-                    <div style="font-size:11px;color:#374151;line-height:1.7;margin-bottom:14px">The strongest current opportunity is <strong>botox savings</strong>. The page with the clearest strategic importance is <em>Migraine Specialist In Evergreen Park | The Headache Lab</em>. The leading traffic source in the uploaded data is <strong>google / organic</strong>. The current readiness score is <strong>3/5</strong>.</div>
-                    <div style="font-size:13px;font-weight:700;color:#111827;margin-bottom:8px">Key Insights</div>
-                    <ul class="st2-bullet-list">
-                      <li>Branded demand is present, but it should not drive the main growth strategy: the headache lab, headache lab.</li>
-                      <li>Top non-branded opportunities are: botox savings, migraine quiz, blepharospasm botox injection sites.</li>
-                      <li>Top traffic sources in the uploaded GA4 source/medium report are: google / organic, (direct) / (none), (not set).</li>
-                      <li>High-impression, low-click gaps suggest weak SERP performance for: botox savings.</li>
-                    </ul>
-                    <div style="font-size:13px;font-weight:700;color:#111827;margin-top:14px;margin-bottom:8px">Recommended Actions</div>
-                    <div style="font-size:11px;color:#374151;font-weight:700">SEO</div>
-                    <div style="font-size:10px;color:#6b7280;margin-top:4px"><strong>Priority:</strong> High &nbsp;·&nbsp; <strong>Issue:</strong> Low CTR and untapped visibility for botox savings</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── SLIDE 9: CHAT WITH AI AGENT ── -->
-          <div class="carousel-slide">
-            <div class="car-chrome">
-              <div class="car-dots"><div class="car-dot car-dot-r"></div><div class="car-dot car-dot-y"></div><div class="car-dot car-dot-g"></div></div>
-              <div class="car-urlbar">localhost:8501 · InsightRx — Chat with AI Agent</div>
-              <div class="car-status">Live</div>
-            </div>
-            <div class="car-body">
-              <div class="st2-wrap">
-                <div class="st2-sidebar">
-                  <div class="st2-logo"><div class="st2-logo-main">Insight<span>Rx</span></div><div class="st2-logo-sub">AI-Powered Marketing Intelligence</div></div>
-                  <div class="st2-nav-label">Navigation</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📁 Data Sources</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📊 Dashboard</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📈 Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📱 Social Analysis</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🚀 Opportunities</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>🎯 Recommendations</div>
-                  <div class="st2-nav-item"><div class="ni-dot"></div>📋 Reports</div>
-                  <div class="st2-nav-item active"><div class="ni-dot"></div>🤖 Chat with AI Agent</div>
-                </div>
-                <div class="st2-main">
-                  <div class="st2-page-title">🤖 Chat with AI Agent</div>
-                  <div class="st2-page-sub">Ask your AI Marketing Strategist about your loaded website, SEO, and social data.</div>
-                  <div style="font-size:11px;color:#6b7280;margin-bottom:12px">Choose a suggested prompt or type your own question.</div>
-                  <div class="st2-chat-feed">
-                    <div class="st2-chat-feed-title">🧠 AI Insights Feed</div>
-                    <div class="st2-chat-feed-sub">A quick strategist read on the strongest patterns in the current run.</div>
-                    <div class="st2-chat-insight"><div class="st2-chat-insight-num">Insight 1</div><div class="st2-chat-insight-body">Branded demand is present, but it should not drive the main growth strategy: the headache lab, headache lab.</div></div>
-                    <div class="st2-chat-insight"><div class="st2-chat-insight-num">Insight 2</div><div class="st2-chat-insight-body">Top non-branded opportunities are: botox savings, migraine quiz, blepharospasm botox injection sites.</div></div>
-                    <div class="st2-chat-insight"><div class="st2-chat-insight-num">Insight 3</div><div class="st2-chat-insight-body">Top traffic sources in the uploaded GA4 source/medium report are: google / organic, (direct) / (none), (not set).</div></div>
-                  </div>
-                  <div class="st2-prompt-grid">
-                    <div class="st2-prompt">What are my biggest SEO opportunities?</div>
-                    <div class="st2-prompt">Which queries have high impressions but low CTR?</div>
-                    <div class="st2-prompt">What pages should I update first?</div>
-                    <div class="st2-prompt">What content topics could drive more traffic?</div>
-                    <div class="st2-prompt">What are the biggest issues in my social content?</div>
-                    <div class="st2-prompt">Summarize the top recommendations from this dataset.</div>
-                  </div>
-                  <div class="st2-chat-input">Ask about your marketing data...<span style="color:#7c3aed;font-size:16px">↑</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /carousel-track -->
-      </div><!-- /carousel-viewport -->
-
-      <div class="carousel-controls">
-        <button class="car-arrow" id="carPrev" onclick="carMove(-1)" aria-label="Previous slide">&#8592;</button>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-          <div class="car-dots-row" id="carDots"></div>
-          <div class="car-caption" id="carCaption"></div>
+      <!-- DESKTOP -->
+      <div class="mockup-desktop active" id="viewDesktop">
+        <div class="browser-chrome">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.insightrx.ai / dashboard</div>
         </div>
-        <button class="car-arrow" id="carNext" onclick="carMove(1)" aria-label="Next slide">&#8594;</button>
+        <div class="app-shell">
+          <aside class="app-sidebar">
+            <div class="sb-logo">Insight<span>Rx</span></div>
+            <div class="sb-section-label">Analytics</div>
+            <div class="sb-item active">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              <span>Dashboard</span>
+            </div>
+            <div class="sb-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Analysis</span>
+            </div>
+            <div class="sb-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Social</span>
+            </div>
+            <div class="sb-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Recs</span><span class="sb-badge">4</span>
+            </div>
+            <div class="sb-section-label" style="margin-top:auto">Config</div>
+            <div class="sb-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+              <span>Data Sources</span>
+            </div>
+          </aside>
+          <div class="app-main">
+            <div class="app-topbar">
+              <div>
+                <div class="app-topbar-title">Marketing Intelligence</div>
+                <div class="app-topbar-meta">InsightRx · Healthcare Practice · May 2026</div>
+              </div>
+              <div class="app-inner-tabs">
+                <button class="app-tab active" data-panel="dt-dashboard">Dashboard</button>
+                <button class="app-tab" data-panel="dt-analysis">Analysis</button>
+                <button class="app-tab" data-panel="dt-social">Social</button>
+                <button class="app-tab" data-panel="dt-recs">Recommendations</button>
+              </div>
+            </div>
+            <div class="app-content">
+
+              <div class="app-panel active" id="dt-dashboard">
+                <div class="kpi-row">
+                  <div class="kpi-card"><div class="kpi-label">Opportunity Score</div><div class="kpi-value">5.37</div><div class="kpi-sub">↑ 0.4 vs. last run</div></div>
+                  <div class="kpi-card"><div class="kpi-label">Top Opportunity</div><div class="kpi-value" style="font-size:14px;padding-top:3px">Botox Savings</div><div class="kpi-sub">Position 4.1 · High CTR gap</div></div>
+                  <div class="kpi-card"><div class="kpi-label">CTR Gap</div><div class="kpi-value">4.27%</div><div class="kpi-sub">Below expected benchmark</div></div>
+                  <div class="kpi-card"><div class="kpi-label">Top Traffic Source</div><div class="kpi-value" style="font-size:13px;padding-top:3px">google/organic</div><div class="kpi-sub">68.3% of sessions</div></div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-label">Weekly Session Trend</div>
+                  <div class="chart-bars">
+                    <div class="cbar" style="height:38%;background:#e0e7ff"></div><div class="cbar" style="height:52%;background:#c4b5fd"></div>
+                    <div class="cbar" style="height:44%;background:#e0e7ff"></div><div class="cbar" style="height:65%;background:#c4b5fd"></div>
+                    <div class="cbar" style="height:55%;background:#e0e7ff"></div><div class="cbar" style="height:72%;background:#a78bfa"></div>
+                    <div class="cbar" style="height:88%;background:#7c3aed"></div><div class="cbar" style="height:80%;background:#6d28d9"></div>
+                  </div>
+                  <div class="chart-x"><span>Apr 14</span><span>Apr 21</span><span>Apr 28</span><span>May 5</span><span>May 12</span><span>May 19</span><span>May 26</span><span>Jun 2</span></div>
+                </div>
+                <div class="insight-row">
+                  <div class="insight-card">
+                    <div class="insight-header"><span class="insight-title">Engagement vs Conversion Gap</span><span class="insight-badge badge-crit">Critical</span></div>
+                    <div class="insight-text">High engagement (4.8 min avg session) but 1.2% conversion — 3.1× below industry median for med-spa practices.</div>
+                    <div class="insight-rec">↗ Reduce friction on booking flow, strengthen CTA placement, clarify next step.</div>
+                  </div>
+                  <div class="insight-card">
+                    <div class="insight-header"><span class="insight-title">CTR Opportunity — Botox</span><span class="insight-badge badge-high">High</span></div>
+                    <div class="insight-text">Ranking Pos 4.1 for "botox savings near me" with 1.9% CTR vs 6.2% expected. Title tag mismatch driving drop-off.</div>
+                    <div class="insight-rec">↗ Rewrite title tag to include price signal and local modifier.</div>
+                  </div>
+                </div>
+                <div class="table-card">
+                  <div class="table-head"><span>Page</span><span>Sessions</span><span>CTR</span><span>Trend</span></div>
+                  <div class="table-row"><span>/botox-savings</span><span>1,842</span><span>1.9%</span><span><span class="pill pill-dn">↓ -0.4</span></span></div>
+                  <div class="table-row"><span>/med-spa-services</span><span>1,204</span><span>3.1%</span><span><span class="pill pill-up">↑ +0.7</span></span></div>
+                  <div class="table-row"><span>/patient-reviews</span><span>964</span><span>4.4%</span><span><span class="pill pill-up">↑ +1.2</span></span></div>
+                  <div class="table-row"><span>/dermal-fillers</span><span>731</span><span>2.8%</span><span><span class="pill pill-dn">↓ -0.1</span></span></div>
+                </div>
+              </div>
+
+              <div class="app-panel" id="dt-analysis">
+                <div class="analysis-grid">
+                  <div class="analysis-card">
+                    <div class="analysis-title">Traffic Distribution</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>google / organic</span><span>68.3%</span></div><div class="bar-track"><div class="bar-fill" style="width:68.3%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>direct</span><span>14.1%</span></div><div class="bar-track"><div class="bar-fill" style="width:14.1%;background:linear-gradient(90deg,#6366f1,#818cf8)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>instagram / social</span><span>9.7%</span></div><div class="bar-track"><div class="bar-fill" style="width:9.7%;background:linear-gradient(90deg,#ec4899,#f472b6)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>facebook / social</span><span>4.8%</span></div><div class="bar-track"><div class="bar-fill" style="width:4.8%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>referral / other</span><span>3.1%</span></div><div class="bar-track"><div class="bar-fill" style="width:3.1%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div></div>
+                    </div>
+                  </div>
+                  <div class="analysis-card">
+                    <div class="analysis-title">Top Queries by Impression</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>botox savings near me</span><span>12,400</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>med spa chicago</span><span>9,100</span></div><div class="bar-track"><div class="bar-fill" style="width:73%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>dermal filler cost</span><span>7,800</span></div><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>lip filler before after</span><span>6,200</span></div><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>patient reviews medspa</span><span>4,900</span></div><div class="bar-track"><div class="bar-fill" style="width:39%"></div></div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="analysis-grid">
+                  <div class="analysis-card">
+                    <div class="analysis-title">User Behavior Signals</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>Avg Session Duration</span><span>4m 48s</span></div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>Pages / Session</span><span>3.2</span></div><div class="bar-track"><div class="bar-fill" style="width:64%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>Scroll Depth</span><span>72%</span></div><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>Bounce Rate</span><span>38%</span></div><div class="bar-track"><div class="bar-fill" style="width:38%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>Conversion Rate</span><span>1.2%</span></div><div class="bar-track"><div class="bar-fill" style="width:12%;background:linear-gradient(90deg,#dc2626,#ef4444)"></div></div></div>
+                    </div>
+                  </div>
+                  <div class="analysis-card">
+                    <div class="analysis-title">Top Pages by Sessions</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>/botox-savings</span><span>1,842</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>/med-spa-services</span><span>1,204</span></div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>/patient-reviews</span><span>964</span></div><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>/dermal-fillers</span><span>731</span></div><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app-panel" id="dt-social">
+                <div class="social-grid">
+                  <div class="social-card social-best"><div class="social-label">Best Post Type</div><div class="social-value">IG Reel</div><div class="social-sub">3.8× avg reach vs. static image</div><div class="sparkline-row"><div class="spark" style="height:30%;background:#d1fae5"></div><div class="spark" style="height:45%;background:#a7f3d0"></div><div class="spark" style="height:60%;background:#6ee7b7"></div><div class="spark" style="height:80%;background:#34d399"></div><div class="spark" style="height:95%;background:#059669"></div></div></div>
+                  <div class="social-card social-worst"><div class="social-label">Lowest Performer</div><div class="social-value">IG Image</div><div class="social-sub">0.4% avg engagement rate</div><div class="sparkline-row"><div class="spark" style="height:60%;background:#fee2e2"></div><div class="spark" style="height:40%;background:#fecaca"></div><div class="spark" style="height:35%;background:#fca5a5"></div><div class="spark" style="height:20%;background:#f87171"></div></div></div>
+                  <div class="social-card social-top"><div class="social-label">Top Topic</div><div class="social-value" style="font-size:14px">Patient Conversion</div><div class="social-sub">Before/after + trust signals · 7.1% avg ER</div></div>
+                  <div class="social-card social-weak"><div class="social-label">Weak Topic</div><div class="social-value" style="font-size:14px">Symptom Awareness</div><div class="social-sub">Too educational, low CTA signal · 0.8% avg ER</div></div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-label">Engagement Rate by Content Type</div>
+                  <div class="chart-bars">
+                    <div class="cbar" style="height:95%;background:#059669"></div><div class="cbar" style="height:70%;background:#6366f1"></div>
+                    <div class="cbar" style="height:50%;background:#8b5cf6"></div><div class="cbar" style="height:35%;background:#a78bfa"></div>
+                    <div class="cbar" style="height:20%;background:#fbbf24"></div><div class="cbar" style="height:10%;background:#f87171"></div>
+                  </div>
+                  <div class="chart-x"><span>IG Reel</span><span>Carousel</span><span>Story Poll</span><span>FB Video</span><span>FB Image</span><span>IG Image</span></div>
+                </div>
+              </div>
+
+              <div class="app-panel" id="dt-recs">
+                <div class="rec-list">
+                  <div class="rec-card crit"><div class="rec-tag-row"><span class="rec-tag crit">Critical</span><span style="font-size:10px;color:#9ca3af">Conversion · Agent: ConversionAgent</span></div><div class="rec-signal">High engagement but low conversion rate</div><div class="rec-insight">Visitors engaging for 4m 48s but converting at 1.2% — 3.1× below industry median.</div><div class="rec-action crit">Reduce friction on booking flow. Strengthen CTA above fold. Clarify next step on every service page.</div></div>
+                  <div class="rec-card warn"><div class="rec-tag-row"><span class="rec-tag warn">High Priority</span><span style="font-size:10px;color:#9ca3af">SEO · Agent: SEOAgent</span></div><div class="rec-signal">CTR gap on top-ranking keyword</div><div class="rec-insight">Ranking 4.1 for "botox savings near me" (12,400 monthly impressions) but 1.9% CTR vs 6.2% expected — ~520 clicks/month unrealized.</div><div class="rec-action warn">Rewrite title tag with price signal and local modifier. Add FAQ schema. Test urgency language in meta.</div></div>
+                  <div class="rec-card" style="border-left-color:#6366f1"><div class="rec-tag-row"><span class="rec-tag">GEO / AEO</span><span style="font-size:10px;color:#9ca3af">AI Search · Agent: GEOAgent</span></div><div class="rec-signal">Not appearing in AI-generated answers</div><div class="rec-insight">Zero appearances in AI overviews for target queries. Competitors with structured schema are being cited instead.</div><div class="rec-action">Add FAQ schema to top 3 service pages. Publish authoritative guide targeting answer-style queries. Build E-E-A-T signals.</div></div>
+                  <div class="rec-card good"><div class="rec-tag-row"><span class="rec-tag good">Opportunity</span><span style="font-size:10px;color:#9ca3af">Social · Agent: SocialAgent</span></div><div class="rec-signal">Scale IG Reel content — top performer by 3.8×</div><div class="rec-insight">IG Reels outperforming all content types (7.1% ER vs 0.4% for static) but only 18% of posting schedule.</div><div class="rec-action good">Shift to 60% Reels focused on patient conversion. Reduce IG static image to &lt;10%.</div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- MOBILE -->
+      <div class="mockup-mobile" id="viewMobile">
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>●●●●</span></div>
+              <div class="phone-app-bar"><div class="phone-app-name">InsightRx</div><div class="phone-app-sub">Healthcare Practice · May 2026</div></div>
+              <div class="phone-tabs">
+                <button class="ph-tab active" data-phanel="ph-dashboard">Dashboard</button>
+                <button class="ph-tab" data-phanel="ph-analysis">Analysis</button>
+                <button class="ph-tab" data-phanel="ph-social">Social</button>
+                <button class="ph-tab" data-phanel="ph-recs">Recs</button>
+              </div>
+              <div class="phone-content">
+                <div class="phone-panel active" id="ph-dashboard">
+                  <div class="ph-kpi-grid">
+                    <div class="ph-kpi"><div class="ph-kpi-label">Opp. Score</div><div class="ph-kpi-value">5.37</div><div class="ph-kpi-sub">↑ +0.4</div></div>
+                    <div class="ph-kpi"><div class="ph-kpi-label">CTR Gap</div><div class="ph-kpi-value">4.27%</div><div class="ph-kpi-sub">Below benchmark</div></div>
+                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Top Source</div><div class="ph-kpi-value" style="font-size:12px">google/organic</div><div class="ph-kpi-sub">68.3% sessions</div></div>
+                    <div class="ph-kpi" style="border-top-color:#d97706"><div class="ph-kpi-label">Top Keyword</div><div class="ph-kpi-value" style="font-size:11px">botox savings</div><div class="ph-kpi-sub">Pos 4.1</div></div>
+                  </div>
+                  <div class="ph-chart"><div class="ph-chart-label">Session Trend</div><div class="ph-bars"><div class="ph-bar" style="height:38%;background:#e0e7ff"></div><div class="ph-bar" style="height:52%;background:#c4b5fd"></div><div class="ph-bar" style="height:65%;background:#a78bfa"></div><div class="ph-bar" style="height:80%;background:#7c3aed"></div><div class="ph-bar" style="height:88%;background:#6d28d9"></div></div></div>
+                  <div class="ph-insight"><div class="ph-insight-label">AI Insight</div><div class="ph-insight-text">High engagement (4m 48s avg) but only 1.2% conversion — 3.1× below industry median. Booking flow friction is the primary lever.</div></div>
+                </div>
+                <div class="phone-panel" id="ph-analysis">
+                  <div class="ph-insight" style="border-left-color:#6366f1"><div class="ph-insight-label" style="color:#6366f1">Traffic Breakdown</div><div class="ph-insight-text">google / organic <strong>68.3%</strong> · direct <strong>14.1%</strong> · instagram <strong>9.7%</strong> · facebook <strong>4.8%</strong></div></div>
+                  <div class="ph-insight"><div class="ph-insight-label">Top Queries</div><div class="ph-insight-text">"botox savings near me" 12.4K · "med spa chicago" 9.1K · "dermal filler cost" 7.8K</div></div>
+                  <div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">User Behavior</div><div class="ph-insight-text">Avg session <strong>4m 48s</strong> · Pages/visit <strong>3.2</strong> · Scroll <strong>72%</strong> · Bounce <strong>38%</strong> · Conversion <strong>1.2%</strong></div></div>
+                  <div class="ph-chart"><div class="ph-chart-label">Top Pages</div><div class="ph-bars"><div class="ph-bar" style="height:100%;background:#7c3aed"></div><div class="ph-bar" style="height:65%;background:#a78bfa"></div><div class="ph-bar" style="height:52%;background:#c4b5fd"></div><div class="ph-bar" style="height:40%;background:#ddd6fe"></div></div></div>
+                </div>
+                <div class="phone-panel" id="ph-social">
+                  <div class="ph-kpi-grid">
+                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Best Format</div><div class="ph-kpi-value" style="font-size:13px">IG Reel</div><div class="ph-kpi-sub">7.1% ER · 3.8×</div></div>
+                    <div class="ph-kpi" style="border-top-color:#dc2626"><div class="ph-kpi-label">Worst Format</div><div class="ph-kpi-value" style="font-size:13px">IG Image</div><div class="ph-kpi-sub">0.4% ER</div></div>
+                  </div>
+                  <div class="ph-insight"><div class="ph-insight-label">Top Topic</div><div class="ph-insight-text"><strong>Patient Conversion</strong> — Before/after + trust signals driving 7.1% engagement rate.</div></div>
+                  <div class="ph-insight" style="border-left-color:#d97706"><div class="ph-insight-label" style="color:#92400e">Weak Topic</div><div class="ph-insight-text"><strong>Symptom Awareness</strong> — Too educational, weak CTA. 0.8% avg ER. Deprioritize.</div></div>
+                </div>
+                <div class="phone-panel" id="ph-recs">
+                  <div class="ph-rec"><div class="ph-rec-tag">🔴 Critical</div><div class="ph-rec-title">High engagement, low conversion</div><div class="ph-rec-text">1.2% conversion — 3.1× below median.</div><div class="ph-rec-action">Reduce friction, strengthen CTA, clarify next step.</div></div>
+                  <div class="ph-rec" style="border-left-color:#d97706"><div class="ph-rec-tag" style="color:#92400e">🟡 High Priority</div><div class="ph-rec-title">CTR gap — botox savings</div><div class="ph-rec-text">Pos 4.1 but 1.9% CTR vs 6.2% expected.</div><div class="ph-rec-action" style="background:#fffbeb;border-left-color:#d97706;color:#92400e">Rewrite title tag with price + local modifier.</div></div>
+                  <div class="ph-rec" style="border-left-color:#059669"><div class="ph-rec-tag" style="color:#065f46">🟢 Opportunity</div><div class="ph-rec-title">Scale IG Reels (3.8× better)</div><div class="ph-rec-text">Reels are only 18% of schedule but 3.8× the ER.</div><div class="ph-rec-action" style="background:#f0fdf4;border-left-color:#059669;color:#065f46">Shift to 60% Reels, focus on patient conversion.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+</div>
 
-
-<!-- ═══ RECOMMENDATIONS ENGINE ═══ -->
-<section id="recommendations" class="section">
-  <div class="container">
-    <div class="fade-up">
-      <div class="eyebrow"><span class="eyebrow-line"></span>Output Layer</div>
-      <h2 class="section-title">The Recommendations<br/><span class="grad-text">Engine</span></h2>
-      <p class="section-sub">InsightRx doesn't produce reports. It produces a ranked, rationale-backed action plan — ready to execute, not interpret.</p>
-    </div>
-    <div class="rec-flow fade-up">
-      <div class="rec-step">
-        <div class="rec-step-icon">📥</div>
-        <div class="rec-step-title">Agent Outputs Collected</div>
-        <div class="rec-step-desc">All 5 upstream agents submit structured JSON findings</div>
-      </div>
-      <div class="rec-arrow">→</div>
-      <div class="rec-step">
-        <div class="rec-step-icon">🧮</div>
-        <div class="rec-step-title">Opportunity Scoring</div>
-        <div class="rec-step-desc">Each signal scored by impact, effort, and strategic alignment</div>
-      </div>
-      <div class="rec-arrow">→</div>
-      <div class="rec-step">
-        <div class="rec-step-icon">🎯</div>
-        <div class="rec-step-title">Ranked Action Plan</div>
-        <div class="rec-step-desc">Prioritized recommendations with rationale and channel</div>
-      </div>
-    </div>
-    <div class="rec-output fade-up">
-      <div class="ro-title">Sample Output — Ranked Recommendations</div>
-      <div class="ro-items">
-        <div class="ro-item">
-          <div class="ro-num" style="background:rgba(248,113,113,.2);color:#f87171">1</div>
-          <div class="ro-text">Optimize title tags on 14 high-impression, low-CTR pages — estimated +18% click-through improvement based on GSC data patterns</div>
-          <span class="ro-channel">SEO</span>
-          <span class="ro-impact">↑ High</span>
-        </div>
-        <div class="ro-item">
-          <div class="ro-num" style="background:rgba(248,113,113,.2);color:#f87171">2</div>
-          <div class="ro-text">Implement FAQ schema markup on top 8 product pages — brand currently absent from AI Overview responses for 23 target queries</div>
-          <span class="ro-channel">AEO</span>
-          <span class="ro-impact">↑ High</span>
-        </div>
-        <div class="ro-item">
-          <div class="ro-num" style="background:rgba(251,191,36,.2);color:#fbbf24">3</div>
-          <div class="ro-text">Shift 22% of Meta ad budget from broad audiences to retargeting — ROAS 3.1x vs. 1.4x differential identified by Social Agent</div>
-          <span class="ro-channel">Paid</span>
-          <span class="ro-impact">↑ Med</span>
-        </div>
-        <div class="ro-item">
-          <div class="ro-num" style="background:rgba(251,191,36,.2);color:#fbbf24">4</div>
-          <div class="ro-text">Publish 3 topical cluster articles to build entity authority for generative AI visibility — 0% GEO presence currently detected for primary category</div>
-          <span class="ro-channel">GEO</span>
-          <span class="ro-impact">↑ Strategic</span>
-        </div>
-        <div class="ro-item">
-          <div class="ro-num" style="background:rgba(74,222,128,.2);color:#4ade80">5</div>
-          <div class="ro-text">Fix 3 crawlability issues blocking 12% of content from Google indexing — technical debt flag surfaced by SEO Agent audit</div>
-          <span class="ro-channel">Technical</span>
-          <span class="ro-impact">↑ Med</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+<div id="tab-learnings" class="tab-panel">
 <!-- ═══ WHAT I LEARNED ═══ -->
 <section id="learned" class="section">
   <div class="container">
@@ -1372,6 +1211,9 @@
 </section>
 
 
+</div>
+
+<div id="tab-contact" class="tab-panel">
 <!-- ═══ CONTACT ═══ -->
 <section id="contact" class="section">
   <div class="container">
@@ -1393,6 +1235,10 @@
   </div>
 </section>
 
+
+</div>
+
+</div><!-- /tab-panels -->
 
 <!-- FOOTER -->
 <footer>
