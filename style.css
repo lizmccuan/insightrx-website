@@ -1004,3 +1004,36 @@ footer{background:var(--bg-0);border-top:1px solid var(--border);padding:28px 0}
   .pv-title{font-size:16px}
   .pipe-desc{display:none}
 }
+
+/* ═══ AGENT PIPELINE OVERVIEW STYLES ═══════════════════════════════════════ */
+.ov-pipeline-row{display:flex;align-items:flex-start;justify-content:center;gap:0;margin-bottom:16px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:14px 12px;flex-wrap:wrap;row-gap:8px}
+.ov-pipe-step{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;min-width:90px;max-width:140px;text-align:center;position:relative;padding:6px 4px}
+.ov-pipe-step.ov-done .ov-step-icon{background:#ede9fe;border-color:#c4b5fd;color:#6d28d9}
+.ov-step-icon{width:32px;height:32px;border-radius:8px;background:#f3f4f6;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;color:#9ca3af;margin:0 auto}
+.ov-step-name{font-size:10px;font-weight:700;color:#111827}
+.ov-step-stat{font-size:9px;color:#6b7280}
+.ov-step-check{font-size:9px;font-weight:700;color:#059669;background:#d1fae5;padding:1px 6px;border-radius:9px}
+.ov-pipe-arrow{font-size:16px;color:#ddd6fe;display:flex;align-items:center;padding:0 2px;margin-top:14px;flex-shrink:0}
+.ov-chat-card{background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:12px 14px;margin-top:2px}
+.ov-chat-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.ov-chat-q{font-size:11px;font-weight:600;color:#374151;margin-bottom:6px;font-style:italic}
+.ov-chat-q::before{content:'"';color:#9ca3af}
+.ov-chat-q::after{content:'"';color:#9ca3af}
+.ov-chat-a{font-size:10.5px;color:#374151;line-height:1.6;background:#f5f3ff;border-left:3px solid #7c3aed;padding:8px 10px;border-radius:0 6px 6px 0}
+
+/* ═══ SIDEBAR STEP BADGE ════════════════════════════════════════════════════ */
+.sb-step-badge{margin-left:auto;width:16px;height:16px;border-radius:50%;background:#6d28d9;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* ═══ RESPONSIVE — OVERVIEW PIPELINE ROW ═══════════════════════════════════ */
+@media(max-width:900px){
+  .ov-pipeline-row{gap:0;padding:10px 8px}
+  .ov-pipe-step{min-width:70px}
+  .ov-pipe-arrow{font-size:12px;margin-top:12px}
+}
+@media(max-width:640px){
+  .ov-pipeline-row{flex-direction:column;align-items:stretch;padding:10px}
+  .ov-pipe-step{flex-direction:row;align-items:center;max-width:100%;gap:8px;text-align:left;padding:6px 8px}
+  .ov-pipe-arrow{transform:rotate(90deg);margin:2px auto;font-size:14px}
+  .ov-step-name{flex:1}
+  .kpi-6{grid-template-columns:repeat(2,1fr)}
+}

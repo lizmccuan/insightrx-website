@@ -99,45 +99,38 @@ document.querySelectorAll('.ph-tab').forEach(function(btn) {
   });
 });
 
-// ── SIDEBAR → APP TAB SYNC ───────────────────────────────────────────────────
+// ── APP TAB + SIDEBAR SYNC ───────────────────────────────────────────────────
 (function(){
   var tabLabels = {
-    'dt-dashboard':    'Executive Dashboard',
-    'dt-sources':      'Data Sources',
-    'dt-analysis':     'Insight Agent · Analysis',
-    'dt-opportunities':'Strategy Agent · Opportunities',
-    'dt-recs':         'Execution Agent · Recommendations',
-    'dt-reports':      'Evaluation Agent · Reports',
-    'dt-chat':         'Chat with AI Agent'
+    'dt-overview':   'Pipeline Overview',
+    'dt-intake':     '① Data Intake Agent',
+    'dt-insight':    '② Insight Agent',
+    'dt-strategy':   '③ Strategy Agent',
+    'dt-execution':  '④ Execution Agent',
+    'dt-evaluation': '⑤ Evaluation Agent'
   };
 
   function switchAppTab(panelId) {
-    // Activate correct top-bar tab
     document.querySelectorAll('.app-tab').forEach(function(b){
       b.classList.toggle('active', b.dataset.panel === panelId);
     });
-    // Activate correct panel
     document.querySelectorAll('.app-panel').forEach(function(p){
       p.classList.toggle('active', p.id === panelId);
     });
-    // Sync sidebar items
     document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
       s.classList.toggle('active', s.dataset.apptab === panelId);
     });
-    // Update topbar label
     var lbl = document.getElementById('app-topbar-label');
     if(lbl && tabLabels[panelId]) lbl.textContent = tabLabels[panelId];
   }
 
-  // Sidebar clicks
+  // Sidebar item clicks
   document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
     s.addEventListener('click', function(){ switchAppTab(s.dataset.apptab); });
   });
 
-  // Top-bar tab clicks — override existing handler to also sync sidebar + label
-  document.querySelectorAll('.app-tab').forEach(function(btn) {
-    btn.addEventListener('click', function(){
-      switchAppTab(btn.dataset.panel);
-    });
+  // Top-bar tab clicks
+  document.querySelectorAll('.app-tab').forEach(function(btn){
+    btn.addEventListener('click', function(){ switchAppTab(btn.dataset.panel); });
   });
 })();
