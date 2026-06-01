@@ -102,62 +102,35 @@ document.querySelectorAll('.ph-tab').forEach(function(btn) {
 // ── APP TAB + SIDEBAR SYNC ───────────────────────────────────────────────────
 (function(){
   var tabLabels = {
-    'dt-overview':   'Executive Overview',
+    'dt-overview':   'Pipeline Overview',
     'dt-intake':     '① Data Intake Agent',
     'dt-insight':    '② Insight Agent',
     'dt-strategy':   '③ Strategy Agent',
     'dt-execution':  '④ Execution Agent',
-    'dt-evaluation': '⑤ Evaluation Agent',
-    'dt-reports':    'Executive Reports',
-    'dt-chat':       'Talk to AI Agent'
+    'dt-evaluation': '⑤ Evaluation Agent'
   };
-  function switchAppTab(id){
+
+  function switchAppTab(panelId) {
     document.querySelectorAll('.app-tab').forEach(function(b){
-      b.classList.toggle('active', b.dataset.panel === id);
+      b.classList.toggle('active', b.dataset.panel === panelId);
     });
     document.querySelectorAll('.app-panel').forEach(function(p){
-      p.classList.toggle('active', p.id === id);
+      p.classList.toggle('active', p.id === panelId);
     });
     document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
-      s.classList.toggle('active', s.dataset.apptab === id);
+      s.classList.toggle('active', s.dataset.apptab === panelId);
     });
     var lbl = document.getElementById('app-topbar-label');
-    if(lbl && tabLabels[id]) lbl.textContent = tabLabels[id];
+    if(lbl && tabLabels[panelId]) lbl.textContent = tabLabels[panelId];
   }
+
+  // Sidebar item clicks
   document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
     s.addEventListener('click', function(){ switchAppTab(s.dataset.apptab); });
   });
+
+  // Top-bar tab clicks
   document.querySelectorAll('.app-tab').forEach(function(btn){
     btn.addEventListener('click', function(){ switchAppTab(btn.dataset.panel); });
   });
 })();
-
-// ── AI AGENT CHAT ─────────────────────────────────────────────────────────────
-var chatResponses = {
-  'What are my biggest SEO opportunities?': 'Your biggest SEO opportunities are: (1) CTR recovery on "botox savings near me" — 12,400 impressions, only 1.9% CTR vs 6.2% expected (+520 clicks/month potential); (2) Local search gap — 14 high-intent Chicago queries with zero competition; (3) AI answer visibility — add FAQ schema to appear in Google AI Overviews and Perplexity.',
-  'Which pages should I update first?': 'Prioritize in this order: (1) /botox-savings — highest impression volume, worst CTR gap; (2) /dermal-fillers — similar CTR underperformance; (3) /med-spa-services — high traffic but missing local modifiers. All three need title tag rewrites with price signals and local modifiers. Implementation briefs are ready in the Execution tab.',
-  'What content topics could drive more traffic?': 'Based on your Search Visibility Data, the highest-opportunity content topics are: (1) Chicago local landing page targeting "med spa chicago" (9,100 impressions/month, uncontested); (2) Before/after patient results — your highest social engagement topic at 7.1% ER; (3) FAQ content targeting "how much does X cost in Chicago" — qualifies for both featured snippets and AI answer citations.',
-  'Summarize the top recommendations.': 'Here's your 5-action priority list: (1) Rewrite title tags on /botox-savings, /dermal-fillers, /med-spa-services — est. +520 clicks/month, 1-2 days; (2) Move booking CTA above fold, simplify form to 3 fields — target 1.2% → 3.7% conversion, 1 week; (3) Add FAQ schema to top 3 pages — AI answer eligibility, 2-3 days; (4) Publish /chicago-med-spa local landing page — 14 uncontested queries, 2 weeks; (5) Shift social to 60% IG Reels — 2× reach in 60 days, ongoing.'
-};
-function irChatSend(btn) {
-  var box = document.getElementById('chat-messages-box');
-  var inp = document.getElementById('chat-input-field');
-  if(!box) return;
-  var q = btn ? btn.textContent.trim() : (inp ? inp.value.trim() : '');
-  if(!q) return;
-  if(inp) inp.value = '';
-  var uDiv = document.createElement('div');
-  uDiv.className = 'chat-msg chat-user';
-  uDiv.innerHTML = '<div class="chat-bubble user">' + q + '</div><div class="chat-ts">Just now</div>';
-  box.appendChild(uDiv);
-  var r = chatResponses[q] || 'Great question. Based on your pipeline data, I can see clear patterns in your traffic and conversion signals. Check the Analysis and Execution tabs for specific findings and ready-to-execute briefs.';
-  setTimeout(function(){
-    var aDiv = document.createElement('div');
-    aDiv.className = 'chat-msg chat-ai';
-    aDiv.innerHTML = '<div class="chat-bubble ai">' + r + '</div><div class="chat-ts">Just now</div>';
-    box.appendChild(aDiv);
-    box.scrollTop = box.scrollHeight;
-  }, 600);
-  box.scrollTop = box.scrollHeight;
-}
-window.irChatSend = irChatSend;

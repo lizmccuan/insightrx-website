@@ -297,7 +297,7 @@
     <div class="fade-up">
       <div class="eyebrow"><span class="eyebrow-line"></span>The Problem</div>
       <h2 class="section-title">The Future of Marketing Intelligence<br/>Is <span class="grad-text">Agentic.</span></h2>
-      <p class="section-sub">InsightRx uses AI-driven workflows and specialized agents to transform fragmented marketing data into strategic insights and operational efficiency. By connecting analytics, search performance, content intelligence, and social signals into a unified workflow, InsightRx helps marketers move from reporting metrics to making decisions.</p>
+      <p class="section-sub">InsightRx uses AI-driven workflows and specialized agents to transform fragmented marketing data into strategic insights and operational efficiency.</p>
     </div>
     <div class="problem-grid">
       <div class="prob-card fade-up">
@@ -883,9 +883,9 @@
   <div class="container">
 
     <div class="demo-header fade-up">
-      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Live Application Walkthrough<span class="eyebrow-line"></span></div>
-      <h2 class="section-title mx-auto">InsightRx <span class="grad-text">Platform Demo</span></h2>
-      <p class="section-sub mx-auto" style="text-align:center;max-width:580px">Click any tab to walk through the full multi-agent pipeline — from data intake to executive reporting. Built with real components, not screenshots.</p>
+      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Live Product Preview<span class="eyebrow-line"></span></div>
+      <h2 class="section-title mx-auto">The Agent Pipeline in <span class="grad-text">Action</span></h2>
+      <p class="section-sub mx-auto" style="text-align:center;max-width:560px">Each tab walks through one stage of the InsightRx multi-agent workflow — from raw data intake to a ranked, ready-to-execute action plan.</p>
     </div>
 
     <div class="view-toggle fade-up">
@@ -899,216 +899,475 @@
 
     <div class="mockup-stage fade-up">
 
-      <!-- DESKTOP -->
+      <!-- ══ DESKTOP ══ -->
       <div class="mockup-desktop active" id="viewDesktop">
         <div class="browser-chrome">
           <div class="browser-dots"><span></span><span></span><span></span></div>
-          <div class="browser-url">app.insightrx.ai / dashboard</div>
+          <div class="browser-url">app.insightrx.ai / pipeline</div>
         </div>
         <div class="app-shell">
+
+          <!-- SIDEBAR -->
           <aside class="app-sidebar">
             <div class="sb-logo">Insight<span>Rx</span></div>
             <div class="sb-section-label">Pipeline</div>
-            <div class="sb-item active" data-apptab="dt-overview"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Overview</span></div>
-            <div class="sb-item" data-apptab="dt-intake"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg><span>Data Intake</span><span class="sb-step-badge">1</span></div>
-            <div class="sb-item" data-apptab="dt-insight"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Insight Agent</span><span class="sb-step-badge">2</span></div>
-            <div class="sb-item" data-apptab="dt-strategy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Strategy Agent</span><span class="sb-step-badge">3</span></div>
-            <div class="sb-item" data-apptab="dt-execution"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Execution Agent</span><span class="sb-step-badge">4</span></div>
-            <div class="sb-item" data-apptab="dt-evaluation"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg><span>Evaluation Agent</span><span class="sb-step-badge">5</span></div>
-            <div class="sb-section-label">Outputs</div>
-            <div class="sb-item" data-apptab="dt-reports"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Reports</span></div>
-            <div class="sb-item" data-apptab="dt-chat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Talk to AI Agent</span></div>
+            <div class="sb-item active" data-apptab="dt-overview">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Overview</span>
+            </div>
+            <div class="sb-item" data-apptab="dt-intake">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg><span>Data Intake</span><span class="sb-step-badge">1</span>
+            </div>
+            <div class="sb-item" data-apptab="dt-insight">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Insight Agent</span><span class="sb-step-badge">2</span>
+            </div>
+            <div class="sb-item" data-apptab="dt-strategy">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Strategy Agent</span><span class="sb-step-badge">3</span>
+            </div>
+            <div class="sb-item" data-apptab="dt-execution">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Execution Agent</span><span class="sb-step-badge">4</span>
+            </div>
+            <div class="sb-item" data-apptab="dt-evaluation">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Evaluation Agent</span><span class="sb-step-badge">5</span>
+            </div>
+            <div class="sb-section-label" style="margin-top:auto">System</div>
+            <div class="sb-item" data-apptab="dt-overview">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Ask AI Agent</span>
+            </div>
           </aside>
 
+          <!-- MAIN -->
           <div class="app-main">
             <div class="app-topbar">
               <div>
-                <div class="app-topbar-title" id="app-topbar-label">Executive Overview</div>
-                <div class="app-topbar-meta">InsightRx &middot; Healthcare Practice &middot; May 2026</div>
+                <div class="app-topbar-title" id="app-topbar-label">Pipeline Overview</div>
+                <div class="app-topbar-meta">InsightRx · Healthcare Practice · May 2026</div>
               </div>
               <div class="app-inner-tabs">
                 <button class="app-tab active" data-panel="dt-overview">Overview</button>
-                <button class="app-tab" data-panel="dt-intake">&#9312; Intake</button>
-                <button class="app-tab" data-panel="dt-insight">&#9313; Insight</button>
-                <button class="app-tab" data-panel="dt-strategy">&#9314; Strategy</button>
-                <button class="app-tab" data-panel="dt-execution">&#9315; Execution</button>
-                <button class="app-tab" data-panel="dt-evaluation">&#9316; Evaluation</button>
-                <button class="app-tab" data-panel="dt-reports">Reports</button>
-                <button class="app-tab" data-panel="dt-chat">AI Agent</button>
+                <button class="app-tab" data-panel="dt-intake">① Data Intake</button>
+                <button class="app-tab" data-panel="dt-insight">② Insight</button>
+                <button class="app-tab" data-panel="dt-strategy">③ Strategy</button>
+                <button class="app-tab" data-panel="dt-execution">④ Execution</button>
+                <button class="app-tab" data-panel="dt-evaluation">⑤ Evaluation</button>
               </div>
             </div>
             <div class="app-content">
 
-              <!-- OVERVIEW -->
+              <!-- ── OVERVIEW ─────────────────────────────────────── -->
               <div class="app-panel active" id="dt-overview">
                 <div class="ov-pipeline-row">
-                  <div class="ov-pipe-step ov-done"><div class="ov-step-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="ov-step-name">Data Intake</div><div class="ov-step-check">&#10003; 47K pts</div></div>
-                  <div class="ov-pipe-arrow">&rarr;</div>
-                  <div class="ov-pipe-step ov-done"><div class="ov-step-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="ov-step-name">Insight Agent</div><div class="ov-step-check">&#10003; 12 insights</div></div>
-                  <div class="ov-pipe-arrow">&rarr;</div>
-                  <div class="ov-pipe-step ov-done"><div class="ov-step-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="ov-step-name">Strategy Agent</div><div class="ov-step-check">&#10003; 5 opps</div></div>
-                  <div class="ov-pipe-arrow">&rarr;</div>
-                  <div class="ov-pipe-step ov-done"><div class="ov-step-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div class="ov-step-name">Execution Agent</div><div class="ov-step-check">&#10003; 5 briefs</div></div>
-                  <div class="ov-pipe-arrow">&rarr;</div>
-                  <div class="ov-pipe-step ov-done"><div class="ov-step-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg></div><div class="ov-step-name">Evaluation Agent</div><div class="ov-step-check">&#10003; Score 5.37</div></div>
+                  <div class="ov-pipe-step ov-done">
+                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+                    <div class="ov-step-name">Data Intake</div>
+                    <div class="ov-step-stat">47,210 pts</div>
+                    <div class="ov-step-check">✓</div>
+                  </div>
+                  <div class="ov-pipe-arrow">→</div>
+                  <div class="ov-pipe-step ov-done">
+                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                    <div class="ov-step-name">Insight Agent</div>
+                    <div class="ov-step-stat">12 insights</div>
+                    <div class="ov-step-check">✓</div>
+                  </div>
+                  <div class="ov-pipe-arrow">→</div>
+                  <div class="ov-pipe-step ov-done">
+                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <div class="ov-step-name">Strategy Agent</div>
+                    <div class="ov-step-stat">5 opps ranked</div>
+                    <div class="ov-step-check">✓</div>
+                  </div>
+                  <div class="ov-pipe-arrow">→</div>
+                  <div class="ov-pipe-step ov-done">
+                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+                    <div class="ov-step-name">Execution Agent</div>
+                    <div class="ov-step-stat">5 action briefs</div>
+                    <div class="ov-step-check">✓</div>
+                  </div>
+                  <div class="ov-pipe-arrow">→</div>
+                  <div class="ov-pipe-step ov-done">
+                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                    <div class="ov-step-name">Evaluation Agent</div>
+                    <div class="ov-step-stat">Report ready</div>
+                    <div class="ov-step-check">✓</div>
+                  </div>
                 </div>
-                <div class="ov-scores-row">
-                  <div class="ov-score-card"><div class="ov-score-top"><span class="ov-score-val">5.37</span><span class="ov-score-denom">/10</span></div><div class="ov-score-bar"><div class="ov-score-fill" style="width:53.7%;background:linear-gradient(90deg,#7c3aed,#6366f1)"></div></div><div class="ov-score-label">Opportunity Score</div><div class="ov-score-status ov-status-med">&#8593; Improving</div></div>
-                  <div class="ov-score-card"><div class="ov-score-top"><span class="ov-score-val">7.2</span><span class="ov-score-denom">/10</span></div><div class="ov-score-bar"><div class="ov-score-fill" style="width:72%;background:linear-gradient(90deg,#059669,#10b981)"></div></div><div class="ov-score-label">Traffic Health</div><div class="ov-score-status ov-status-good">&#9679; Good</div></div>
-                  <div class="ov-score-card"><div class="ov-score-top"><span class="ov-score-val">4.8</span><span class="ov-score-denom">/10</span></div><div class="ov-score-bar"><div class="ov-score-fill" style="width:48%;background:linear-gradient(90deg,#dc2626,#f59e0b)"></div></div><div class="ov-score-label">SEO Visibility</div><div class="ov-score-status ov-status-crit">&#9888; Needs Work</div></div>
-                  <div class="ov-score-card"><div class="ov-score-top"><span class="ov-score-val">6.1</span><span class="ov-score-denom">/10</span></div><div class="ov-score-bar"><div class="ov-score-fill" style="width:61%;background:linear-gradient(90deg,#d97706,#fbbf24)"></div></div><div class="ov-score-label">Content Readiness</div><div class="ov-score-status ov-status-med">&#9679; Fair</div></div>
-                  <div class="ov-score-card"><div class="ov-score-top"><span class="ov-score-val">5.9</span><span class="ov-score-denom">/10</span></div><div class="ov-score-bar"><div class="ov-score-fill" style="width:59%;background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div></div><div class="ov-score-label">Social Engagement</div><div class="ov-score-status ov-status-med">&#9679; Fair</div></div>
+                <div class="kpi-row kpi-6">
+                  <div class="kpi-card"><div class="kpi-label">Opportunity Score</div><div class="kpi-value">5.37</div><div class="kpi-sub">↑ +0.4 vs last run</div></div>
+                  <div class="kpi-card" style="border-top-color:#6366f1"><div class="kpi-label">Top Opportunity</div><div class="kpi-value" style="font-size:13px;padding-top:2px">CTR Optimization</div><div class="kpi-sub">Botox cluster · Pos 4.1</div></div>
+                  <div class="kpi-card" style="border-top-color:#059669"><div class="kpi-label">Traffic Trend</div><div class="kpi-value">+12%</div><div class="kpi-sub">vs prior 4-week avg</div></div>
+                  <div class="kpi-card" style="border-top-color:#0ea5e9"><div class="kpi-label">Engagement Trend</div><div class="kpi-value">+8%</div><div class="kpi-sub">Session depth improving</div></div>
+                  <div class="kpi-card" style="border-top-color:#f59e0b"><div class="kpi-label">Actions Ready</div><div class="kpi-value">5</div><div class="kpi-sub">4 high priority</div></div>
+                  <div class="kpi-card" style="border-top-color:#10b981"><div class="kpi-label">Agent Status</div><div class="kpi-value" style="font-size:13px">5 / 5</div><div class="kpi-sub"><span style="color:#059669;font-weight:600">● All Complete</span></div></div>
                 </div>
                 <div class="insight-row">
                   <div class="insight-card">
-                    <div class="insight-header"><span class="insight-title">Critical: Engagement&ndash;Conversion Gap</span><span class="insight-badge badge-crit">Critical</span></div>
-                    <div class="insight-text">4m 48s avg session, 1.2% conversion &mdash; 3.1&times; below industry median. Strong intent, broken funnel.</div>
-                    <div class="insight-rec">&#8599; Move CTA above fold &middot; Simplify form to 3 fields &middot; Add social proof adjacent to every button.</div>
+                    <div class="insight-header"><span class="insight-title">Critical: Engagement–Conversion Gap</span><span class="insight-badge badge-crit">Critical</span></div>
+                    <div class="insight-text">4m 48s avg session but only 1.2% conversion — 3.1× below industry median. Strong intent, broken funnel.</div>
+                    <div class="insight-rec">↗ Execution Agent brief: Move CTA above fold, simplify booking form to 3 fields.</div>
                   </div>
                   <div class="insight-card">
                     <div class="insight-header"><span class="insight-title">High: CTR Gap on Top Keyword Cluster</span><span class="insight-badge badge-high">High</span></div>
                     <div class="insight-text">12,400 monthly impressions at Pos 4.1 yielding 1.9% CTR vs 6.2% expected. ~520 clicks/month unrealized.</div>
-                    <div class="insight-rec">&#8599; Rewrite title tags with price signal + local modifier &middot; Test urgency language in meta description.</div>
+                    <div class="insight-rec">↗ Execution Agent brief: Rewrite title tags with price signal and local modifier.</div>
                   </div>
                 </div>
-                <div class="ov-ai-summary">
-                  <div class="ov-ai-header"><span class="agent-pill">&#11042; AI Executive Summary</span><span style="font-size:10px;color:#6b7280">Generated by Evaluation Agent &middot; May 31, 2026</span></div>
-                  <div class="ov-ai-body">Your primary growth lever this month is <strong>CTR optimization</strong> &mdash; 12,400 monthly impressions are largely uncaptured due to title tag mismatches. Pair this with <strong>booking flow improvements</strong> (1.2% &rarr; ~3.7% conversion target) and <strong>FAQ schema implementation</strong> for AI search visibility. These three actions represent the majority of your short-term revenue opportunity. All implementation briefs are ready in the Execution tab.</div>
+                <div class="ov-chat-card">
+                  <div class="ov-chat-header"><span class="agent-pill">⬡ Ask the AI Agent</span><span class="chat-status" style="font-size:10px;color:#059669;font-weight:600">● Live</span></div>
+                  <div class="ov-chat-preview">
+                    <div class="ov-chat-q">"What should we prioritize this month?"</div>
+                    <div class="ov-chat-a">Based on your data, the top 3 actions are: <strong>(1)</strong> Rewrite title tags to recover ~520 clicks/mo · <strong>(2)</strong> Move booking CTA above fold to lift 1.2% → ~3.7% conversion · <strong>(3)</strong> Add FAQ schema to 3 pages for AI answer eligibility. All briefs are ready in the Execution tab.</div>
+                  </div>
                 </div>
               </div>
 
-              <!-- DATA INTAKE -->
+              <!-- ── DATA INTAKE AGENT ──────────────────────────── -->
               <div class="app-panel" id="dt-intake">
-                <div class="ia-badge-row"><span class="agent-pill">&#11042; Data Intake Agent &middot; Stage 1 of 5</span><span style="font-size:10px;color:#6b7280">Last run: May 31, 2026 &middot; 9:14 AM &middot; All sources nominal</span><span class="ds-status-dot">&#9679; 5 / 5 Connected</span></div>
+                <div class="ia-badge-row">
+                  <span class="agent-pill">⬡ Data Intake Agent · Stage 1 of 5</span>
+                  <span style="font-size:10px;color:#6b7280">Last run: May 31, 2026 · 9:14 AM · All sources nominal</span>
+                  <span class="ds-status-dot">● 5 / 5 Connected</span>
+                </div>
                 <div class="ds-grid">
-                  <div class="ds-card"><div class="ds-card-head"><div class="ds-icon" style="background:#e8f5e9;color:#2e7d32"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="ds-name">Google Analytics 4</div><div class="ds-type">Behavioral &middot; Session Data</div></div></div><div class="ds-checks"><span class="dsc dsc-ok">&#10003; Imported</span><span class="dsc dsc-ok">&#10003; Cleaned</span><span class="dsc dsc-ok">&#10003; Standardized</span><span class="dsc dsc-ok">&#10003; Ready</span></div><div class="ds-fields"><span class="sf">sessions</span><span class="sf">users</span><span class="sf">conversions</span><span class="sf">engagement_time</span></div></div>
-                  <div class="ds-card"><div class="ds-card-head"><div class="ds-icon" style="background:#e3f2fd;color:#1565c0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><div class="ds-name">Google Search Console</div><div class="ds-type">Search Visibility Data</div></div></div><div class="ds-checks"><span class="dsc dsc-ok">&#10003; Imported</span><span class="dsc dsc-ok">&#10003; Cleaned</span><span class="dsc dsc-ok">&#10003; Standardized</span><span class="dsc dsc-ok">&#10003; Ready</span></div><div class="ds-fields"><span class="sf">queries</span><span class="sf">impressions</span><span class="sf">ctr</span><span class="sf">position</span></div></div>
-                  <div class="ds-card"><div class="ds-card-head"><div class="ds-icon" style="background:#e8eaf6;color:#3949ab"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><div class="ds-name">Meta Social Analytics</div><div class="ds-type">Social &middot; Engagement Data</div></div></div><div class="ds-checks"><span class="dsc dsc-ok">&#10003; Imported</span><span class="dsc dsc-ok">&#10003; Cleaned</span><span class="dsc dsc-ok">&#10003; Standardized</span><span class="dsc dsc-ok">&#10003; Ready</span></div><div class="ds-fields"><span class="sf">reach</span><span class="sf">engagement</span><span class="sf">impressions</span><span class="sf">roas</span></div></div>
-                  <div class="ds-card"><div class="ds-card-head"><div class="ds-icon" style="background:#fff3e0;color:#e65100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><div class="ds-name">Website Performance Data</div><div class="ds-type">Technical &middot; Core Web Vitals</div></div></div><div class="ds-checks"><span class="dsc dsc-ok">&#10003; Imported</span><span class="dsc dsc-ok">&#10003; Cleaned</span><span class="dsc dsc-ok">&#10003; Standardized</span><span class="dsc dsc-ok">&#10003; Ready</span></div><div class="ds-fields"><span class="sf">lcp</span><span class="sf">cls</span><span class="sf">fid</span><span class="sf">page_speed</span></div></div>
-                  <div class="ds-card ds-card-full"><div class="ds-card-head"><div class="ds-icon" style="background:#f3e5f5;color:#6a1b9a"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="11 8 11 11 13 13"/></svg></div><div><div class="ds-name">Keyword Intelligence Data</div><div class="ds-type">SEO Findings &middot; Competitive Rankings</div></div></div><div class="ds-checks"><span class="dsc dsc-ok">&#10003; Imported</span><span class="dsc dsc-ok">&#10003; Cleaned</span><span class="dsc dsc-ok">&#10003; Standardized</span><span class="dsc dsc-ok">&#10003; Ready</span></div><div class="ds-fields"><span class="sf">keyword_rankings</span><span class="sf">search_volume</span><span class="sf">gap_analysis</span><span class="sf">competitor_data</span><span class="sf">serp_features</span></div></div>
+                  <div class="ds-card">
+                    <div class="ds-card-head">
+                      <div class="ds-icon" style="background:#e8f5e9;color:#2e7d32"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                      <div><div class="ds-name">Google Analytics 4</div><div class="ds-type">Behavioral · Session Data</div></div>
+                    </div>
+                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
+                    <div class="ds-fields"><span class="sf">sessions</span><span class="sf">users</span><span class="sf">conversions</span><span class="sf">engagement_time</span><span class="sf">bounce_rate</span></div>
+                  </div>
+                  <div class="ds-card">
+                    <div class="ds-card-head">
+                      <div class="ds-icon" style="background:#e3f2fd;color:#1565c0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                      <div><div class="ds-name">Google Search Console</div><div class="ds-type">Search Visibility Data</div></div>
+                    </div>
+                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
+                    <div class="ds-fields"><span class="sf">queries</span><span class="sf">impressions</span><span class="sf">ctr</span><span class="sf">position</span><span class="sf">pages</span></div>
+                  </div>
+                  <div class="ds-card">
+                    <div class="ds-card-head">
+                      <div class="ds-icon" style="background:#e8eaf6;color:#3949ab"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                      <div><div class="ds-name">Meta Social Analytics</div><div class="ds-type">Social · Engagement Data</div></div>
+                    </div>
+                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
+                    <div class="ds-fields"><span class="sf">reach</span><span class="sf">engagement</span><span class="sf">impressions</span><span class="sf">roas</span><span class="sf">ctr</span></div>
+                  </div>
+                  <div class="ds-card">
+                    <div class="ds-card-head">
+                      <div class="ds-icon" style="background:#fff3e0;color:#e65100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                      <div><div class="ds-name">Website Performance Data</div><div class="ds-type">Technical · Core Web Vitals</div></div>
+                    </div>
+                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
+                    <div class="ds-fields"><span class="sf">lcp</span><span class="sf">cls</span><span class="sf">fid</span><span class="sf">page_speed</span></div>
+                  </div>
+                  <div class="ds-card ds-card-full">
+                    <div class="ds-card-head">
+                      <div class="ds-icon" style="background:#f3e5f5;color:#6a1b9a"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="11 8 11 11 13 13"/></svg></div>
+                      <div><div class="ds-name">Keyword Intelligence Data</div><div class="ds-type">SEO Findings · Competitive Rankings</div></div>
+                    </div>
+                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
+                    <div class="ds-fields"><span class="sf">keyword_rankings</span><span class="sf">search_volume</span><span class="sf">gap_analysis</span><span class="sf">competitor_data</span><span class="sf">serp_features</span></div>
+                  </div>
                 </div>
-                <div class="ds-flow-bar"><div class="ds-flow-nodes"><span class="ds-fn">GA4</span><span class="ds-fn">Search Console</span><span class="ds-fn">Meta Social</span><span class="ds-fn">Web Performance</span><span class="ds-fn">Keyword Intelligence</span></div><div class="ds-flow-arrow">&#8595; Unified Data Pipeline &middot; Schema Normalization &middot; Quality Validation &#8595;</div><div class="ds-flow-target">&#11042; InsightRx Intelligence Layer &middot; 5 sources &middot; 47,210 data points &middot; Ready for Insight Agent</div></div>
+                <div class="ds-flow-bar">
+                  <div class="ds-flow-nodes"><span class="ds-fn">GA4</span><span class="ds-fn">Search Console</span><span class="ds-fn">Meta Social</span><span class="ds-fn">Web Performance</span><span class="ds-fn">Keyword Intelligence</span></div>
+                  <div class="ds-flow-arrow">↓ Unified Data Pipeline · Schema Normalization · Quality Validation ↓</div>
+                  <div class="ds-flow-target">⬡ InsightRx Intelligence Layer · 5 sources · 47,210 data points · Ready for Insight Agent</div>
+                </div>
               </div>
 
-              <!-- INSIGHT AGENT -->
+              <!-- ── INSIGHT AGENT ──────────────────────────────── -->
               <div class="app-panel" id="dt-insight">
-                <div class="ia-badge-row"><span class="agent-pill agent-pill-insight">&#11042; Insight Agent &middot; Stage 2 of 5</span><span style="font-size:10px;color:#6b7280">12 insights detected across 5 data dimensions &middot; May 2026</span></div>
-                <div class="analysis-grid">
-                  <div class="analysis-card"><div class="analysis-title">High-Impression / Low-CTR Queries</div><div class="mini-table"><div class="mt-head"><span>Query</span><span>Impr.</span><span>CTR</span><span>Gap</span></div><div class="mt-row"><span>botox savings near me</span><span>12,400</span><span>1.9%</span><span class="pill pill-dn">-4.3%</span></div><div class="mt-row"><span>med spa chicago</span><span>9,100</span><span>2.1%</span><span class="pill pill-dn">-2.9%</span></div><div class="mt-row"><span>dermal filler cost</span><span>7,800</span><span>1.4%</span><span class="pill pill-dn">-3.6%</span></div><div class="mt-row"><span>lip filler near me</span><span>5,600</span><span>3.1%</span><span class="pill pill-dn">-1.4%</span></div></div></div>
-                  <div class="analysis-card"><div class="analysis-title">Non-Branded SEO Findings</div><div class="bar-list"><div class="bar-item"><div class="bar-item-label"><span>med spa services</span><span>Pos 3.2 &middot; 8.1K</span></div><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>botox savings cluster</span><span>Pos 4.1 &middot; 12.4K</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>dermal fillers</span><span>Pos 5.7 &middot; 7.8K</span></div><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>aesthetic clinic</span><span>Pos 7.2 &middot; 4.2K</span></div><div class="bar-track"><div class="bar-fill" style="width:34%"></div></div></div></div></div>
+                <div class="ia-badge-row">
+                  <span class="agent-pill agent-pill-insight">⬡ Insight Agent · Stage 2 of 5</span>
+                  <span style="font-size:10px;color:#6b7280">12 insights detected across 5 data dimensions · May 2026</span>
                 </div>
                 <div class="analysis-grid">
-                  <div class="analysis-card"><div class="analysis-title">Top Traffic Sources</div><div class="bar-list"><div class="bar-item"><div class="bar-item-label"><span>google / organic</span><span>68.3%</span></div><div class="bar-track"><div class="bar-fill" style="width:68.3%"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>direct</span><span>14.1%</span></div><div class="bar-track"><div class="bar-fill" style="width:14.1%;background:linear-gradient(90deg,#6366f1,#818cf8)"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>instagram / social</span><span>9.7%</span></div><div class="bar-track"><div class="bar-fill" style="width:9.7%;background:linear-gradient(90deg,#ec4899,#f472b6)"></div></div></div><div class="bar-item"><div class="bar-item-label"><span>facebook / social</span><span>4.8%</span></div><div class="bar-track"><div class="bar-fill" style="width:4.8%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div></div></div></div>
-                  <div class="analysis-card"><div class="analysis-title">Content Performance Signal</div><div class="cp-split"><div><div class="cp-label cp-good">&#8593; High CTR</div><div class="cp-item">patient-reviews <span>4.4%</span></div><div class="cp-item">med-spa-services <span>3.1%</span></div><div class="cp-item">before-after <span>2.9%</span></div></div><div><div class="cp-label cp-bad">&#8595; Low CTR</div><div class="cp-item">botox-savings <span>1.9% &#8595;</span></div><div class="cp-item">dermal-fillers <span>1.4% &#8595;</span></div><div class="cp-item">about-us <span>0.8% &#8595;</span></div></div></div></div>
+                  <div class="analysis-card">
+                    <div class="analysis-title">High-Impression / Low-CTR Queries</div>
+                    <div class="mini-table">
+                      <div class="mt-head"><span>Query</span><span>Impr.</span><span>CTR</span><span>Gap</span></div>
+                      <div class="mt-row"><span>botox savings near me</span><span>12,400</span><span>1.9%</span><span class="pill pill-dn">-4.3%</span></div>
+                      <div class="mt-row"><span>med spa chicago</span><span>9,100</span><span>2.1%</span><span class="pill pill-dn">-2.9%</span></div>
+                      <div class="mt-row"><span>dermal filler cost</span><span>7,800</span><span>1.4%</span><span class="pill pill-dn">-3.6%</span></div>
+                      <div class="mt-row"><span>lip filler near me</span><span>5,600</span><span>3.1%</span><span class="pill pill-dn">-1.4%</span></div>
+                    </div>
+                  </div>
+                  <div class="analysis-card">
+                    <div class="analysis-title">Non-Branded SEO Findings</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>med spa services</span><span>Pos 3.2 · 8.1K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>botox savings cluster</span><span>Pos 4.1 · 12.4K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>dermal fillers</span><span>Pos 5.7 · 7.8K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>aesthetic clinic</span><span>Pos 7.2 · 4.2K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:34%"></div></div></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="chart-card"><div class="chart-label">Weekly Session Trend &mdash; 8-Week View &middot; +12% vs prior period</div><div class="chart-bars"><div class="cbar" style="height:38%;background:#e0e7ff"></div><div class="cbar" style="height:44%;background:#c4b5fd"></div><div class="cbar" style="height:52%;background:#c4b5fd"></div><div class="cbar" style="height:65%;background:#a78bfa"></div><div class="cbar" style="height:55%;background:#e0e7ff"></div><div class="cbar" style="height:72%;background:#a78bfa"></div><div class="cbar" style="height:88%;background:#7c3aed"></div><div class="cbar" style="height:80%;background:#6d28d9"></div></div><div class="chart-x"><span>Apr 7</span><span>Apr 14</span><span>Apr 21</span><span>Apr 28</span><span>May 5</span><span>May 12</span><span>May 19</span><span>May 26</span></div></div>
+                <div class="analysis-grid">
+                  <div class="analysis-card">
+                    <div class="analysis-title">Top Traffic Sources</div>
+                    <div class="bar-list">
+                      <div class="bar-item"><div class="bar-item-label"><span>google / organic</span><span>68.3%</span></div><div class="bar-track"><div class="bar-fill" style="width:68.3%"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>direct</span><span>14.1%</span></div><div class="bar-track"><div class="bar-fill" style="width:14.1%;background:linear-gradient(90deg,#6366f1,#818cf8)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>instagram / social</span><span>9.7%</span></div><div class="bar-track"><div class="bar-fill" style="width:9.7%;background:linear-gradient(90deg,#ec4899,#f472b6)"></div></div></div>
+                      <div class="bar-item"><div class="bar-item-label"><span>facebook / social</span><span>4.8%</span></div><div class="bar-track"><div class="bar-fill" style="width:4.8%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div></div>
+                    </div>
+                  </div>
+                  <div class="analysis-card">
+                    <div class="analysis-title">Content Performance Signal</div>
+                    <div class="cp-split">
+                      <div>
+                        <div class="cp-label cp-good">↑ High Performing</div>
+                        <div class="cp-item">patient-reviews <span>4.4% CTR</span></div>
+                        <div class="cp-item">med-spa-services <span>3.1% CTR</span></div>
+                        <div class="cp-item">before-after-gallery <span>2.9% CTR</span></div>
+                      </div>
+                      <div>
+                        <div class="cp-label cp-bad">↓ Underperforming</div>
+                        <div class="cp-item">botox-savings <span>1.9% ↓</span></div>
+                        <div class="cp-item">dermal-fillers <span>1.4% ↓</span></div>
+                        <div class="cp-item">about-us <span>0.8% ↓</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-card">
+                  <div class="chart-label">Weekly Session Trend — 8-Week View</div>
+                  <div class="chart-bars">
+                    <div class="cbar" style="height:38%;background:#e0e7ff"></div><div class="cbar" style="height:44%;background:#c4b5fd"></div>
+                    <div class="cbar" style="height:52%;background:#c4b5fd"></div><div class="cbar" style="height:65%;background:#a78bfa"></div>
+                    <div class="cbar" style="height:55%;background:#e0e7ff"></div><div class="cbar" style="height:72%;background:#a78bfa"></div>
+                    <div class="cbar" style="height:88%;background:#7c3aed"></div><div class="cbar" style="height:80%;background:#6d28d9"></div>
+                  </div>
+                  <div class="chart-x"><span>Apr 7</span><span>Apr 14</span><span>Apr 21</span><span>Apr 28</span><span>May 5</span><span>May 12</span><span>May 19</span><span>May 26</span></div>
+                </div>
               </div>
 
-              <!-- STRATEGY AGENT -->
+              <!-- ── STRATEGY AGENT ─────────────────────────────── -->
               <div class="app-panel" id="dt-strategy">
-                <div class="ia-badge-row"><span class="agent-pill agent-pill-strategy">&#11042; Strategy Agent &middot; Stage 3 of 5</span><span style="font-size:10px;color:#6b7280">5 opportunities scored by impact &times; confidence &divide; effort</span></div>
+                <div class="ia-badge-row">
+                  <span class="agent-pill agent-pill-strategy">⬡ Strategy Agent · Stage 3 of 5</span>
+                  <span style="font-size:10px;color:#6b7280">5 opportunities scored by impact × confidence ÷ effort</span>
+                </div>
                 <div class="opp-list">
-                  <div class="opp-card opp-crit"><div class="opp-head-row"><span class="opp-tag opp-seo">SEO Opportunity</span><span class="opp-rank">#1 Priority</span></div><div class="opp-title">CTR Recovery &mdash; High-Impression Keyword Cluster</div><div class="opp-desc">12,400 monthly impressions for "botox savings near me" yielding 1.9% CTR vs 6.2% expected. Title tag mismatch and missing price signals suppressing clicks. Conservative estimate: +520 clicks/month.</div><div class="opp-scores"><div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">9/10</div></div><div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">2/10</div></div><div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div></div></div>
-                  <div class="opp-card opp-high"><div class="opp-head-row"><span class="opp-tag opp-conv">Conversion</span><span class="opp-rank">#2 Priority</span></div><div class="opp-title">Booking Flow Friction Reduction</div><div class="opp-desc">4m 48s avg session, 1.2% conversion &mdash; 3.1&times; below industry median. CTA placement, form complexity, and unclear next steps are primary friction points.</div><div class="opp-scores"><div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">10/10</div></div><div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div><div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">High</div></div></div></div>
-                  <div class="opp-card"><div class="opp-head-row"><span class="opp-tag opp-local">Local Visibility</span><span class="opp-rank">#3 Priority</span></div><div class="opp-title">Local SEO Content Gap &mdash; Chicago Med Spa</div><div class="opp-desc">Competitors rank for 14 high-intent local queries where this practice has zero presence. Strong commercial intent, fully uncontested.</div><div class="opp-scores"><div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div><div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div><div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">Med</div></div></div></div>
-                  <div class="opp-card"><div class="opp-head-row"><span class="opp-tag opp-content">Content Gap</span><span class="opp-rank">#4 Priority</span></div><div class="opp-title">AI Answer Visibility &mdash; FAQ &amp; Schema Gap</div><div class="opp-desc">Zero appearances in AI-generated overviews for any target query. Competitors with FAQ schema are cited in Perplexity and Google AI Overviews instead.</div><div class="opp-scores"><div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div><div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">3/10</div></div><div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div></div></div>
-                  <div class="opp-card"><div class="opp-head-row"><span class="opp-tag opp-social">Social</span><span class="opp-rank">#5 Priority</span></div><div class="opp-title">IG Reels Scale &mdash; 3.8&times; Performance Gap</div><div class="opp-desc">Reels outperform all other content types by 3.8&times; but are only 18% of the posting schedule. Shifting to 60% Reels could 2&times; social reach in 60 days.</div><div class="opp-scores"><div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">6/10</div></div><div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">4/10</div></div><div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div></div></div>
+                  <div class="opp-card opp-crit">
+                    <div class="opp-head-row"><span class="opp-tag opp-seo">SEO Opportunity</span><span class="opp-rank">#1 Priority</span></div>
+                    <div class="opp-title">CTR Recovery — High-Impression Keyword Cluster</div>
+                    <div class="opp-desc">12,400 monthly impressions for "botox savings near me" yielding only 1.9% CTR vs 6.2% expected. Title tag mismatch and missing price signals are suppressing clicks. Conservative recovery: +520 clicks/month.</div>
+                    <div class="opp-scores">
+                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">9/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">2/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
+                    </div>
+                  </div>
+                  <div class="opp-card opp-high">
+                    <div class="opp-head-row"><span class="opp-tag opp-conv">Conversion Opportunity</span><span class="opp-rank">#2 Priority</span></div>
+                    <div class="opp-title">Booking Flow Friction Reduction</div>
+                    <div class="opp-desc">4m 48s average session, 1.2% conversion — 3.1× below industry median. Users are engaged but not converting. CTA placement, form complexity, and unclear next steps are primary friction points.</div>
+                    <div class="opp-scores">
+                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">10/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">High</div></div>
+                    </div>
+                  </div>
+                  <div class="opp-card">
+                    <div class="opp-head-row"><span class="opp-tag opp-local">Local Visibility</span><span class="opp-rank">#3 Priority</span></div>
+                    <div class="opp-title">Local SEO Content Gap — Chicago Med Spa</div>
+                    <div class="opp-desc">Competitors rank for 14 high-intent local queries where this practice has zero presence. "Med spa Chicago," "aesthetic clinic near me," and "botox specials Chicago" are uncontested with strong commercial intent.</div>
+                    <div class="opp-scores">
+                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">Med</div></div>
+                    </div>
+                  </div>
+                  <div class="opp-card">
+                    <div class="opp-head-row"><span class="opp-tag opp-content">Content Gap</span><span class="opp-rank">#4 Priority</span></div>
+                    <div class="opp-title">AI Answer Visibility — FAQ &amp; Schema Gap</div>
+                    <div class="opp-desc">Zero appearances in AI-generated overviews for any target query. Competitors with structured FAQ schema are cited in Perplexity and Google AI Overviews. E-E-A-T signals are missing across top service pages.</div>
+                    <div class="opp-scores">
+                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">3/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
+                    </div>
+                  </div>
+                  <div class="opp-card">
+                    <div class="opp-head-row"><span class="opp-tag opp-social">Social</span><span class="opp-rank">#5 Priority</span></div>
+                    <div class="opp-title">IG Reels Scale — 3.8× Performance Gap</div>
+                    <div class="opp-desc">Reels outperform all other content types by 3.8× but comprise only 18% of the posting schedule. Shifting to 60% Reels focused on patient conversion could 2× overall social reach in 60 days.</div>
+                    <div class="opp-scores">
+                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">6/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">4/10</div></div>
+                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- EXECUTION AGENT -->
+              <!-- ── EXECUTION AGENT ────────────────────────────── -->
               <div class="app-panel" id="dt-execution">
-                <div class="ia-badge-row"><span class="agent-pill agent-pill-exec">&#11042; Execution Agent &middot; Stage 4 of 5</span><span style="font-size:10px;color:#6b7280">5 implementation briefs generated &middot; All actions ready to assign</span></div>
+                <div class="ia-badge-row">
+                  <span class="agent-pill agent-pill-exec">⬡ Execution Agent · Stage 4 of 5</span>
+                  <span style="font-size:10px;color:#6b7280">5 implementation briefs generated · All actions ready to assign</span>
+                </div>
                 <div class="rec-list">
-                  <div class="rec-card crit"><div class="rec-tag-row"><span class="rec-tag crit">Critical</span><span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">1&ndash;2 days</span></span></div><div class="rec-signal">Rewrite title tags on top-3 underperforming pages</div><div class="rec-insight">Pages ranking Pos 3&ndash;5 with CTR 2&ndash;4&times; below expected. Title tags lack price signals, urgency, and local modifiers.</div><div class="rec-action crit">Rewrite /botox-savings to "Botox from $X &middot; Chicago Med Spa". Mirror across /dermal-fillers and /med-spa-services.</div></div>
-                  <div class="rec-card crit"><div class="rec-tag-row"><span class="rec-tag crit">Critical</span><span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">1 week</span></span></div><div class="rec-signal">Move CTA above fold &middot; Reduce booking form to 3 fields</div><div class="rec-insight">Users spending 4m 48s on-site but converting at 1.2% &mdash; 3.1&times; below median. Primary CTA is below fold on all service pages.</div><div class="rec-action crit">Move booking CTA above fold on all service pages. Simplify form: Name, Phone, Service. Add review count adjacent to every CTA.</div></div>
-                  <div class="rec-card warn"><div class="rec-tag-row"><span class="rec-tag warn">High Priority</span><span class="rec-meta-tags"><span class="rmt">Impact: High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">2&ndash;3 days</span></span></div><div class="rec-signal">Add FAQ schema to top 3 pages for AI answer eligibility</div><div class="rec-insight">Zero AI Overview appearances for any target query. FAQ markup is the fastest path to AI citation eligibility.</div><div class="rec-action warn">Add 5-question FAQ blocks on /botox-savings, /dermal-fillers, /med-spa-services. Implement JSON-LD schema.</div></div>
-                  <div class="rec-card" style="border-left-color:#6366f1"><div class="rec-tag-row"><span class="rec-tag" style="background:#ede9fe;color:#5b21b6">Medium</span><span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">2 weeks</span></span></div><div class="rec-signal">Publish local landing page targeting Chicago med spa cluster</div><div class="rec-insight">14 high-intent local queries uncontested. A dedicated local page captures this traffic without cannibalizing existing rankings.</div><div class="rec-action">Draft /chicago-med-spa targeting "med spa Chicago" (9,100 impressions). Include LocalBusiness schema, map embed, 3 neighborhood testimonials.</div></div>
-                  <div class="rec-card good"><div class="rec-tag-row"><span class="rec-tag good">Opportunity</span><span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Ongoing</span></span></div><div class="rec-signal">Shift social calendar to 60% Reels &middot; focus on patient conversion</div><div class="rec-insight">Reels drive 7.1% ER vs 0.4% for static images. Current schedule is only 18% Reels.</div><div class="rec-action good">3 Reels / 1 Carousel / 1 Story Poll per week. Before/after results, patient stories, price transparency.</div></div>
+                  <div class="rec-card crit">
+                    <div class="rec-tag-row">
+                      <span class="rec-tag crit">Critical</span>
+                      <span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: 1–2 days</span></span>
+                    </div>
+                    <div class="rec-signal">Rewrite title tags on top-3 underperforming pages</div>
+                    <div class="rec-insight">Pages ranking 3–5 with CTR 2–4× below expected. Title tags lack price signals, urgency, and local modifiers users are actively searching for.</div>
+                    <div class="rec-action crit">Rewrite /botox-savings to "Botox from $X · Chicago Med Spa". Mirror pattern across /dermal-fillers and /med-spa-services. A/B test urgency modifier in meta description.</div>
+                  </div>
+                  <div class="rec-card crit">
+                    <div class="rec-tag-row">
+                      <span class="rec-tag crit">Critical</span>
+                      <span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">Timeline: 1 week</span></span>
+                    </div>
+                    <div class="rec-signal">Move CTA above fold, reduce booking form to 3 fields</div>
+                    <div class="rec-insight">Users spending 4m 48s on-site but converting at 1.2% — 3.1× below median. Primary booking CTA is below the fold on all service pages.</div>
+                    <div class="rec-action crit">Move booking CTA above fold on all service pages. Simplify form: Name, Phone, Service. Add review count (social proof) adjacent to every CTA button.</div>
+                  </div>
+                  <div class="rec-card warn">
+                    <div class="rec-tag-row">
+                      <span class="rec-tag warn">High Priority</span>
+                      <span class="rec-meta-tags"><span class="rmt">Impact: High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: 2–3 days</span></span>
+                    </div>
+                    <div class="rec-signal">Add FAQ schema to top 3 pages for AI answer eligibility</div>
+                    <div class="rec-insight">Zero AI Overview appearances for any target query. Structured FAQ markup is the fastest path to AI citation eligibility and featured snippet capture.</div>
+                    <div class="rec-action warn">Add 5-question FAQ blocks on /botox-savings, /dermal-fillers, /med-spa-services. Implement JSON-LD FAQ schema. Target: "How much does X cost in Chicago?"</div>
+                  </div>
+                  <div class="rec-card" style="border-left-color:#6366f1">
+                    <div class="rec-tag-row">
+                      <span class="rec-tag" style="background:#ede9fe;color:#5b21b6">Medium Priority</span>
+                      <span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">Timeline: 2 weeks</span></span>
+                    </div>
+                    <div class="rec-signal">Publish local landing page targeting Chicago med spa cluster</div>
+                    <div class="rec-insight">14 high-intent local queries uncontested. A dedicated local page captures this traffic without cannibalizing existing rankings.</div>
+                    <div class="rec-action">Draft /chicago-med-spa targeting "med spa Chicago" (9,100 impressions). Include LocalBusiness schema, map embed, 3 neighborhood testimonials.</div>
+                  </div>
+                  <div class="rec-card good">
+                    <div class="rec-tag-row">
+                      <span class="rec-tag good">Opportunity</span>
+                      <span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: Ongoing</span></span>
+                    </div>
+                    <div class="rec-signal">Shift social calendar to 60% Reels, focus on patient conversion</div>
+                    <div class="rec-insight">IG Reels drive 7.1% ER vs 0.4% for static images. Current schedule is only 18% Reels — the highest-ROI social action available.</div>
+                    <div class="rec-action good">3 Reels / 1 Carousel / 1 Story Poll per week. Topic: before/after results, patient stories, price transparency. Retire low-ER educational static posts.</div>
+                  </div>
                 </div>
               </div>
 
-              <!-- EVALUATION AGENT -->
+              <!-- ── EVALUATION AGENT ───────────────────────────── -->
               <div class="app-panel" id="dt-evaluation">
-                <div class="ia-badge-row"><span class="agent-pill" style="background:#f3e5f5;color:#6a1b9a;border-color:#e1bee7">&#11042; Evaluation Agent &middot; Stage 5 of 5</span><span style="font-size:10px;color:#6b7280">Full pipeline quality assessment complete &middot; May 31, 2026</span></div>
-                <div class="eval-scores-grid">
-                  <div class="eval-score-card"><div class="eval-score-ring"><svg viewBox="0 0 36 36" class="eval-ring-svg"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#f3f4f6" stroke-width="3"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="81,100"/></svg><div class="eval-ring-val">8.1</div></div><div class="eval-score-name">Readiness Score</div><div class="eval-score-desc">Data quality, source coverage, and pipeline completeness are strong. All 5 agents ran with full data.</div><div class="eval-score-badge" style="background:#d1fae5;color:#065f46">&#9679; Ready to Execute</div></div>
-                  <div class="eval-score-card"><div class="eval-score-ring"><svg viewBox="0 0 36 36" class="eval-ring-svg"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#f3f4f6" stroke-width="3"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#6366f1" stroke-width="3" stroke-dasharray="74,100"/></svg><div class="eval-ring-val">7.4</div></div><div class="eval-score-name">Quality Score</div><div class="eval-score-desc">Insight confidence is high across most findings. Minor gaps in social data density reduce score slightly.</div><div class="eval-score-badge" style="background:#ede9fe;color:#5b21b6">&#9679; High Quality</div></div>
-                  <div class="eval-score-card"><div class="eval-score-ring"><svg viewBox="0 0 36 36" class="eval-ring-svg"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#f3f4f6" stroke-width="3"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="88,100"/></svg><div class="eval-ring-val">8.8</div></div><div class="eval-score-name">Confidence Score</div><div class="eval-score-desc">CTR gap and conversion findings are based on verified GSC + GA4 data with &gt;90% statistical confidence.</div><div class="eval-score-badge" style="background:#f5f3ff;color:#5b21b6">&#9679; Very High Confidence</div></div>
-                  <div class="eval-score-card"><div class="eval-score-ring"><svg viewBox="0 0 36 36" class="eval-ring-svg"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#f3f4f6" stroke-width="3"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d97706" stroke-width="3" stroke-dasharray="92,100"/></svg><div class="eval-ring-val">9.2</div></div><div class="eval-score-name">Actionability Score</div><div class="eval-score-desc">All 5 recommendations include specific implementation steps, timelines, and measurable success criteria.</div><div class="eval-score-badge" style="background:#fef3c7;color:#92400e">&#9679; Immediately Actionable</div></div>
+                <div class="ia-badge-row">
+                  <span class="agent-pill" style="background:#f3e5f5;color:#6a1b9a;border-color:#e1bee7">⬡ Evaluation Agent · Stage 5 of 5</span>
+                  <span style="font-size:10px;color:#6b7280">Executive report generated · Pipeline complete</span>
                 </div>
-                <div class="eval-summary"><div class="eval-summary-header"><span class="agent-pill" style="background:#f3e5f5;color:#6a1b9a;border-color:#e1bee7">&#11042; Evaluation Summary</span></div><div class="eval-summary-body">Pipeline run complete. Data quality is strong (8.1/10 readiness). The Insight Agent identified 12 high-confidence findings; Strategy Agent selected 5 prioritized opportunities. All 5 Execution Agent briefs are immediately actionable (9.2/10). Highest-confidence recommendation: CTR title tag rewrite &mdash; verified GSC data, low effort, high reward. Recommend executing Priorities 1 and 2 this week before initiating the local landing page build.</div></div>
-              </div>
-
-              <!-- REPORTS -->
-              <div class="app-panel" id="dt-reports">
-                <div class="ia-badge-row"><span class="agent-pill" style="background:#e8f5e9;color:#2e7d32;border-color:#a5d6a7">&#11042; Executive Report &middot; Generated May 31, 2026</span><span style="font-size:10px;color:#6b7280">Full pipeline run &middot; Healthcare Practice</span></div>
                 <div class="report-doc">
-                  <div class="report-header"><div><div class="report-logo">InsightRx</div><div class="report-title-line">Executive Marketing Intelligence Report</div><div class="report-meta">Healthcare Practice &middot; Chicago &middot; May 2026 &middot; Full Pipeline Run</div></div><div class="report-score-badge"><div style="font-size:9px;color:#6b7280;margin-bottom:2px">Opportunity Score</div><div style="font-size:22px;font-weight:800;color:#6d28d9;font-family:'Bricolage Grotesque',sans-serif">5.37</div></div></div>
-                  <div class="report-kpi-strip">
-                    <div class="rks-card"><div class="rks-val">7.2<span style="font-size:10px;color:#9ca3af">/10</span></div><div class="rks-label">Traffic Health</div><div class="rks-bar"><div class="rks-fill" style="width:72%;background:#059669"></div></div></div>
-                    <div class="rks-card"><div class="rks-val">4.8<span style="font-size:10px;color:#9ca3af">/10</span></div><div class="rks-label">SEO Visibility</div><div class="rks-bar"><div class="rks-fill" style="width:48%;background:#dc2626"></div></div></div>
-                    <div class="rks-card"><div class="rks-val">6.1<span style="font-size:10px;color:#9ca3af">/10</span></div><div class="rks-label">Content Readiness</div><div class="rks-bar"><div class="rks-fill" style="width:61%;background:#d97706"></div></div></div>
-                    <div class="rks-card"><div class="rks-val">5.9<span style="font-size:10px;color:#9ca3af">/10</span></div><div class="rks-label">Social Engagement</div><div class="rks-bar"><div class="rks-fill" style="width:59%;background:#0ea5e9"></div></div></div>
+                  <div class="report-header">
+                    <div>
+                      <div class="report-logo">InsightRx</div>
+                      <div class="report-title-line">Executive Marketing Intelligence Report</div>
+                      <div class="report-meta">Healthcare Practice · May 2026 · Generated by Evaluation Agent · Full pipeline run complete</div>
+                    </div>
+                    <div class="report-score-badge">
+                      <div style="font-size:9px;color:#6b7280;margin-bottom:2px">Opportunity Score</div>
+                      <div style="font-size:22px;font-weight:800;color:#6d28d9;font-family:'Bricolage Grotesque',sans-serif">5.37</div>
+                    </div>
                   </div>
-                  <div class="report-section"><div class="report-section-title">Key Findings</div><div class="report-finding"><span class="rf-dot rf-red"></span><strong>CTR Gap:</strong> 12,400 monthly impressions yielding 1.9% CTR vs 6.2% benchmark &mdash; ~520 clicks/month unrealized.</div><div class="report-finding"><span class="rf-dot rf-red"></span><strong>Conversion Underperformance:</strong> 4m 48s avg session, 1.2% conversion vs 3.7% industry median. Structural CX friction.</div><div class="report-finding"><span class="rf-dot rf-yellow"></span><strong>Local Search Gap:</strong> Zero presence across 14 high-intent local queries. Uncontested traffic available now.</div><div class="report-finding"><span class="rf-dot rf-purple"></span><strong>AI Visibility Zero:</strong> No appearances in Google AI Overviews or Perplexity for any target query.</div><div class="report-finding"><span class="rf-dot rf-green"></span><strong>Social Arbitrage:</strong> IG Reels 3.8&times; more effective than static but only 18% of schedule. High ROI reallocation available.</div></div>
-                  <div class="report-section"><div class="report-section-title">Top Opportunities</div><div class="report-rec-list"><div class="rrl-item"><span class="rrl-num">01</span><span><strong>CTR Title Tag Rewrite</strong> &mdash; Rewrite top 3 page titles with price signals + local modifiers &rarr; est. +520 clicks/month</span></div><div class="rrl-item"><span class="rrl-num">02</span><span><strong>Conversion Flow Fix</strong> &mdash; Move CTA above fold, simplify booking form to 3 fields &rarr; target 3.7% conversion</span></div><div class="rrl-item"><span class="rrl-num">03</span><span><strong>FAQ Schema Implementation</strong> &mdash; Add structured FAQ to 3 service pages for AI answer eligibility</span></div><div class="rrl-item"><span class="rrl-num">04</span><span><strong>Local Landing Page</strong> &mdash; Publish /chicago-med-spa targeting 14 uncontested local queries</span></div><div class="rrl-item"><span class="rrl-num">05</span><span><strong>Social Content Rebalance</strong> &mdash; Shift to 60% IG Reels focused on patient conversion narratives</span></div></div></div>
-                  <div class="report-section"><div class="report-section-title">Expected Impact</div><div class="report-impact-grid"><div class="ri-card"><div class="ri-metric">+520</div><div class="ri-label">organic clicks/month from CTR recovery</div></div><div class="ri-card ri-green"><div class="ri-metric">2&ndash;3&times;</div><div class="ri-label">conversion rate improvement potential</div></div><div class="ri-card ri-blue"><div class="ri-metric">14</div><div class="ri-label">new local queries within reach</div></div><div class="ri-card ri-purple"><div class="ri-metric">2&times;</div><div class="ri-label">social reach in 60 days</div></div></div></div>
+                  <div class="report-section">
+                    <div class="report-section-title">Key Findings</div>
+                    <div class="report-finding"><span class="rf-dot rf-red"></span><strong>Critical CTR Gap:</strong> 12,400 monthly impressions for top keyword cluster yielding 1.9% CTR vs 6.2% benchmark — ~520 clicks/month unrealized from title tag mismatches alone.</div>
+                    <div class="report-finding"><span class="rf-dot rf-red"></span><strong>Conversion Underperformance:</strong> Strong engagement (4m 48s, 3.2 pages/visit) not translating to bookings — 1.2% conversion rate is 3.1× below industry median.</div>
+                    <div class="report-finding"><span class="rf-dot rf-yellow"></span><strong>Local Search Gap:</strong> Zero ranking presence across 14 high-intent local queries where competitors are established. Uncontested traffic available now.</div>
+                    <div class="report-finding"><span class="rf-dot rf-purple"></span><strong>AI Visibility Zero:</strong> No appearances in Google AI Overviews or Perplexity for any target query. Competitors with FAQ schema are being cited instead.</div>
+                    <div class="report-finding"><span class="rf-dot rf-green"></span><strong>Social Content Arbitrage:</strong> IG Reels outperforming all formats by 3.8× but only 18% of schedule. High ROI reallocation available at low incremental cost.</div>
+                  </div>
+                  <div class="report-section">
+                    <div class="report-section-title">Strategic Recommendations</div>
+                    <div class="report-rec-list">
+                      <div class="rrl-item"><span class="rrl-num">01</span><span>Rewrite title tags on top 3 pages with price signals and local modifiers → +520 clicks/month</span></div>
+                      <div class="rrl-item"><span class="rrl-num">02</span><span>Move booking CTA above fold and simplify form to 3 fields → target 3.7% conversion</span></div>
+                      <div class="rrl-item"><span class="rrl-num">03</span><span>Add FAQ schema to 3 service pages to qualify for AI answer citations</span></div>
+                      <div class="rrl-item"><span class="rrl-num">04</span><span>Publish Chicago local landing page with LocalBusiness schema for 14 uncontested queries</span></div>
+                      <div class="rrl-item"><span class="rrl-num">05</span><span>Shift social calendar to 60% Reels focused on patient conversion narratives</span></div>
+                    </div>
+                  </div>
+                  <div class="report-section">
+                    <div class="report-section-title">Expected Impact</div>
+                    <div class="report-impact-grid">
+                      <div class="ri-card"><div class="ri-metric">+520</div><div class="ri-label">organic clicks/month from CTR recovery</div></div>
+                      <div class="ri-card ri-green"><div class="ri-metric">2–3×</div><div class="ri-label">conversion rate improvement potential</div></div>
+                      <div class="ri-card ri-blue"><div class="ri-metric">14</div><div class="ri-label">new local queries within reach</div></div>
+                      <div class="ri-card ri-purple"><div class="ri-metric">2×</div><div class="ri-label">social reach within 60 days</div></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- TALK TO AI AGENT -->
-              <div class="app-panel" id="dt-chat">
-                <div class="ia-badge-row"><span class="agent-pill">&#11042; AI Agent &middot; Connected to Live Pipeline</span><span class="chat-status" style="font-size:10px;color:#059669;font-weight:600">&#9679; Online &middot; All agents active</span></div>
-                <div class="chat-suggested-row">
-                  <div class="chat-suggested-label">Suggested questions</div>
-                  <div class="chat-suggestions">
-                    <button class="chat-sugg-btn" onclick="irChatSend(this)">What are my biggest SEO opportunities?</button>
-                    <button class="chat-sugg-btn" onclick="irChatSend(this)">Which pages should I update first?</button>
-                    <button class="chat-sugg-btn" onclick="irChatSend(this)">What content topics could drive more traffic?</button>
-                    <button class="chat-sugg-btn" onclick="irChatSend(this)">Summarize the top recommendations.</button>
+            </div><!-- /app-content -->
+          </div><!-- /app-main -->
+        </div><!-- /app-shell -->
+      </div><!-- /mockup-desktop -->
+
+      <!-- ══ MOBILE ══ -->
+      <div class="mockup-mobile" id="viewMobile">
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>●●●●</span></div>
+              <div class="phone-app-bar"><div class="phone-app-name">InsightRx</div><div class="phone-app-sub">Agent Pipeline · May 2026</div></div>
+              <div class="phone-tabs">
+                <button class="ph-tab active" data-phanel="ph-overview">Overview</button>
+                <button class="ph-tab" data-phanel="ph-insight">Insight</button>
+                <button class="ph-tab" data-phanel="ph-execution">Actions</button>
+                <button class="ph-tab" data-phanel="ph-evaluation">Report</button>
+              </div>
+              <div class="phone-content">
+                <div class="phone-panel active" id="ph-overview">
+                  <div class="ph-kpi-grid">
+                    <div class="ph-kpi"><div class="ph-kpi-label">Opp. Score</div><div class="ph-kpi-value">5.37</div><div class="ph-kpi-sub">↑ +0.4</div></div>
+                    <div class="ph-kpi" style="border-top-color:#dc2626"><div class="ph-kpi-label">CTR Gap</div><div class="ph-kpi-value">4.3%</div><div class="ph-kpi-sub">Below benchmark</div></div>
+                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Traffic</div><div class="ph-kpi-value">+12%</div><div class="ph-kpi-sub">vs prior avg</div></div>
+                    <div class="ph-kpi" style="border-top-color:#10b981"><div class="ph-kpi-label">Agents</div><div class="ph-kpi-value" style="font-size:13px">5/5</div><div class="ph-kpi-sub" style="color:#059669;font-weight:600">● Done</div></div>
                   </div>
+                  <div class="ph-chart"><div class="ph-chart-label">Session Trend</div><div class="ph-bars"><div class="ph-bar" style="height:38%;background:#e0e7ff"></div><div class="ph-bar" style="height:52%;background:#c4b5fd"></div><div class="ph-bar" style="height:65%;background:#a78bfa"></div><div class="ph-bar" style="height:80%;background:#7c3aed"></div><div class="ph-bar" style="height:88%;background:#6d28d9"></div></div></div>
+                  <div class="ph-insight"><div class="ph-insight-label">Pipeline Status</div><div class="ph-insight-text">Data Intake ✓ → Insight ✓ → Strategy ✓ → Execution ✓ → Evaluation ✓ · All 5 agents complete</div></div>
                 </div>
-                <div class="chat-ui">
-                  <div class="chat-header"><div class="chat-agent-dot">&#11042;</div><div><div class="chat-agent-name">InsightRx AI Agent</div><div class="chat-agent-sub">Connected to live pipeline &middot; 47,210 data points loaded</div></div><span class="chat-status">&#9679; Live</span></div>
-                  <div class="chat-messages" id="chat-messages-box">
-                    <div class="chat-msg chat-ai"><div class="chat-bubble ai">Hello! I've completed analysis across your 5 data sources &mdash; 47,210 data points processed, 12 insights detected, 5 prioritized opportunities identified. All implementation briefs are ready. What would you like to explore?</div><div class="chat-ts">9:14 AM</div></div>
-                    <div class="chat-msg chat-user"><div class="chat-bubble user">What should we prioritize this month?</div><div class="chat-ts">9:16 AM</div></div>
-                    <div class="chat-msg chat-ai"><div class="chat-bubble ai">Based on your data, your top 3 priorities this month are:<br><br><strong>1. Fix your CTR gap (1&ndash;2 days)</strong><br>You're ranking #4 for "botox savings near me" &mdash; 12,400 monthly impressions &mdash; but only capturing 1.9% CTR vs 6.2% expected. A title tag rewrite alone recovers ~520 clicks/month.<br><br><strong>2. Move your booking CTA above the fold (1 week)</strong><br>Users spend nearly 5 minutes on-site but convert at only 1.2%. Industry median is 3.7%. The bottleneck is CTA placement and form complexity &mdash; not intent.<br><br><strong>3. Add FAQ schema to your top 3 pages (2&ndash;3 days)</strong><br>You have zero AI Overview appearances for any target query. This is the fastest path to AI search visibility.</div><div class="chat-ts">9:16 AM</div></div>
+                <div class="phone-panel" id="ph-insight">
+                  <div class="ph-insight" style="border-left-color:#0369a1"><div class="ph-insight-label" style="color:#0369a1">⬡ Insight Agent</div><div class="ph-insight-text">47,210 data points analyzed · 12 insights detected</div></div>
+                  <div class="ph-insight"><div class="ph-insight-label">Top Traffic Source</div><div class="ph-insight-text">google/organic <strong>68.3%</strong> · direct <strong>14.1%</strong> · instagram <strong>9.7%</strong></div></div>
+                  <div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">High CTR Pages</div><div class="ph-insight-text">patient-reviews <strong>4.4%</strong> · med-spa-services <strong>3.1%</strong></div></div>
+                  <div class="ph-insight" style="border-left-color:#dc2626"><div class="ph-insight-label" style="color:#991b1b">Low CTR Pages</div><div class="ph-insight-text">botox-savings <strong>1.9%↓</strong> · dermal-fillers <strong>1.4%↓</strong></div></div>
+                  <div class="ph-chart"><div class="ph-chart-label">Keyword Impression Volume</div><div class="ph-bars"><div class="ph-bar" style="height:100%;background:#7c3aed"></div><div class="ph-bar" style="height:73%;background:#a78bfa"></div><div class="ph-bar" style="height:63%;background:#c4b5fd"></div><div class="ph-bar" style="height:45%;background:#ddd6fe"></div></div></div>
+                </div>
+                <div class="phone-panel" id="ph-execution">
+                  <div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">⬡ Execution Agent · 5 Briefs Ready</div><div class="ph-insight-text">All actions implementation-ready</div></div>
+                  <div class="ph-rec"><div class="ph-rec-tag">🔴 Critical</div><div class="ph-rec-title">Rewrite title tags — 3 pages</div><div class="ph-rec-text">Add price signals + local modifiers.</div><div class="ph-rec-action">Est. +520 clicks/month · 1–2 days</div></div>
+                  <div class="ph-rec" style="border-left-color:#dc2626"><div class="ph-rec-tag">🔴 Critical</div><div class="ph-rec-title">Move CTA above fold</div><div class="ph-rec-text">1.2% conversion → target 3.7%.</div><div class="ph-rec-action" style="background:#fff5f5;border-left-color:#dc2626;color:#991b1b">Simplify form to 3 fields · 1 week</div></div>
+                  <div class="ph-rec" style="border-left-color:#d97706"><div class="ph-rec-tag" style="color:#92400e">🟡 High</div><div class="ph-rec-title">Add FAQ schema to 3 pages</div><div class="ph-rec-text">Qualify for AI Overview citations.</div><div class="ph-rec-action" style="background:#fffbeb;border-left-color:#d97706;color:#92400e">2–3 days · High confidence</div></div>
+                  <div class="ph-rec" style="border-left-color:#059669"><div class="ph-rec-tag" style="color:#065f46">🟢 Opportunity</div><div class="ph-rec-title">Shift to 60% IG Reels</div><div class="ph-rec-text">3.8× ER vs static — scale this.</div><div class="ph-rec-action" style="background:#f0fdf4;border-left-color:#059669;color:#065f46">Ongoing · Low effort</div></div>
+                </div>
+                <div class="phone-panel" id="ph-evaluation">
+                  <div class="ph-insight" style="border-left-color:#6a1b9a"><div class="ph-insight-label" style="color:#6a1b9a">⬡ Evaluation Agent</div><div class="ph-insight-text">Opportunity Score: <strong>5.37</strong> · Report complete</div></div>
+                  <div class="ph-kpi-grid">
+                    <div class="ph-kpi"><div class="ph-kpi-label">Clicks/mo</div><div class="ph-kpi-value" style="font-size:14px">+520</div><div class="ph-kpi-sub">CTR recovery</div></div>
+                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Conv. Lift</div><div class="ph-kpi-value" style="font-size:14px">2–3×</div><div class="ph-kpi-sub">potential</div></div>
+                    <div class="ph-kpi" style="border-top-color:#0369a1"><div class="ph-kpi-label">Local Gaps</div><div class="ph-kpi-value">14</div><div class="ph-kpi-sub">uncontested</div></div>
+                    <div class="ph-kpi" style="border-top-color:#7c3aed"><div class="ph-kpi-label">Social Reach</div><div class="ph-kpi-value">2×</div><div class="ph-kpi-sub">60 days</div></div>
                   </div>
-                  <div class="chat-input-bar"><input class="chat-input-field" id="chat-input-field" type="text" placeholder="Ask the AI agent anything about your marketing data..." onkeydown="if(event.key==='Enter')irChatSend()"/><button class="chat-send" onclick="irChatSend()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div>
+                  <div class="ph-insight"><div class="ph-insight-label">Priority Actions</div><div class="ph-insight-text"><strong>1.</strong> Rewrite title tags · <strong>2.</strong> Move CTA above fold · <strong>3.</strong> Add FAQ schema · <strong>4.</strong> Local landing page · <strong>5.</strong> Scale IG Reels</div></div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
-      <!-- MOBILE -->
-      <div class="mockup-mobile" id="viewMobile">
-        <div class="phone-wrap"><div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen">
-          <div class="phone-status"><span>9:41</span><span>&#9679;&#9679;&#9679;&#9679;</span></div>
-          <div class="phone-app-bar"><div class="phone-app-name">InsightRx</div><div class="phone-app-sub">AI Pipeline &middot; May 2026</div></div>
-          <div class="phone-tabs">
-            <button class="ph-tab active" data-phanel="ph-overview">Overview</button>
-            <button class="ph-tab" data-phanel="ph-insight">Insight</button>
-            <button class="ph-tab" data-phanel="ph-execution">Actions</button>
-            <button class="ph-tab" data-phanel="ph-report">Report</button>
-            <button class="ph-tab" data-phanel="ph-chat">AI</button>
-          </div>
-          <div class="phone-content">
-            <div class="phone-panel active" id="ph-overview"><div class="ph-kpi-grid"><div class="ph-kpi"><div class="ph-kpi-label">Opp. Score</div><div class="ph-kpi-value">5.37</div><div class="ph-kpi-sub">&#8593; Improving</div></div><div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Traffic</div><div class="ph-kpi-value">7.2</div><div class="ph-kpi-sub">&#9679; Good</div></div><div class="ph-kpi" style="border-top-color:#dc2626"><div class="ph-kpi-label">SEO Vis.</div><div class="ph-kpi-value">4.8</div><div class="ph-kpi-sub">&#9888; Low</div></div><div class="ph-kpi" style="border-top-color:#10b981"><div class="ph-kpi-label">Agents</div><div class="ph-kpi-value" style="font-size:13px">5/5</div><div class="ph-kpi-sub" style="color:#059669;font-weight:600">&#9679; Done</div></div></div><div class="ph-chart"><div class="ph-chart-label">Session Trend (+12%)</div><div class="ph-bars"><div class="ph-bar" style="height:38%;background:#e0e7ff"></div><div class="ph-bar" style="height:52%;background:#c4b5fd"></div><div class="ph-bar" style="height:65%;background:#a78bfa"></div><div class="ph-bar" style="height:80%;background:#7c3aed"></div><div class="ph-bar" style="height:88%;background:#6d28d9"></div></div></div><div class="ph-insight"><div class="ph-insight-label">AI Summary</div><div class="ph-insight-text">Top priority: rewrite title tags for +520 clicks/mo. Then fix booking CTA. All 5 briefs ready.</div></div></div>
-            <div class="phone-panel" id="ph-insight"><div class="ph-insight" style="border-left-color:#0369a1"><div class="ph-insight-label" style="color:#0369a1">&#11042; Insight Agent</div><div class="ph-insight-text">47,210 data points &middot; 12 insights detected</div></div><div class="ph-insight"><div class="ph-insight-label">Top Sources</div><div class="ph-insight-text">google/organic <strong>68.3%</strong> &middot; direct <strong>14.1%</strong> &middot; instagram <strong>9.7%</strong></div></div><div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">High CTR</div><div class="ph-insight-text">patient-reviews <strong>4.4%</strong> &middot; med-spa-services <strong>3.1%</strong></div></div><div class="ph-insight" style="border-left-color:#dc2626"><div class="ph-insight-label" style="color:#991b1b">CTR Gaps</div><div class="ph-insight-text">botox-savings <strong>1.9%&#8595;</strong> &middot; dermal-fillers <strong>1.4%&#8595;</strong></div></div></div>
-            <div class="phone-panel" id="ph-execution"><div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">&#11042; Execution Agent &middot; 5 Briefs</div><div class="ph-insight-text">All actions ready to assign</div></div><div class="ph-rec"><div class="ph-rec-tag">&#128308; Critical</div><div class="ph-rec-title">Rewrite title tags &mdash; 3 pages</div><div class="ph-rec-text">Add price signals + local modifiers.</div><div class="ph-rec-action">Est. +520 clicks/month &middot; 1&ndash;2 days</div></div><div class="ph-rec" style="border-left-color:#dc2626"><div class="ph-rec-tag">&#128308; Critical</div><div class="ph-rec-title">Move CTA above fold</div><div class="ph-rec-text">1.2% &rarr; target 3.7% conversion.</div><div class="ph-rec-action" style="background:#fff5f5;border-left-color:#dc2626;color:#991b1b">Simplify form to 3 fields &middot; 1 week</div></div><div class="ph-rec" style="border-left-color:#d97706"><div class="ph-rec-tag" style="color:#92400e">&#128993; High</div><div class="ph-rec-title">Add FAQ schema &mdash; 3 pages</div><div class="ph-rec-text">AI answer eligibility.</div><div class="ph-rec-action" style="background:#fffbeb;border-left-color:#d97706;color:#92400e">2&ndash;3 days</div></div></div>
-            <div class="phone-panel" id="ph-report"><div class="ph-insight" style="border-left-color:#6a1b9a"><div class="ph-insight-label" style="color:#6a1b9a">&#11042; Executive Report</div><div class="ph-insight-text">Opportunity Score: <strong>5.37</strong> &middot; Pipeline complete</div></div><div class="ph-kpi-grid"><div class="ph-kpi"><div class="ph-kpi-label">Traffic</div><div class="ph-kpi-value">7.2</div><div class="ph-kpi-sub">&#9679; Good</div></div><div class="ph-kpi" style="border-top-color:#dc2626"><div class="ph-kpi-label">SEO Vis.</div><div class="ph-kpi-value">4.8</div><div class="ph-kpi-sub">Needs work</div></div><div class="ph-kpi" style="border-top-color:#d97706"><div class="ph-kpi-label">Content</div><div class="ph-kpi-value">6.1</div><div class="ph-kpi-sub">Fair</div></div><div class="ph-kpi" style="border-top-color:#0ea5e9"><div class="ph-kpi-label">Social</div><div class="ph-kpi-value">5.9</div><div class="ph-kpi-sub">Fair</div></div></div><div class="ph-insight"><div class="ph-insight-label">Top 3 Actions</div><div class="ph-insight-text"><strong>1.</strong> Rewrite title tags (+520 clicks) &middot; <strong>2.</strong> CTA above fold (&rarr;3.7% conv) &middot; <strong>3.</strong> FAQ schema (AI visibility)</div></div></div>
-            <div class="phone-panel" id="ph-chat"><div class="ph-chat-mini"><div class="ph-msg ph-msg-ai"><div class="ph-bubble-ai">Analysis complete &mdash; 47,210 data points, 12 insights, 5 opportunities. What would you like to explore?</div></div><div class="ph-msg ph-msg-user"><div class="ph-bubble-user">What should we prioritize?</div></div><div class="ph-msg ph-msg-ai"><div class="ph-bubble-ai"><strong>Top 3 this month:</strong><br>1. Title tag rewrites &rarr; +520 clicks/mo<br>2. Move CTA above fold &rarr; 2&ndash;3&times; conv<br>3. FAQ schema &rarr; AI search visibility</div></div><div class="ph-typing-bar"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div><span style="font-size:9px;color:#9ca3af;margin-left:4px">AI Agent ready</span></div></div></div>
-          </div>
-        </div></div></div>
-      </div>
-
-    </div>
-  </div>
+    </div><!-- /mockup-stage -->
+  </div><!-- /container -->
 </section>
 </div>
 <div id="tab-learnings" class="tab-panel">
