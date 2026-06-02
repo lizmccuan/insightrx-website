@@ -1037,3 +1037,409 @@ footer{background:var(--bg-0);border-top:1px solid var(--border);padding:28px 0}
   .ov-step-name{flex:1}
   .kpi-6{grid-template-columns:repeat(2,1fr)}
 }
+
+
+/* ═══ AGENT ARCHITECTURE DIAGRAM ═══════════════════════════════════════════ */
+
+/* Outer wrapper */
+.agent-arch-diagram {
+  background: var(--bg-1);
+  border: 1px solid var(--border-2);
+  border-radius: 24px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 0 80px rgba(139,92,246,.07), var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Layer 1: Source chips ── */
+.aad-src-row {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+.aad-source-chip {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  transition: border-color .2s;
+}
+.aad-source-chip:hover { border-color: var(--border-2); }
+.aad-chip-icon  { font-size: 20px; }
+.aad-chip-name  { font-size: 10px; font-weight: 600; color: var(--text-2); line-height: 1.3; }
+.aad-chip-live  { font-size: 9px; font-weight: 700; color: #4ade80; letter-spacing: .04em; }
+
+/* ── Connector bands ── */
+.aad-conn-band {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  height: 36px;
+}
+.aad-conn-single { display: flex; justify-content: center; height: 28px; }
+.aad-conn-v {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.aad-conn-v::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom,rgba(139,92,246,.55),rgba(139,92,246,.18));
+  border-radius: 1px;
+}
+
+/* Traveling dot */
+.aad-dot {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 8px rgba(167,139,250,.7);
+  opacity: 0;
+}
+/* Staggered delays via individual delay classes */
+.aad-dot-d1 { animation-delay: .55s !important; }
+.aad-dot-d2 { animation-delay: 1.1s !important; }
+.aad-dot-d3 { animation-delay: 1.65s !important; }
+.aad-dot-d4 { animation-delay: .3s  !important; }
+.aad-dot-d5 { animation-delay: 0s   !important; }
+
+/* ── Layer 2: Ingestion nodes ── */
+.aad-ingestion-row {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+.aad-inode {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 13px 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color .2s, transform .2s;
+}
+.aad-inode:hover { border-color: var(--border-2); transform: translateY(-3px); }
+.aad-inode-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: 14px 14px 0 0;
+}
+.aad-in-analytics .aad-inode-bar { background: linear-gradient(90deg,#3b82f6,#60a5fa); }
+.aad-in-seo       .aad-inode-bar { background: linear-gradient(90deg,#8b5cf6,#a78bfa); }
+.aad-in-aeogeo    .aad-inode-bar { background: linear-gradient(90deg,#6366f1,#818cf8); }
+.aad-in-social    .aad-inode-bar { background: linear-gradient(90deg,#ec4899,#f472b6); }
+.aad-inode-icon { font-size: 20px; }
+.aad-inode-name { font-size: 12px; font-weight: 700; color: var(--text-1); line-height: 1.25; }
+.aad-inode-sub  {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  color: var(--text-3);
+  letter-spacing: .05em;
+  line-height: 1.3;
+}
+.aad-tag-row { display: flex; flex-wrap: wrap; gap: 3px; }
+.aad-tag {
+  display: inline-block;
+  background: rgba(139,92,246,.1);
+  color: rgba(167,139,250,.85);
+  border: 1px solid rgba(139,92,246,.18);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  padding: 1px 5px;
+}
+.aad-tag-amber {
+  background: rgba(217,119,6,.12);
+  color: rgba(251,191,36,.85);
+  border-color: rgba(217,119,6,.22);
+}
+.aad-json-out {
+  margin-top: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  color: rgba(74,222,128,.65);
+  background: rgba(74,222,128,.06);
+  border: 1px solid rgba(74,222,128,.12);
+  border-radius: 5px;
+  padding: 3px 7px;
+  text-align: center;
+}
+
+/* ── Converge connector (H-bracket) ── */
+.aad-converge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aad-conv-stubs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  height: 18px;
+}
+.aad-conv-stubs span {
+  display: flex;
+  justify-content: center;
+}
+.aad-conv-stubs span::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: rgba(139,92,246,.35);
+}
+.aad-conv-bridge {
+  /* spans from center of col1 to center of col4 ≈ 75% of container */
+  width: 75%;
+  height: 28px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aad-conv-bridge::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 2px;
+  background: rgba(139,92,246,.3);
+  transform: translateY(-50%);
+}
+.aad-conv-label {
+  position: relative;            /* sits on top of ::before line */
+  background: var(--bg-1);       /* punches through the line */
+  padding: 0 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: rgba(167,139,250,.7);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  white-space: nowrap;
+}
+.aad-conv-drop {
+  width: 2px;
+  height: 22px;
+  background: rgba(139,92,246,.45);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Layer 3: Strategy Agent ── */
+.aad-strategy-wrap { display: flex; justify-content: center; }
+.aad-strategy-node {
+  background: linear-gradient(135deg,rgba(217,119,6,.07),rgba(251,191,36,.03));
+  border: 1px solid rgba(217,119,6,.28);
+  border-radius: 18px;
+  padding: 22px 26px;
+  width: 72%;
+  position: relative;
+  overflow: hidden;
+}
+.aad-strategy-node::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,#d97706,#fbbf24,#d97706);
+  border-radius: 18px 18px 0 0;
+}
+.aad-strategy-pulse {
+  position: absolute;
+  inset: -1px;
+  border-radius: 19px;
+  border: 1px solid rgba(217,119,6,.18);
+  pointer-events: none;
+}
+.aad-strategy-inner { display: flex; align-items: flex-start; gap: 18px; }
+.aad-strategy-icon  { font-size: 30px; flex-shrink: 0; padding-top: 2px; }
+.aad-strategy-name  { font-size: 15px; font-weight: 700; color: var(--text-1); margin-bottom: 3px; }
+.aad-strategy-sub   {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: rgba(251,191,36,.65);
+  letter-spacing: .06em;
+  margin-bottom: 10px;
+}
+.aad-strategy-desc  { font-size: 12.5px; color: var(--text-2); line-height: 1.65; }
+
+/* ── Layer 4: Recommendation node ── */
+.aad-output-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.aad-reco-node {
+  background: linear-gradient(135deg,rgba(22,163,74,.07),rgba(74,222,128,.03));
+  border: 1px solid rgba(22,163,74,.28);
+  border-radius: 14px;
+  padding: 16px 24px;
+  width: 52%;
+  position: relative;
+  overflow: hidden;
+}
+.aad-reco-node::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,#16a34a,#4ade80,#16a34a);
+}
+.aad-reco-inner { display: flex; align-items: center; gap: 14px; }
+.aad-reco-icon  { font-size: 26px; }
+.aad-reco-name  { font-size: 14px; font-weight: 700; color: var(--text-1); }
+.aad-reco-sub   {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  color: rgba(74,222,128,.6);
+  letter-spacing: .06em;
+  margin-top: 2px;
+}
+
+/* Output preview cards */
+.aad-previews {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.aad-preview {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  transition: border-color .2s;
+}
+.aad-preview:hover { border-color: var(--border-2); }
+.aad-pv-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700;
+  flex-shrink: 0;
+}
+.aad-pv-text { font-size: 11px; color: var(--text-2); line-height: 1.55; flex: 1; }
+.aad-pv-foot { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.aad-pv-ch {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700;
+  padding: 1px 6px; border-radius: 4px;
+  background: rgba(59,130,246,.15); color: #60a5fa;
+}
+.aad-pv-ch-purple { background: rgba(139,92,246,.15); color: #a78bfa; }
+.aad-pv-ch-pink   { background: rgba(236,72,153,.15); color: #f472b6; }
+.aad-pv-imp     { font-size: 9.5px; font-weight: 700; color: #4ade80; }
+.aad-pv-imp-med { color: #fbbf24; }
+
+/* ── CSS-only animations (triggered when parent gets .visible from existing IO) ── */
+@keyframes aadIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes aadDotFall {
+  0%   { top: -8px; opacity: 0; }
+  10%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { top: calc(100% + 2px); opacity: 0; }
+}
+@keyframes aadPulse {
+  0%,100% { transform: scale(1);    opacity: .5; }
+  50%      { transform: scale(1.05); opacity: .2; }
+}
+
+/* Staggered layer entrances — keyed off .visible on outer .fade-up */
+.agent-arch-diagram.visible .aad-src-row       { animation: aadIn .5s ease .0s  both; }
+.agent-arch-diagram.visible .aad-conn-band-top { animation: aadIn .4s ease .2s  both; }
+.agent-arch-diagram.visible .aad-ingestion-row { animation: aadIn .5s ease .38s both; }
+.agent-arch-diagram.visible .aad-converge      { animation: aadIn .4s ease .62s both; }
+.agent-arch-diagram.visible .aad-strategy-wrap { animation: aadIn .5s ease .8s  both; }
+.agent-arch-diagram.visible .aad-conn-single   { animation: aadIn .3s ease 1.0s both; }
+.agent-arch-diagram.visible .aad-output-wrap   { animation: aadIn .5s ease 1.12s both; }
+
+/* Traveling dots */
+.agent-arch-diagram.visible .aad-dot {
+  animation: aadDotFall 2.2s ease-in-out infinite;
+}
+/* Per-dot stagger (inline !important overrides the base delay) */
+
+/* Preview card stagger */
+.agent-arch-diagram.visible .aad-pv-1 { animation: aadIn .4s ease 1.3s  both; }
+.agent-arch-diagram.visible .aad-pv-2 { animation: aadIn .4s ease 1.5s  both; }
+.agent-arch-diagram.visible .aad-pv-3 { animation: aadIn .4s ease 1.7s  both; }
+
+/* Strategy pulse */
+.agent-arch-diagram.visible .aad-strategy-pulse {
+  animation: aadPulse 2.8s ease-in-out infinite;
+}
+
+/* ── Responsive ── */
+@media(max-width:900px) {
+  .aad-strategy-node { width: 88%; }
+  .aad-reco-node     { width: 72%; }
+}
+@media(max-width:768px) {
+  /* Agents collapse to 2x2 */
+  .aad-ingestion-row,
+  .aad-src-row,
+  .aad-conn-band { grid-template-columns: repeat(2,1fr); }
+  /* Simplify converge on tablet */
+  .aad-conv-stubs  { grid-template-columns: repeat(2,1fr); }
+  .aad-conv-bridge { width: 50%; }
+  .aad-strategy-node { width: 94%; }
+  .aad-reco-node     { width: 80%; }
+  .aad-previews      { grid-template-columns: 1fr; }
+}
+@media(max-width:640px) {
+  .agent-arch-diagram { padding: 20px 16px; border-radius: 18px; }
+  /* Hide complex converge on small screens — show just a drop line */
+  .aad-conv-stubs,
+  .aad-conv-bridge { display: none; }
+  .aad-conv-drop   { height: 32px; }
+  .aad-strategy-node  { width: 100%; }
+  .aad-strategy-inner { flex-direction: column; gap: 10px; }
+  .aad-reco-node      { width: 100%; }
+  .aad-ingestion-row,
+  .aad-src-row { grid-template-columns: repeat(2,1fr); }
+  .aad-conn-band { grid-template-columns: repeat(2,1fr); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .aad-dot,
+  .aad-strategy-pulse,
+  .agent-arch-diagram.visible .aad-src-row,
+  .agent-arch-diagram.visible .aad-conn-band-top,
+  .agent-arch-diagram.visible .aad-ingestion-row,
+  .agent-arch-diagram.visible .aad-converge,
+  .agent-arch-diagram.visible .aad-strategy-wrap,
+  .agent-arch-diagram.visible .aad-conn-single,
+  .agent-arch-diagram.visible .aad-output-wrap,
+  .agent-arch-diagram.visible .aad-pv-1,
+  .agent-arch-diagram.visible .aad-pv-2,
+  .agent-arch-diagram.visible .aad-pv-3 { animation: none !important; opacity: 1 !important; }
+}

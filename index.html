@@ -512,92 +512,160 @@
         <p style="font-size:14px;color:var(--text-2);line-height:1.7">Each agent has a defined role, a defined data source, and a defined output schema. They don't just run in sequence — they communicate. This is what makes InsightRx an intelligence system, not a pipeline of isolated AI calls.</p>
       </div>
     </div>
-    <div class="agents-grid fade-up">
-      <div class="agent a-analytics">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">📊</div>
-          <div>
-            <div class="agent-name">Analytics Agent</div>
-            <div class="agent-type">DATA LAYER · GA4 API</div>
+
+    <div class="agent-arch-diagram fade-up">
+
+      <!-- ╔══ LAYER 1 · DATA SOURCES ══════════════════════════════════════╗ -->
+      <div class="aad-src-row">
+        <div class="aad-source-chip aad-chip-ga4">
+          <div class="aad-chip-icon">&#128202;</div>
+          <div class="aad-chip-name">Google Analytics 4</div>
+          <div class="aad-chip-live">&#9679; Live</div>
+        </div>
+        <div class="aad-source-chip aad-chip-gsc">
+          <div class="aad-chip-icon">&#128269;</div>
+          <div class="aad-chip-name">Google Search Console</div>
+          <div class="aad-chip-live">&#9679; Live</div>
+        </div>
+        <div class="aad-source-chip aad-chip-si">
+          <div class="aad-chip-icon">&#128200;</div>
+          <div class="aad-chip-name">Search Intelligence</div>
+          <div class="aad-chip-live">&#9679; Live</div>
+        </div>
+        <div class="aad-source-chip aad-chip-meta">
+          <div class="aad-chip-icon">&#128216;</div>
+          <div class="aad-chip-name">Meta Graph API</div>
+          <div class="aad-chip-live">&#9679; Live</div>
+        </div>
+      </div>
+
+      <!-- ╔══ CONNECTOR · SOURCES → AGENTS ════════════════════════════════╗ -->
+      <div class="aad-conn-band aad-conn-band-top">
+        <div class="aad-conn-v"><span class="aad-dot"></span></div>
+        <div class="aad-conn-v"><span class="aad-dot aad-dot-d1"></span></div>
+        <div class="aad-conn-v"><span class="aad-dot aad-dot-d2"></span></div>
+        <div class="aad-conn-v"><span class="aad-dot aad-dot-d3"></span></div>
+      </div>
+
+      <!-- ╔══ LAYER 2 · INGESTION AGENTS ══════════════════════════════════╗ -->
+      <div class="aad-ingestion-row">
+        <div class="aad-inode aad-in-analytics">
+          <div class="aad-inode-bar"></div>
+          <div class="aad-inode-icon">&#128202;</div>
+          <div class="aad-inode-name">Analytics Agent</div>
+          <div class="aad-inode-sub">DATA LAYER &middot; GA4 API</div>
+          <div class="aad-tag-row">
+            <span class="aad-tag">ga4_api</span>
+            <span class="aad-tag">anomaly_detection</span>
+            <span class="aad-tag">conversion_analysis</span>
+          </div>
+          <div class="aad-json-out">&rarr;&nbsp;JSON signal</div>
+        </div>
+        <div class="aad-inode aad-in-seo">
+          <div class="aad-inode-bar"></div>
+          <div class="aad-inode-icon">&#128269;</div>
+          <div class="aad-inode-name">SEO Agent</div>
+          <div class="aad-inode-sub">SEARCH INTELLIGENCE</div>
+          <div class="aad-tag-row">
+            <span class="aad-tag">gsc_api</span>
+            <span class="aad-tag">ranking_api</span>
+            <span class="aad-tag">gap_analysis</span>
+          </div>
+          <div class="aad-json-out">&rarr;&nbsp;JSON signal</div>
+        </div>
+        <div class="aad-inode aad-in-aeogeo">
+          <div class="aad-inode-bar"></div>
+          <div class="aad-inode-icon">&#10022;</div>
+          <div class="aad-inode-name">AEO / GEO Agent</div>
+          <div class="aad-inode-sub">AI SEARCH READINESS</div>
+          <div class="aad-tag-row">
+            <span class="aad-tag">entity_audit</span>
+            <span class="aad-tag">schema_analysis</span>
+            <span class="aad-tag">ai_visibility</span>
+          </div>
+          <div class="aad-json-out">&rarr;&nbsp;JSON signal</div>
+        </div>
+        <div class="aad-inode aad-in-social">
+          <div class="aad-inode-bar"></div>
+          <div class="aad-inode-icon">&#128241;</div>
+          <div class="aad-inode-name">Social Media Agent</div>
+          <div class="aad-inode-sub">SOCIAL INTELLIGENCE</div>
+          <div class="aad-tag-row">
+            <span class="aad-tag">meta_graph_api</span>
+            <span class="aad-tag">engagement_analysis</span>
+            <span class="aad-tag">roas_scoring</span>
+          </div>
+          <div class="aad-json-out">&rarr;&nbsp;JSON signal</div>
+        </div>
+      </div>
+
+      <!-- ╔══ CONNECTOR · 4 AGENTS → STRATEGY (H-bracket) ════════════════╗ -->
+      <div class="aad-converge">
+        <div class="aad-conv-stubs">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="aad-conv-bridge">
+          <span class="aad-conv-label">&#11042;&nbsp; A2A Handoffs &middot; LangGraph Orchestration</span>
+        </div>
+        <div class="aad-conv-drop"><span class="aad-dot aad-dot-d4"></span></div>
+      </div>
+
+      <!-- ╔══ LAYER 3 · STRATEGY AGENT ════════════════════════════════════╗ -->
+      <div class="aad-strategy-wrap">
+        <div class="aad-strategy-node">
+          <div class="aad-strategy-pulse"></div>
+          <div class="aad-strategy-inner">
+            <div class="aad-strategy-icon">&#129504;</div>
+            <div class="aad-strategy-body">
+              <div class="aad-strategy-name">Strategy Agent</div>
+              <div class="aad-strategy-sub">CROSS-CHANNEL SYNTHESIS &middot; LANGGRAPH A2A</div>
+              <div class="aad-strategy-desc">Receives structured JSON from all four ingestion agents via LangGraph handoffs. Identifies cross-channel correlations invisible from any single-platform view, scores opportunities by strategic priority, and passes a ranked action plan to the Recommendation Agent.</div>
+              <div class="aad-tag-row" style="margin-top:10px">
+                <span class="aad-tag aad-tag-amber">a2a_input</span>
+                <span class="aad-tag aad-tag-amber">priority_scoring</span>
+                <span class="aad-tag aad-tag-amber">pattern_recognition</span>
+                <span class="aad-tag aad-tag-amber">langgraph</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="agent-desc">Ingests GA4 sessions, conversion events, traffic sources, and behavioral data. Runs anomaly detection algorithms to surface performance shifts, then encodes findings as structured signals for downstream agents to consume.</div>
-        <div class="agent-tags">
-          <span class="at">ga4_api</span><span class="at">anomaly_detection</span><span class="at">conversion_analysis</span>
-        </div>
       </div>
-      <div class="agent a-seo">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">🔍</div>
-          <div>
-            <div class="agent-name">SEO Agent</div>
-            <div class="agent-type">SEARCH INTELLIGENCE · GSC + RANKING DATA</div>
+
+      <!-- ╔══ CONNECTOR · STRATEGY → OUTPUT ══════════════════════════════╗ -->
+      <div class="aad-conn-single">
+        <div class="aad-conn-v"><span class="aad-dot aad-dot-d5"></span></div>
+      </div>
+
+      <!-- ╔══ LAYER 4 · RECOMMENDATION AGENT + OUTPUT PREVIEWS ════════════╗ -->
+      <div class="aad-output-wrap">
+        <div class="aad-reco-node">
+          <div class="aad-reco-inner">
+            <div class="aad-reco-icon">&#127919;</div>
+            <div>
+              <div class="aad-reco-name">Recommendation Agent</div>
+              <div class="aad-reco-sub">ACTION OUTPUT LAYER &middot; STREAMLIT RENDER</div>
+            </div>
           </div>
         </div>
-        <div class="agent-desc">Combines Google Search Console query data with keyword ranking intelligence to identify keyword gaps, content cannibalization, technical health issues, and high-opportunity content angles.</div>
-        <div class="agent-tags">
-          <span class="at">gsc_api</span><span class="at">ranking_api</span><span class="at">gap_analysis</span><span class="at">technical_audit</span>
-        </div>
-      </div>
-      <div class="agent a-aeogeo">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">✦</div>
-          <div>
-            <div class="agent-name">AEO / GEO Agent</div>
-            <div class="agent-type">AI SEARCH READINESS</div>
+        <div class="aad-previews">
+          <div class="aad-preview aad-pv-1">
+            <div class="aad-pv-num" style="background:rgba(248,113,113,.15);color:#f87171">1</div>
+            <div class="aad-pv-text">Optimize title tags on 14 high-impression, low-CTR pages &mdash; estimated +18% CTR improvement</div>
+            <div class="aad-pv-foot"><span class="aad-pv-ch">SEO</span><span class="aad-pv-imp">&#8593; High</span></div>
+          </div>
+          <div class="aad-preview aad-pv-2">
+            <div class="aad-pv-num" style="background:rgba(248,113,113,.15);color:#f87171">2</div>
+            <div class="aad-pv-text">Implement FAQ schema on top 8 pages &mdash; brand absent from AI Overviews for 23 target queries</div>
+            <div class="aad-pv-foot"><span class="aad-pv-ch aad-pv-ch-purple">AEO</span><span class="aad-pv-imp">&#8593; High</span></div>
+          </div>
+          <div class="aad-preview aad-pv-3">
+            <div class="aad-pv-num" style="background:rgba(251,191,36,.15);color:#fbbf24">3</div>
+            <div class="aad-pv-text">Shift 22% of Meta budget to retargeting &mdash; ROAS 3.1&times; vs 1.4&times; differential detected</div>
+            <div class="aad-pv-foot"><span class="aad-pv-ch aad-pv-ch-pink">Paid</span><span class="aad-pv-imp aad-pv-imp-med">&#8593; Med</span></div>
           </div>
         </div>
-        <div class="agent-desc">Audits brand readiness for Answer Engine Optimization (AI assistant citations) and Generative Engine Optimization (AI-generated recommendations). Identifies entity clarity gaps, schema coverage, and content structure deficiencies invisible to traditional SEO tools.</div>
-        <div class="agent-tags">
-          <span class="at">entity_audit</span><span class="at">schema_analysis</span><span class="at">ai_visibility</span>
-        </div>
       </div>
-      <div class="agent a-social">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">📱</div>
-          <div>
-            <div class="agent-name">Social Media Agent</div>
-            <div class="agent-type">SOCIAL INTELLIGENCE · META API</div>
-          </div>
-        </div>
-        <div class="agent-desc">Pulls Meta Graph API data to analyze ad performance, audience engagement patterns, content decay rates, and creative performance scoring — feeding social signal context into the cross-channel strategy synthesis.</div>
-        <div class="agent-tags">
-          <span class="at">meta_graph_api</span><span class="at">engagement_analysis</span><span class="at">roas_scoring</span>
-        </div>
-      </div>
-      <div class="agent a-strategy">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">🧠</div>
-          <div>
-            <div class="agent-name">Strategy Agent</div>
-            <div class="agent-type">CROSS-CHANNEL SYNTHESIS</div>
-          </div>
-        </div>
-        <div class="agent-desc">Receives structured JSON outputs from all four upstream agents via LangGraph handoffs. Identifies cross-channel correlations invisible from any single-platform view, scores opportunities by strategic priority, and prepares ranked input for the Recommendation Agent.</div>
-        <div class="agent-tags">
-          <span class="at">a2a_input</span><span class="at">priority_scoring</span><span class="at">pattern_recognition</span>
-        </div>
-      </div>
-      <div class="agent a-reco">
-        <div class="agent-head">
-          <div class="agent-icon-wrap">🎯</div>
-          <div>
-            <div class="agent-name">Recommendation Agent</div>
-            <div class="agent-type">ACTION OUTPUT LAYER</div>
-          </div>
-        </div>
-        <div class="agent-desc">Produces the final deliverable: a ranked list of strategic marketing actions, each with a rationale, expected impact score, effort estimate, responsible channel, and implementation notes. Output feeds directly into the Streamlit dashboard.</div>
-        <div class="agent-tags">
-          <span class="at">ranked_output</span><span class="at">impact_scoring</span><span class="at">streamlit_render</span>
-        </div>
-      </div>
-    </div>
-    <div class="a2a-banner fade-up">
-      <div class="a2a-icon-big">🔄</div>
-      <div>
-        <div class="a2a-title">Agent-to-Agent (A2A) Handoffs via LangGraph</div>
-        <div class="a2a-desc">InsightRx uses LangGraph to orchestrate structured communication between agents — not string concatenation or prompt chaining, but typed, schema-validated outputs that downstream agents consume as first-class input. This is the architectural decision that separates InsightRx from a set of sequential AI prompts: agents genuinely inform each other, creating emergent cross-channel intelligence that no single-agent system can produce.</div>
-      </div>
+
     </div>
   </div>
 </section>
