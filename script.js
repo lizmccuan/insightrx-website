@@ -17,18 +17,16 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
 // ── TAB NAVIGATION ──────────────────────────────────────────────────────────
 (function(){
-  var tabs   = document.querySelectorAll('.tab-btn');
-  var panels = document.querySelectorAll('.tab-panel');
+  var navLinks = document.querySelectorAll('.nav-link[data-tab]');
+  var panels   = document.querySelectorAll('.tab-panel');
 
   function showTab(id) {
-    tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.tab === id); });
+    navLinks.forEach(function(t){ t.classList.toggle('active', t.dataset.tab === id); });
     panels.forEach(function(p){ p.classList.toggle('active', p.id === 'tab-' + id); });
     history.replaceState(null, '', '#tab-' + id);
-    // scroll to top of content (below fixed nav + tab bar)
-    var tabNav = document.getElementById('tab-nav');
-    var navH   = (document.getElementById('navbar')  || {offsetHeight:62}).offsetHeight;
-    var tabH   = (tabNav || {offsetHeight:0}).offsetHeight;
-    window.scrollTo({ top: navH + tabH - 2, behavior: 'instant' });
+    // scroll to top of content (below fixed nav)
+    var navH = (document.getElementById('navbar') || {offsetHeight:62}).offsetHeight;
+    window.scrollTo({ top: navH - 2, behavior: 'instant' });
     // trigger fade-ups for newly visible content
     setTimeout(function(){
       document.querySelectorAll('.tab-panel.active .fade-up:not(.visible)').forEach(function(el){
@@ -37,16 +35,16 @@ document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
     }, 50);
   }
 
-  tabs.forEach(function(t){
+  navLinks.forEach(function(t){
     t.addEventListener('click', function(){ showTab(t.dataset.tab); });
   });
 
-  // honour hash on page load
+  // honour hash on page load — includes tabs not in the top nav (e.g. contact)
   var hash  = location.hash.replace('#tab-', '');
-  var valid = Array.from(tabs).map(function(t){ return t.dataset.tab; });
+  var valid = Array.from(panels).map(function(p){ return p.id.replace('tab-', ''); });
   showTab(valid.indexOf(hash) >= 0 ? hash : 'overview');
 
-  // expose for onclick= nav links
+  // expose for onclick= nav links (top nav + "Get in Touch" CTA)
   window.showTab = showTab;
 })();
 

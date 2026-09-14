@@ -46,17 +46,20 @@
       <span class="nav-logo-sub">by Elizabeth McCuan</span>
     </div>
     <div class="nav-links">
-      <a href="#tab-overview" onclick="showTab('overview');return false;">Overview</a>
-      <a href="#tab-problem" onclick="showTab('problem');return false;">Problem</a>
-      <a href="#tab-system" onclick="showTab('system');return false;">System</a>
-      <a href="#tab-ai-search" onclick="showTab('ai-search');return false;">AI Search</a>
-      <a href="#tab-demo" onclick="showTab('demo');return false;">Demo</a>
-      <a href="#tab-learnings" onclick="showTab('learnings');return false;">Learnings</a>
+      <a href="#tab-overview" class="nav-link" data-tab="overview" onclick="showTab('overview');return false;">Overview</a>
+      <a href="#tab-problem" class="nav-link" data-tab="problem" onclick="showTab('problem');return false;">Problem</a>
+      <a href="#tab-system" class="nav-link" data-tab="system" onclick="showTab('system');return false;">System</a>
+      <a href="#tab-ai-search" class="nav-link" data-tab="ai-search" onclick="showTab('ai-search');return false;">AI Search</a>
+      <a href="#tab-demo" class="nav-link" data-tab="demo" onclick="showTab('demo');return false;">Demo</a>
+      <a href="#tab-learnings" class="nav-link" data-tab="learnings" onclick="showTab('learnings');return false;">Learnings</a>
     </div>
     <a href="#tab-contact" onclick="showTab('contact');return false;" class="nav-cta">Get in Touch</a>
   </div>
 </nav>
 
+<div class="tab-panels">
+
+<div id="tab-overview" class="tab-panel active">
 <!-- ═══ HERO ═══ -->
 <section id="hero">
   <div class="dot-grid"></div>
@@ -127,23 +130,6 @@
   </div>
 </section>
 
-
-
-
-<div class="tab-nav-wrap" id="tab-nav">
-  <nav class="tab-nav" role="tablist">
-    <button class="tab-btn active" data-tab="overview" role="tab">Overview</button>
-    <button class="tab-btn" data-tab="problem" role="tab">Problem</button>
-    <button class="tab-btn" data-tab="system" role="tab">System</button>
-    <button class="tab-btn" data-tab="ai-search" role="tab">AI Search</button>
-    <button class="tab-btn" data-tab="demo" role="tab">Demo</button>
-    <button class="tab-btn" data-tab="learnings" role="tab">Learnings</button>
-    <button class="tab-btn" data-tab="contact" role="tab">Contact</button>
-  </nav>
-</div>
-<div class="tab-panels">
-
-<div id="tab-overview" class="tab-panel active">
 <!-- ═══ TECH STACK ═══ -->
 <section id="tech-stack" class="section-sm">
   <div class="container">
