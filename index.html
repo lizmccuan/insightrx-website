@@ -62,70 +62,21 @@
 <div id="tab-overview" class="tab-panel active">
 <!-- ═══ HERO ═══ -->
 <section id="hero">
-  <div class="dot-grid"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-left fade-up">
-        <div class="hero-eyebrow-row">
-          <span class="h-live-dot"></span>
-          <span>DePaul University · Elizabeth McCuan</span>
-        </div>
-        <h1 class="hero-title">
-          Marketing Intelligence<br/>
-          <span class="grad-text">Powered by<br/>Agentic AI</span>
-        </h1>
-        <p class="hero-sub">InsightRx is a multi-agent AI system that ingests live data from GA4, Search Console, search intelligence tools, and Meta — then deploys six specialized agents to surface SEO, AEO, and GEO opportunities and produce a ranked strategic action plan. No dashboards. No manual analysis. Pure intelligence.</p>
-        <div class="hero-btns">
-          <a href="#demo" class="btn btn-primary">View System Demo →</a>
-          <a href="#agents" class="btn btn-ghost">Explore Agent Architecture</a>
-        </div>
-        <div class="hero-chips">
-          <span class="hero-chip">Agentic AI</span>
-          <span class="hero-chip">SEO · AEO · GEO</span>
-          <span class="hero-chip">Grounding APIs</span>
-          <span class="hero-chip">A2A Pipeline</span>
-          <span class="hero-chip">LangGraph</span>
-          <span class="hero-chip">Python</span>
-        </div>
-      </div>
-
-      <div class="hero-terminal fade-up">
-        <div class="ht-topbar">
-          <div class="ht-dot ht-dot-r"></div>
-          <div class="ht-dot ht-dot-y"></div>
-          <div class="ht-dot ht-dot-g"></div>
-          <span class="ht-title">insightrx — agent_pipeline.py</span>
-        </div>
-        <div class="ht-body">
-          <div class="ht-line"><span class="ht-prompt">▸</span><span class="ht-cmd">python run_pipeline.py --brand <span class="ht-highlight">"client_demo"</span></span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Initializing InsightRx agent pipeline...</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Grounding APIs: <span class="ht-green">GA4 ✓  GSC ✓  Search Intel ✓  Meta ✓</span></span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">Spawning agents:</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">AnalyticsAgent</span>  → pulling GA4 sessions, events, conversions</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">SEOAgent</span>        → scanning GSC + ranking data for gaps</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">AEO_GEO_Agent</span>   → evaluating AI search readiness</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">SocialAgent</span>     → analyzing Meta performance signals</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">StrategyAgent</span>   → synthesizing cross-channel signals</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">  <span class="ht-purple">RecoAgent</span>       → generating ranked action plan</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-output">A2A handoffs complete. Compiling output...</span></div>
-          <div class="ht-line"><span class="ht-prompt"> </span><span class="ht-green">✓ Pipeline complete — 9 recommendations generated</span></div>
-          <div class="ht-divider"></div>
-          <div class="ht-metric-row">
-            <div class="ht-metric">
-              <div class="ht-m-val">9</div>
-              <div class="ht-m-label">Recommendations</div>
-            </div>
-            <div class="ht-metric">
-              <div class="ht-m-val">6</div>
-              <div class="ht-m-label">Agents Active</div>
-            </div>
-            <div class="ht-metric">
-              <div class="ht-m-val">4</div>
-              <div class="ht-m-label">Live APIs</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <img class="hero-wave-bg" src="assets/hero/insightrx-hero-waves.png" alt="" aria-hidden="true"/>
+  <div class="container hero-content fade-up">
+    <div class="hero-eyebrow-row">
+      <span>DePaul University · Elizabeth McCuan</span>
+    </div>
+    <h1 class="hero-title">
+      Marketing Intelligence<br/>
+      Powered by <span class="grad-text">Agentic AI</span>
+    </h1>
+    <p class="hero-sub">InsightRx is an AI-powered marketing intelligence and decision-support system that transforms structured data from GA4, Google Search Console, SEMrush, and Meta into evidence-backed opportunities, prioritized recommendations, and guided actions.</p>
+    <div class="hero-btns">
+      <a href="#tab-system" class="hero-cta" onclick="showTab('system');return false;">Explore the System →</a>
+    </div>
+    <div class="hero-dashboard-wrap">
+      <img class="hero-dashboard-img" src="assets/hero/insightrx-dashboard-recommendation.png" alt="InsightRx dashboard recommending an action to improve click-through rate for high-impression search queries, with impressions, CTR, and average position metrics"/>
     </div>
   </div>
 </section>
