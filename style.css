@@ -72,14 +72,14 @@ nav.scrolled{border-color:var(--border-2)}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(139,92,246,.45)}
 
 /* HERO */
-#hero{position:relative;overflow:hidden;padding:168px 0 120px;background:var(--bg-0)}
+#hero{position:relative;overflow:hidden;padding:168px 0 48px;background:var(--bg-0)}
 .hero-wave-bg{position:absolute;left:0;bottom:0;width:100%;height:auto;z-index:0;pointer-events:none;user-select:none}
 .hero-content{position:relative;z-index:2;text-align:center}
 .hero-eyebrow-row{margin-bottom:22px}
 .hero-eyebrow-row span{font-size:12px;font-weight:600;color:#c4b5fd;letter-spacing:.18em;text-transform:uppercase}
 .hero-title{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(40px,6vw,72px);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--text-1);margin-bottom:24px}
 .hero-sub{font-size:19px;line-height:1.7;color:var(--text-2);max-width:920px;margin:0 auto 40px}
-.hero-btns{margin-bottom:64px}
+.hero-btns{margin-bottom:10px}
 .hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;font-size:15px;font-weight:600;padding:15px 32px;border-radius:var(--r-sm);box-shadow:0 4px 20px rgba(139,92,246,.4);transition:all .2s;cursor:pointer;white-space:nowrap}
 .hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(139,92,246,.5)}
 .hero-cta:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
@@ -415,10 +415,10 @@ footer{background:var(--bg-0);border-top:1px solid var(--border);padding:28px 0}
   .nav-links::-webkit-scrollbar{display:none}
   .nav-links a{white-space:nowrap;flex-shrink:0;font-size:12px}
   .nav-cta{flex-shrink:0;font-size:12px;padding:8px 15px}
-  #hero{padding:112px 0 72px}
+  #hero{padding:112px 0 36px}
   .hero-title{font-size:clamp(32px,10vw,44px)}
   .hero-sub{font-size:16px;line-height:1.65}
-  .hero-btns{margin-bottom:40px}
+  .hero-btns{margin-bottom:14px}
   .hero-cta{width:100%;justify-content:center;padding:15px 20px}
   .hero-dashboard-wrap{max-width:100%}
   .problem-grid{grid-template-columns:1fr}
