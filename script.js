@@ -55,82 +55,57 @@ document.querySelectorAll('.accordion-header').forEach(function(hdr){
   });
 });
 
-// ── DESKTOP / MOBILE VIEW TOGGLE ────────────────────────────────────────────
-function setView(v) {
-  document.getElementById('viewDesktop').classList.toggle('active', v === 'desktop');
-  document.getElementById('viewMobile').classList.toggle('active', v === 'mobile');
-  document.getElementById('vtDesktop').classList.toggle('active', v === 'desktop');
-  document.getElementById('vtMobile').classList.toggle('active', v === 'mobile');
-}
-// On narrow screens, start in mobile view and keep in sync on resize
-(function initViewToggle(){
-  function syncView(){
-    if(window.innerWidth <= 640){
-      // CSS forces phone view; keep JS state aligned so vtMobile stays .active
-      document.getElementById('vtMobile').classList.add('active');
-      document.getElementById('vtDesktop').classList.remove('active');
-    }
-  }
-  syncView();
-  window.addEventListener('resize', syncView);
-})();
-
-// ── DESKTOP APP INNER TABS ──────────────────────────────────────────────────
-document.querySelectorAll('.app-tab').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var panel = btn.dataset.panel;
-    btn.closest('.app-inner-tabs').querySelectorAll('.app-tab').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
-    btn.closest('.app-main').querySelectorAll('.app-panel').forEach(function(p){ p.classList.remove('active'); });
-    document.getElementById(panel).classList.add('active');
-  });
-});
-
-// ── PHONE TABS ───────────────────────────────────────────────────────────────
-document.querySelectorAll('.ph-tab').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    var panel = btn.dataset.phanel;
-    btn.closest('.phone-tabs').querySelectorAll('.ph-tab').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
-    btn.closest('.phone-screen').querySelectorAll('.phone-panel').forEach(function(p){ p.classList.remove('active'); });
-    document.getElementById(panel).classList.add('active');
-  });
-});
-
-// ── APP TAB + SIDEBAR SYNC ───────────────────────────────────────────────────
+// ── INTERACTIVE PRODUCT DEMO (Demo tab) ─────────────────────────────────────
 (function(){
-  var tabLabels = {
-    'dt-overview':   'Pipeline Overview',
-    'dt-intake':     '① Data Intake Agent',
-    'dt-insight':    '② Insight Agent',
-    'dt-strategy':   '③ Strategy Agent',
-    'dt-execution':  '④ Execution Agent',
-    'dt-evaluation': '⑤ Evaluation Agent'
-  };
+  var sidebarItems = document.querySelectorAll('.pf-sidebar .pf-nav-item[data-page]');
+  var mobileItems  = document.querySelectorAll('.pf-mobile-item[data-page]');
+  var pages        = document.querySelectorAll('.pf-page');
+  if (!pages.length) return;
 
-  function switchAppTab(panelId) {
-    document.querySelectorAll('.app-tab').forEach(function(b){
-      b.classList.toggle('active', b.dataset.panel === panelId);
-    });
-    document.querySelectorAll('.app-panel').forEach(function(p){
-      p.classList.toggle('active', p.id === panelId);
-    });
-    document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
-      s.classList.toggle('active', s.dataset.apptab === panelId);
-    });
-    var lbl = document.getElementById('app-topbar-label');
-    if(lbl && tabLabels[panelId]) lbl.textContent = tabLabels[panelId];
+  function showPage(id) {
+    sidebarItems.forEach(function(t){ t.classList.toggle('active', t.dataset.page === id); });
+    mobileItems.forEach(function(t){ t.classList.toggle('active', t.dataset.page === id); });
+    pages.forEach(function(p){ p.classList.toggle('active', p.dataset.page === id); });
   }
 
-  // Sidebar item clicks
-  document.querySelectorAll('.sb-item[data-apptab]').forEach(function(s){
-    s.addEventListener('click', function(){ switchAppTab(s.dataset.apptab); });
+  sidebarItems.forEach(function(t){
+    t.addEventListener('click', function(){ showPage(t.dataset.page); });
+  });
+  mobileItems.forEach(function(t){
+    t.addEventListener('click', function(){ showPage(t.dataset.page); });
   });
 
-  // Top-bar tab clicks
-  document.querySelectorAll('.app-tab').forEach(function(btn){
-    btn.addEventListener('click', function(){ switchAppTab(btn.dataset.panel); });
+  // in-page links/buttons that jump to another sidebar page (e.g. dashboard's
+  // "View Opportunity" or opportunities' "See Action Plan")
+  document.querySelectorAll('.pf-goto[data-goto]').forEach(function(el){
+    el.addEventListener('click', function(){ showPage(el.dataset.goto); });
   });
+
+  // Analysis page's internal Traffic/Search/Pages sub-toggle
+  var subTabs = document.querySelectorAll('.analysis-subtab');
+  var subPanels = document.querySelectorAll('.analysis-subpanel');
+  subTabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      subTabs.forEach(function(b){ b.classList.toggle('active', b === t); });
+      subPanels.forEach(function(p){ p.classList.toggle('active', p.dataset.subPanel === t.dataset.sub); });
+    });
+  });
+
+  // Recommendations page: queue ⇄ detail internal navigation
+  var recQueue  = document.querySelector('.pf-rec-queue');
+  var recDetail = document.querySelector('.pf-rec-detail');
+  if (recQueue && recDetail) {
+    document.querySelectorAll('.pf-rec-open').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        recQueue.classList.remove('active');
+        recDetail.classList.add('active');
+      });
+    });
+    document.querySelector('.pf-rec-back').addEventListener('click', function(){
+      recDetail.classList.remove('active');
+      recQueue.classList.add('active');
+    });
+  }
 })();
 
 // ── HOW THE SYSTEM WORKS TABS (System page) ──────────────────────────────────

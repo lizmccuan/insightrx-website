@@ -1142,496 +1142,516 @@
 </div>
 
 <div id="tab-demo" class="tab-panel">
-<!-- ═══ DEMO ═══ -->
-<section id="system-walkthrough" class="demo-section">
-  <div class="container">
+<section id="product-walkthrough" class="demo-section">
+<div class="container">
 
-    <div class="demo-header fade-up">
-      <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span>Live Product Preview<span class="eyebrow-line"></span></div>
-      <h2 class="section-title mx-auto">The Agent Pipeline in <span class="grad-text">Action</span></h2>
-      <p class="section-sub mx-auto" style="text-align:center;max-width:560px">Each tab walks through one stage of the InsightRx multi-agent workflow — from raw data intake to a ranked, ready-to-execute action plan.</p>
+  <div class="demo-intro fade-up">
+    <div class="eyebrow mx-auto" style="justify-content:center"><span class="eyebrow-line"></span>INTERACTIVE PRODUCT DEMO<span class="eyebrow-line"></span></div>
+    <h2 class="section-title mx-auto">Explore InsightRx<br><span class="grad-text">like a marketer would.</span></h2>
+    <p class="section-sub mx-auto">Click through the product to see how InsightRx moves from uploaded marketing data to analysis, opportunities, recommendations, and AI-assisted action.</p>
+  </div>
+
+  <p class="demo-instruction fade-up">Start with Data Sources, then use the InsightRx sidebar to explore the workflow.</p>
+
+  <!-- ═══ SINGLE INTERACTIVE PRODUCT FRAME ═══ -->
+  <div class="product-frame product-frame-app fade-up">
+    <div class="pf-sidebar">
+      <div class="pf-logo"><span class="pf-logo-insight">Insight</span><span class="pf-logo-rx">Rx</span></div>
+      <div class="pf-logo-sub">AI-POWERED MARKETING INTELLIGENCE</div>
+      <div class="pf-nav">
+        <a class="pf-nav-item active" data-page="data-sources">📁 Data Sources</a>
+        <a class="pf-nav-item" data-page="dashboard">📊 Dashboard</a>
+        <a class="pf-nav-item" data-page="analysis">📈 Analysis</a>
+        <a class="pf-nav-item" data-page="social">📱 Social Analysis</a>
+        <a class="pf-nav-item pf-nav-gap" data-page="opportunities">🚀 Opportunities</a>
+        <a class="pf-nav-item" data-page="recommendations">🎯 Recommendations</a>
+        <a class="pf-nav-item" data-page="reports">📄 Reports</a>
+        <a class="pf-nav-item" data-page="chat">🤖 Chat with AI Agent</a>
+      </div>
+      <div class="pf-nav-dev">Developer Tools ⌄</div>
     </div>
 
-    <div class="view-toggle fade-up">
-      <button class="vt-btn active" id="vtDesktop" onclick="setView('desktop')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Desktop
-      </button>
-      <button class="vt-btn" id="vtMobile" onclick="setView('mobile')">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>Mobile
-      </button>
+    <!-- mobile horizontal page selector (hidden on desktop) -->
+    <div class="pf-mobile-nav">
+      <button class="pf-mobile-item active" data-page="data-sources">📁 Data Sources</button>
+      <button class="pf-mobile-item" data-page="dashboard">📊 Dashboard</button>
+      <button class="pf-mobile-item" data-page="analysis">📈 Analysis</button>
+      <button class="pf-mobile-item" data-page="social">📱 Social Analysis</button>
+      <button class="pf-mobile-item" data-page="opportunities">🚀 Opportunities</button>
+      <button class="pf-mobile-item" data-page="recommendations">🎯 Recommendations</button>
+      <button class="pf-mobile-item" data-page="reports">📄 Reports</button>
+      <button class="pf-mobile-item" data-page="chat">🤖 Chat with AI Agent</button>
     </div>
 
-    <div class="mockup-stage fade-up">
+    <div class="pf-main">
 
-      <!-- ══ DESKTOP ══ -->
-      <div class="mockup-desktop active" id="viewDesktop">
-        <div class="browser-chrome">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
-          <div class="browser-url">app.insightrx.ai / pipeline</div>
+      <!-- ═══ DATA SOURCES ═══ -->
+      <div class="pf-page active" data-page="data-sources">
+        <h1 class="pf-page-title">📁 Data Sources</h1>
+        <p class="pf-page-sub">Upload and manage your marketing data inputs</p>
+        <p class="pf-meta">Current loaded run: 2026-05-30_200841</p>
+        <div class="pf-block">
+          <h4 class="pf-block-title">Load Previous Run</h4>
+          <p class="pf-block-text">Open a previously saved analysis run and restore it into the app without rerunning uploads.</p>
+          <div class="pf-select">05-30-2026 (GA4, GSC, Meta, SEMrush) <span>⌄</span></div>
+          <p class="pf-hint">Feb 23–May 14 · GA4 · GSC · Meta · SEMrush</p>
+          <div class="pf-card">
+            <h5 class="pf-card-title">Run Summary</h5>
+            <p><strong>Date:</strong> Feb 23–May 14</p>
+            <p><strong>Data Sources:</strong> GA4, GSC, Meta, SEMrush</p>
+            <p><strong>Schema:</strong> v2</p>
+          </div>
+          <button class="pf-btn">Load One Saved Run</button>
         </div>
-        <div class="app-shell">
+        <div class="pf-block">
+          <h4 class="pf-block-title">Compare Saved Runs</h4>
+          <p class="pf-block-text">Choose a base run and a comparison run to inspect changes in performance, priorities, and intelligence.</p>
+        </div>
+      </div>
 
-          <!-- SIDEBAR -->
-          <aside class="app-sidebar">
-            <div class="sb-logo">Insight<span>Rx</span></div>
-            <div class="sb-section-label">Pipeline</div>
-            <div class="sb-item active" data-apptab="dt-overview">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Overview</span>
+      <!-- ═══ DASHBOARD ═══ -->
+      <div class="pf-page" data-page="dashboard">
+        <p class="pf-eyebrow-sm">MARKETING INTELLIGENCE</p>
+        <h1 class="pf-page-title">Marketing Intelligence Dashboard</h1>
+        <p class="pf-page-sub">Your marketing performance at a glance, with the opportunities that matter most.</p>
+
+        <div class="pf-stat-row">
+          <div class="pf-stat"><div class="pf-stat-label">Website Traffic</div><div class="pf-stat-value">887</div><div class="pf-stat-sub">Sessions from the current GA4 run</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Organic Visibility</div><div class="pf-stat-value">592</div><div class="pf-stat-sub">Google Search impressions</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Engagement Rate</div><div class="pf-stat-value">73.86%</div><div class="pf-stat-sub">Engaged website sessions</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Social Engagement</div><div class="pf-stat-value">10.27%</div><div class="pf-stat-sub">Interactions relative to reach</div></div>
+        </div>
+
+        <div class="pf-card">
+          <h5 class="pf-card-title">Performance Overview</h5>
+          <p class="pf-block-text">Top Google Search queries by impressions in the loaded run.</p>
+          <div class="pf-chart">
+            <div class="pf-bar-row"><span class="pf-bar-label">migraine quiz</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:100%"></div></div></div>
+            <div class="pf-bar-row"><span class="pf-bar-label">botoxsavingsprogram</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:74%"></div></div></div>
+            <div class="pf-bar-row"><span class="pf-bar-label">headache clinic</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div></div>
+            <div class="pf-bar-row"><span class="pf-bar-label">the headache lab</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:30%"></div></div></div>
+            <div class="pf-bar-row"><span class="pf-bar-label">headache lab</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:12%"></div></div></div>
+          </div>
+        </div>
+
+        <div class="pf-card pf-callout">
+          <h5 class="pf-card-title">Top Opportunity</h5>
+          <p class="pf-opp-name">headache oak lawn</p>
+          <p class="pf-opp-label">WHAT'S HAPPENING</p>
+          <p class="pf-block-text">"headache oak lawn" is appearing in Google searches, but relatively few searchers are clicking it.</p>
+          <p class="pf-opp-label">RECOMMENDED NEXT STEP</p>
+          <p class="pf-block-text">Improve the title tag, meta description, and search-intent alignment to make the result more compelling in Google.</p>
+          <p class="pf-hint">11.0K search appearances · 0.00% CTR · #4 avg. position · 56/100 confidence</p>
+          <a class="pf-link pf-goto" data-goto="recommendations">View Opportunity →</a>
+        </div>
+
+        <div class="pf-card">
+          <h5 class="pf-card-title">What's Driving Performance</h5>
+          <div class="pf-tabs">
+            <span class="pf-tab active">Top Pages</span>
+            <span class="pf-tab">Top Queries</span>
+            <span class="pf-tab">Traffic Sources</span>
+            <span class="pf-tab">Social Content</span>
+          </div>
+          <table class="pf-table">
+            <thead><tr><th>Page</th><th>Metric</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Migraine &amp; Headache Treatment Westmont, IL</td><td>active_users</td><td>285</td></tr>
+              <tr><td>Migraine Specialist Near Chicago</td><td>active_users</td><td>179</td></tr>
+              <tr><td>Meet Our Migraine Specialists</td><td>active_users</td><td>36</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pf-card">
+          <h5 class="pf-card-title">Recommended Actions</h5>
+          <p class="pf-block-text">The highest-priority actions generated from the current run.</p>
+          <div class="pf-action-list">
+            <div class="pf-action"><span class="pf-badge pf-badge-high">High priority</span><strong>High impressions but low CTR</strong><p>Search demand exists, but the search result is not compelling enough to drive traffic.</p></div>
+            <div class="pf-action"><span class="pf-badge pf-badge-high">High priority</span><strong>Strong ranking but low CTR</strong><p>High rankings without clicks represent missed traffic opportunities.</p></div>
+            <div class="pf-action"><span class="pf-badge pf-badge-high">High priority</span><strong>Non-branded search opportunity</strong><p>One of the clearest ways to grow net-new discovery beyond people who already know the brand.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ ANALYSIS ═══ -->
+      <div class="pf-page" data-page="analysis">
+        <h1 class="pf-page-title">📈 Analysis</h1>
+        <p class="pf-page-sub">Performance data from GA4 + GSC</p>
+
+        <div class="analysis-subnav">
+          <button class="analysis-subtab active" data-sub="traffic">Traffic Distribution</button>
+          <button class="analysis-subtab" data-sub="search">Search Behavior</button>
+          <button class="analysis-subtab" data-sub="pages">Page Performance</button>
+        </div>
+
+        <div class="analysis-subpanel active" data-sub-panel="traffic">
+          <div class="pf-card">
+            <h5 class="pf-card-title">Traffic Distribution</h5>
+            <p class="pf-block-text">Acquisition mix from the loaded GA4 source and medium report.</p>
+            <div class="pf-chart pf-chart-cols">
+              <div class="pf-col-row"><div class="pf-col" style="height:100%"></div><span>google / organic</span></div>
+              <div class="pf-col-row"><div class="pf-col" style="height:88%"></div><span>ig / paid</span></div>
+              <div class="pf-col-row"><div class="pf-col" style="height:64%"></div><span>(direct) / (none)</span></div>
+              <div class="pf-col-row"><div class="pf-col" style="height:21%"></div><span>fb / paid</span></div>
+              <div class="pf-col-row"><div class="pf-col" style="height:9%"></div><span>ig / social</span></div>
             </div>
-            <div class="sb-item" data-apptab="dt-intake">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg><span>Data Intake</span><span class="sb-step-badge">1</span>
+            <table class="pf-table">
+              <thead><tr><th>Source / Medium</th><th>Metric</th></tr></thead>
+              <tbody>
+                <tr><td>google / organic</td><td>sessions</td></tr>
+                <tr><td>ig / paid</td><td>sessions</td></tr>
+                <tr><td>(direct) / (none)</td><td>sessions</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="analysis-subpanel" data-sub-panel="search">
+          <div class="pf-card">
+            <h5 class="pf-card-title">Top Queries</h5>
+            <p class="pf-block-text">Search queries with the highest impression volume from the loaded GSC data.</p>
+            <div class="pf-chart">
+              <div class="pf-bar-row"><span class="pf-bar-label">migraine quiz</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:100%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">botoxsavingsprogram</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:74%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">headache clinic</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">the headache lab</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:30%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">headache lab</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:12%"></div></div></div>
             </div>
-            <div class="sb-item" data-apptab="dt-insight">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg><span>Insight Agent</span><span class="sb-step-badge">2</span>
+            <table class="pf-table">
+              <thead><tr><th>Query</th><th>CTR</th><th>Impressions</th><th>Position</th></tr></thead>
+              <tbody>
+                <tr><td>migraine quiz</td><td>0.85%</td><td>236</td><td>—</td></tr>
+                <tr><td>botoxsavingsprogram</td><td>0.57%</td><td>175</td><td>—</td></tr>
+                <tr><td>headache clinic</td><td>1.22%</td><td>82</td><td>—</td></tr>
+                <tr><td>the headache lab</td><td>41.43%</td><td>70</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="analysis-subpanel" data-sub-panel="pages">
+          <div class="pf-card">
+            <h5 class="pf-card-title">Top Pages</h5>
+            <p class="pf-block-text">Highest-value pages from the loaded GA4 page-title report.</p>
+            <div class="pf-chart">
+              <div class="pf-bar-row"><span class="pf-bar-label">Migraine &amp; Headache Treatment Westmont, IL</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:100%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">Migraine Specialist Near Chicago</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:63%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">Meet Our Migraine Specialists</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:13%"></div></div></div>
+              <div class="pf-bar-row"><span class="pf-bar-label">Botox For Migraines Near Chicago</span><div class="pf-bar-track"><div class="pf-bar-fill" style="width:8%"></div></div></div>
             </div>
-            <div class="sb-item" data-apptab="dt-strategy">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Strategy Agent</span><span class="sb-step-badge">3</span>
+            <table class="pf-table">
+              <thead><tr><th>Page Title</th><th>Metric</th><th>Value</th></tr></thead>
+              <tbody>
+                <tr><td>Migraine &amp; Headache Treatment Westmont, IL</td><td>active_users</td><td>285</td></tr>
+                <tr><td>Migraine Specialist Near Chicago</td><td>active_users</td><td>179</td></tr>
+                <tr><td>Meet Our Migraine Specialists</td><td>active_users</td><td>36</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SOCIAL ANALYSIS ═══ -->
+      <div class="pf-page" data-page="social">
+        <h1 class="pf-page-title">📱 Social Analysis</h1>
+        <p class="pf-page-sub">AI-powered insights from your social content performance</p>
+
+        <div class="pf-stat-row pf-stat-row-5">
+          <div class="pf-stat"><div class="pf-stat-label">Total Reach</div><div class="pf-stat-value">565</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Total Views</div><div class="pf-stat-value">1.0K</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Engagement Rate</div><div class="pf-stat-value">10.27%</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Posts Published</div><div class="pf-stat-value">4</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Avg Engagements / Post</div><div class="pf-stat-value">14.5</div></div>
+        </div>
+
+        <div class="pf-split">
+          <div class="pf-card">
+            <h5 class="pf-card-title">💊 AI Social Summary</h5>
+            <ul class="pf-insight-list">
+              <li>Patient Conversion is the strongest current content theme by average engagement rate.</li>
+              <li>Saves and shares account for 7% of recorded engagement actions.</li>
+            </ul>
+          </div>
+          <div class="pf-card">
+            <h5 class="pf-card-title">🚀 Top Opportunity</h5>
+            <p class="pf-opp-name">Clarify next steps on engaged posts</p>
+            <p class="pf-block-text">Posts with strong engagement but no follows may benefit from a clearer follow prompt or next-step action in the caption and creative.</p>
+            <a class="pf-link pf-goto" data-goto="opportunities">View Opportunities →</a>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <h5 class="pf-card-title">Content Themes</h5>
+          <p class="pf-block-text">Themes use the existing InsightRx topic classification and are ranked by available audience-response signals.</p>
+          <table class="pf-table">
+            <thead><tr><th>Theme</th><th>Posts</th><th>Engagement Rate</th><th>Save Rate</th></tr></thead>
+            <tbody>
+              <tr><td>Patient Conversion</td><td>1</td><td>16.67%</td><td>0.00%</td></tr>
+              <tr><td>Community / Event</td><td>1</td><td>11.52%</td><td>0.41%</td></tr>
+              <tr><td>Treatment Education</td><td>2</td><td>8.89%</td><td>0.37%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pf-card">
+          <h5 class="pf-card-title">Top Performing Content</h5>
+          <div class="pf-tabs">
+            <span class="pf-tab active">Overall</span>
+            <span class="pf-tab">Reach</span>
+            <span class="pf-tab">Engagement</span>
+            <span class="pf-tab">Saves</span>
+            <span class="pf-tab">Shares</span>
+          </div>
+          <div class="pf-post-list">
+            <div class="pf-post"><strong>Daily headaches aren't normal.</strong><p>IG image · Patient Conversion · Reach 54 · Engagement rate 16.67%</p></div>
+            <div class="pf-post"><strong>Seeing zigzag lines, flashing lights, or blurry vision?</strong><p>IG image · Treatment Education · Reach 85 · Engagement rate 11.76%</p></div>
+          </div>
+        </div>
+
+        <div class="pf-card pf-split">
+          <div>
+            <div class="pf-donut"></div>
+          </div>
+          <div>
+            <p class="pf-hint">TOTAL ENGAGEMENTS</p>
+            <p class="pf-stat-value">58</p>
+            <p class="pf-block-text">Saves and shares account for 7% of the recorded engagement actions in this run.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ OPPORTUNITIES ═══ -->
+      <div class="pf-page" data-page="opportunities">
+        <h1 class="pf-page-title">🚀 Opportunities</h1>
+        <p class="pf-page-sub">Where your marketing has the greatest room to improve.</p>
+
+        <div class="pf-stat-row pf-stat-row-3">
+          <div class="pf-stat"><div class="pf-stat-label">Opportunities Found</div><div class="pf-stat-value">27</div><div class="pf-stat-sub">Across the marketing areas analyzed in this run</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">High Priority</div><div class="pf-stat-value">12</div><div class="pf-stat-sub">Require the most attention based on current evidence</div></div>
+          <div class="pf-stat"><div class="pf-stat-label">Top Opportunity Area</div><div class="pf-stat-value">SEO</div><div class="pf-stat-sub">Largest concentration of detected opportunities</div></div>
+        </div>
+
+        <div class="pf-card pf-callout">
+          <h5 class="pf-card-title">🎯 Biggest Opportunity</h5>
+          <p class="pf-opp-name">Turn save-worthy content into clearer next steps</p>
+          <p class="pf-opp-label">WHY THIS MATTERS</p>
+          <p class="pf-block-text">Content that earns saves already shows audience value. The next opportunity is to make a relevant next step clearer.</p>
+          <p class="pf-opp-label">HOW TO IMPROVE</p>
+          <ul class="pf-insight-list">
+            <li>Add one next step that naturally follows the educational topic.</li>
+            <li>Match the CTA to the audience intent.</li>
+          </ul>
+          <p class="pf-hint">IG image · Treatment Education · 1 save on the top supporting post · Priority: High · Source: Meta</p>
+          <button class="pf-btn pf-btn-primary pf-goto" data-goto="recommendations">See Action Plan →</button>
+        </div>
+
+        <div class="pf-tabs pf-tabs-filter">
+          <span class="pf-tab active">SEO</span>
+          <span class="pf-tab">Pages</span>
+          <span class="pf-tab">Social</span>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-opp-header">
+            <strong>Improve click-through rate for high-impression migraine treatment searches</strong>
+            <span class="pf-badge pf-badge-high">High Priority</span>
+          </div>
+          <p class="pf-hint">Quick-Win On-Page SEO</p>
+          <p class="pf-opp-label">WHY THIS MATTERS</p>
+          <p class="pf-block-text">Already ranking in a range where a focused on-page refresh can realistically push it into stronger click-driving positions.</p>
+          <p class="pf-opp-label">EVIDENCE</p>
+          <p class="pf-hint">Position: 10 · Source: SEMrush</p>
+          <button class="pf-btn pf-goto" data-goto="recommendations">View Action Plan →</button>
+        </div>
+      </div>
+
+      <!-- ═══ RECOMMENDATIONS ═══ -->
+      <div class="pf-page" data-page="recommendations">
+
+        <!-- Recommendation Queue -->
+        <div class="pf-rec-queue active">
+          <h1 class="pf-page-title">🎯 Recommendations</h1>
+          <p class="pf-page-sub">Prioritized actions based on what InsightRx found in your marketing data.</p>
+
+          <div class="pf-card pf-callout">
+            <p class="pf-opp-label">✨ RECOMMENDED NEXT ACTION</p>
+            <p class="pf-opp-name">Improve search performance for Headache Oak Lawn queries</p>
+            <p class="pf-block-text">Review the result currently earning visibility for Headache Oak Lawn intent, then improve title/meta click appeal and strengthen relevance signals.</p>
+            <p class="pf-hint">
+              <span class="pf-badge pf-badge-high">High Priority</span>
+              <span class="pf-badge">Impact: Medium</span>
+              <span class="pf-badge">Confidence: 95%</span>
+              <span class="pf-badge">Effort: Medium</span>
+              <span class="pf-badge">Google Search Console</span>
+            </p>
+            <div class="pf-btn-row">
+              <button class="pf-btn pf-btn-primary pf-rec-open" data-rec="oak-lawn">Start This Action →</button>
+              <button class="pf-btn pf-rec-open" data-rec="oak-lawn">View Evidence →</button>
             </div>
-            <div class="sb-item" data-apptab="dt-execution">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Execution Agent</span><span class="sb-step-badge">4</span>
-            </div>
-            <div class="sb-item" data-apptab="dt-evaluation">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Evaluation Agent</span><span class="sb-step-badge">5</span>
-            </div>
-            <div class="sb-section-label" style="margin-top:auto">System</div>
-            <div class="sb-item" data-apptab="dt-overview">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Ask AI Agent</span>
-            </div>
-          </aside>
+          </div>
 
-          <!-- MAIN -->
-          <div class="app-main">
-            <div class="app-topbar">
-              <div>
-                <div class="app-topbar-title" id="app-topbar-label">Pipeline Overview</div>
-                <div class="app-topbar-meta">InsightRx · Healthcare Practice · May 2026</div>
-              </div>
-              <div class="app-inner-tabs">
-                <button class="app-tab active" data-panel="dt-overview">Overview</button>
-                <button class="app-tab" data-panel="dt-intake">① Data Intake</button>
-                <button class="app-tab" data-panel="dt-insight">② Insight</button>
-                <button class="app-tab" data-panel="dt-strategy">③ Strategy</button>
-                <button class="app-tab" data-panel="dt-execution">④ Execution</button>
-                <button class="app-tab" data-panel="dt-evaluation">⑤ Evaluation</button>
+          <div class="pf-tabs pf-tabs-filter">
+            <span class="pf-tab active">All</span>
+            <span class="pf-tab">SEO</span>
+            <span class="pf-tab">UX/CRO</span>
+            <span class="pf-tab">Analytics</span>
+          </div>
+
+          <p class="pf-block-title" style="margin-top:16px">Recommendation Queue</p>
+          <div class="pf-rec-list">
+            <div class="pf-rec-card">
+              <strong>Improve search performance for Botox Savings Program queries</strong>
+              <p>Review the result currently earning visibility for Botox Savings Program intent, then improve title/meta click appeal.</p>
+              <p class="pf-hint">
+                <span class="pf-badge pf-badge-high">High Priority</span>
+                <span class="pf-badge">Impact: Low</span>
+                <span class="pf-badge">Confidence: 95%</span>
+                <span class="pf-badge">Effort: High</span>
+                <span class="pf-badge">Google Search Console</span>
+              </p>
+              <div class="pf-btn-row">
+                <button class="pf-btn pf-btn-primary pf-rec-open" data-rec="botox-savings">Start This Action →</button>
+                <button class="pf-btn pf-rec-open" data-rec="botox-savings">View Evidence →</button>
               </div>
             </div>
-            <div class="app-content">
-
-              <!-- ── OVERVIEW ─────────────────────────────────────── -->
-              <div class="app-panel active" id="dt-overview">
-                <div class="ov-pipeline-row">
-                  <div class="ov-pipe-step ov-done">
-                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-                    <div class="ov-step-name">Data Intake</div>
-                    <div class="ov-step-stat">47,210 pts</div>
-                    <div class="ov-step-check">✓</div>
-                  </div>
-                  <div class="ov-pipe-arrow">→</div>
-                  <div class="ov-pipe-step ov-done">
-                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                    <div class="ov-step-name">Insight Agent</div>
-                    <div class="ov-step-stat">12 insights</div>
-                    <div class="ov-step-check">✓</div>
-                  </div>
-                  <div class="ov-pipe-arrow">→</div>
-                  <div class="ov-pipe-step ov-done">
-                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                    <div class="ov-step-name">Strategy Agent</div>
-                    <div class="ov-step-stat">5 opps ranked</div>
-                    <div class="ov-step-check">✓</div>
-                  </div>
-                  <div class="ov-pipe-arrow">→</div>
-                  <div class="ov-pipe-step ov-done">
-                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-                    <div class="ov-step-name">Execution Agent</div>
-                    <div class="ov-step-stat">5 action briefs</div>
-                    <div class="ov-step-check">✓</div>
-                  </div>
-                  <div class="ov-pipe-arrow">→</div>
-                  <div class="ov-pipe-step ov-done">
-                    <div class="ov-step-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-                    <div class="ov-step-name">Evaluation Agent</div>
-                    <div class="ov-step-stat">Report ready</div>
-                    <div class="ov-step-check">✓</div>
-                  </div>
-                </div>
-                <div class="kpi-row kpi-6">
-                  <div class="kpi-card"><div class="kpi-label">Opportunity Score</div><div class="kpi-value">5.37</div><div class="kpi-sub">↑ +0.4 vs last run</div></div>
-                  <div class="kpi-card" style="border-top-color:#6366f1"><div class="kpi-label">Top Opportunity</div><div class="kpi-value" style="font-size:13px;padding-top:2px">CTR Optimization</div><div class="kpi-sub">Botox cluster · Pos 4.1</div></div>
-                  <div class="kpi-card" style="border-top-color:#059669"><div class="kpi-label">Traffic Trend</div><div class="kpi-value">+12%</div><div class="kpi-sub">vs prior 4-week avg</div></div>
-                  <div class="kpi-card" style="border-top-color:#0ea5e9"><div class="kpi-label">Engagement Trend</div><div class="kpi-value">+8%</div><div class="kpi-sub">Session depth improving</div></div>
-                  <div class="kpi-card" style="border-top-color:#f59e0b"><div class="kpi-label">Actions Ready</div><div class="kpi-value">5</div><div class="kpi-sub">4 high priority</div></div>
-                  <div class="kpi-card" style="border-top-color:#10b981"><div class="kpi-label">Agent Status</div><div class="kpi-value" style="font-size:13px">5 / 5</div><div class="kpi-sub"><span style="color:#059669;font-weight:600">● All Complete</span></div></div>
-                </div>
-                <div class="insight-row">
-                  <div class="insight-card">
-                    <div class="insight-header"><span class="insight-title">Critical: Engagement–Conversion Gap</span><span class="insight-badge badge-crit">Critical</span></div>
-                    <div class="insight-text">4m 48s avg session but only 1.2% conversion — 3.1× below industry median. Strong intent, broken funnel.</div>
-                    <div class="insight-rec">↗ Execution Agent brief: Move CTA above fold, simplify booking form to 3 fields.</div>
-                  </div>
-                  <div class="insight-card">
-                    <div class="insight-header"><span class="insight-title">High: CTR Gap on Top Keyword Cluster</span><span class="insight-badge badge-high">High</span></div>
-                    <div class="insight-text">12,400 monthly impressions at Pos 4.1 yielding 1.9% CTR vs 6.2% expected. ~520 clicks/month unrealized.</div>
-                    <div class="insight-rec">↗ Execution Agent brief: Rewrite title tags with price signal and local modifier.</div>
-                  </div>
-                </div>
-                <div class="ov-chat-card">
-                  <div class="ov-chat-header"><span class="agent-pill">⬡ Ask the AI Agent</span><span class="chat-status" style="font-size:10px;color:#059669;font-weight:600">● Live</span></div>
-                  <div class="ov-chat-preview">
-                    <div class="ov-chat-q">"What should we prioritize this month?"</div>
-                    <div class="ov-chat-a">Based on your data, the top 3 actions are: <strong>(1)</strong> Rewrite title tags to recover ~520 clicks/mo · <strong>(2)</strong> Move booking CTA above fold to lift 1.2% → ~3.7% conversion · <strong>(3)</strong> Add FAQ schema to 3 pages for AI answer eligibility. All briefs are ready in the Execution tab.</div>
-                  </div>
-                </div>
+            <div class="pf-rec-card">
+              <strong>Improve search performance for Chronic Migraine queries</strong>
+              <p>Review the result currently earning visibility for Chronic Migraine intent, then improve title/meta click appeal.</p>
+              <p class="pf-hint">
+                <span class="pf-badge pf-badge-medium">Medium Priority</span>
+                <span class="pf-badge">Impact: Low</span>
+                <span class="pf-badge">Confidence: 70%</span>
+                <span class="pf-badge">Effort: Medium</span>
+                <span class="pf-badge">Google Search Console</span>
+              </p>
+              <div class="pf-btn-row">
+                <button class="pf-btn pf-btn-primary pf-rec-open" data-rec="chronic-migraine">Start This Action →</button>
+                <button class="pf-btn pf-rec-open" data-rec="chronic-migraine">View Evidence →</button>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <!-- ── DATA INTAKE AGENT ──────────────────────────── -->
-              <div class="app-panel" id="dt-intake">
-                <div class="ia-badge-row">
-                  <span class="agent-pill">⬡ Data Intake Agent · Stage 1 of 5</span>
-                  <span style="font-size:10px;color:#6b7280">Last run: May 31, 2026 · 9:14 AM · All sources nominal</span>
-                  <span class="ds-status-dot">● 5 / 5 Connected</span>
-                </div>
-                <div class="ds-grid">
-                  <div class="ds-card">
-                    <div class="ds-card-head">
-                      <div class="ds-icon" style="background:#e8f5e9;color:#2e7d32"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                      <div><div class="ds-name">Google Analytics 4</div><div class="ds-type">Behavioral · Session Data</div></div>
-                    </div>
-                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
-                    <div class="ds-fields"><span class="sf">sessions</span><span class="sf">users</span><span class="sf">conversions</span><span class="sf">engagement_time</span><span class="sf">bounce_rate</span></div>
-                  </div>
-                  <div class="ds-card">
-                    <div class="ds-card-head">
-                      <div class="ds-icon" style="background:#e3f2fd;color:#1565c0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-                      <div><div class="ds-name">Google Search Console</div><div class="ds-type">Search Visibility Data</div></div>
-                    </div>
-                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
-                    <div class="ds-fields"><span class="sf">queries</span><span class="sf">impressions</span><span class="sf">ctr</span><span class="sf">position</span><span class="sf">pages</span></div>
-                  </div>
-                  <div class="ds-card">
-                    <div class="ds-card-head">
-                      <div class="ds-icon" style="background:#e8eaf6;color:#3949ab"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                      <div><div class="ds-name">Meta Social Analytics</div><div class="ds-type">Social · Engagement Data</div></div>
-                    </div>
-                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
-                    <div class="ds-fields"><span class="sf">reach</span><span class="sf">engagement</span><span class="sf">impressions</span><span class="sf">roas</span><span class="sf">ctr</span></div>
-                  </div>
-                  <div class="ds-card">
-                    <div class="ds-card-head">
-                      <div class="ds-icon" style="background:#fff3e0;color:#e65100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                      <div><div class="ds-name">Website Performance Data</div><div class="ds-type">Technical · Core Web Vitals</div></div>
-                    </div>
-                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
-                    <div class="ds-fields"><span class="sf">lcp</span><span class="sf">cls</span><span class="sf">fid</span><span class="sf">page_speed</span></div>
-                  </div>
-                  <div class="ds-card ds-card-full">
-                    <div class="ds-card-head">
-                      <div class="ds-icon" style="background:#f3e5f5;color:#6a1b9a"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="11 8 11 11 13 13"/></svg></div>
-                      <div><div class="ds-name">Keyword Intelligence Data</div><div class="ds-type">SEO Findings · Competitive Rankings</div></div>
-                    </div>
-                    <div class="ds-checks"><span class="dsc dsc-ok">✓ Imported</span><span class="dsc dsc-ok">✓ Cleaned</span><span class="dsc dsc-ok">✓ Standardized</span><span class="dsc dsc-ok">✓ Ready</span></div>
-                    <div class="ds-fields"><span class="sf">keyword_rankings</span><span class="sf">search_volume</span><span class="sf">gap_analysis</span><span class="sf">competitor_data</span><span class="sf">serp_features</span></div>
-                  </div>
-                </div>
-                <div class="ds-flow-bar">
-                  <div class="ds-flow-nodes"><span class="ds-fn">GA4</span><span class="ds-fn">Search Console</span><span class="ds-fn">Meta Social</span><span class="ds-fn">Web Performance</span><span class="ds-fn">Keyword Intelligence</span></div>
-                  <div class="ds-flow-arrow">↓ Unified Data Pipeline · Schema Normalization · Quality Validation ↓</div>
-                  <div class="ds-flow-target">⬡ InsightRx Intelligence Layer · 5 sources · 47,210 data points · Ready for Insight Agent</div>
-                </div>
+        <!-- Recommendation Detail (opened from queue; includes Create With InsightRx) -->
+        <div class="pf-rec-detail">
+          <button class="pf-breadcrumb pf-rec-back">← Recommendations › SEO › <span class="pf-rec-detail-title">Improve search performance for Headache Oak Lawn queries</span></button>
+          <h1 class="pf-page-title" style="font-size:20px">Improve search performance for Headache Oak Lawn queries</h1>
+          <p class="pf-hint">
+            <span class="pf-badge pf-badge-high">High Priority</span>
+            <span class="pf-badge">Impact: Medium</span>
+            <span class="pf-badge">Confidence: 95%</span>
+            <span class="pf-badge">Effort: Medium</span>
+            <span class="pf-badge">Status: Ready</span>
+            <span class="pf-badge">Google Search Console</span>
+          </p>
+
+          <div class="pf-card">
+            <h5 class="pf-card-title">Why InsightRx Recommends This</h5>
+            <p class="pf-block-text">This search opportunity already has measurable visibility. The click-through evidence suggests the search result may not be earning as much response as the visibility could support.</p>
+          </div>
+
+          <div class="pf-card">
+            <h5 class="pf-card-title">Evidence</h5>
+            <div class="pf-stat-row pf-stat-row-3">
+              <div class="pf-stat"><div class="pf-stat-label">Average Position</div><div class="pf-stat-value">4</div></div>
+              <div class="pf-stat"><div class="pf-stat-label">CTR</div><div class="pf-stat-value">0.00%</div></div>
+              <div class="pf-stat"><div class="pf-stat-label">Impressions</div><div class="pf-stat-value">11,038</div></div>
+            </div>
+          </div>
+
+          <div class="pf-card">
+            <h5 class="pf-card-title">✨ Create With InsightRx</h5>
+            <p class="pf-block-text">Use AI to turn this recommendation into ready-to-review marketing assets.</p>
+            <div class="create-grid">
+              <div class="create-card">
+                <strong>Title + Meta Description</strong>
+                <p>Generate optimized search-result copy</p>
+                <button class="pf-btn">Create Draft</button>
               </div>
-
-              <!-- ── INSIGHT AGENT ──────────────────────────────── -->
-              <div class="app-panel" id="dt-insight">
-                <div class="ia-badge-row">
-                  <span class="agent-pill agent-pill-insight">⬡ Insight Agent · Stage 2 of 5</span>
-                  <span style="font-size:10px;color:#6b7280">12 insights detected across 5 data dimensions · May 2026</span>
-                </div>
-                <div class="analysis-grid">
-                  <div class="analysis-card">
-                    <div class="analysis-title">High-Impression / Low-CTR Queries</div>
-                    <div class="mini-table">
-                      <div class="mt-head"><span>Query</span><span>Impr.</span><span>CTR</span><span>Gap</span></div>
-                      <div class="mt-row"><span>botox savings near me</span><span>12,400</span><span>1.9%</span><span class="pill pill-dn">-4.3%</span></div>
-                      <div class="mt-row"><span>med spa chicago</span><span>9,100</span><span>2.1%</span><span class="pill pill-dn">-2.9%</span></div>
-                      <div class="mt-row"><span>dermal filler cost</span><span>7,800</span><span>1.4%</span><span class="pill pill-dn">-3.6%</span></div>
-                      <div class="mt-row"><span>lip filler near me</span><span>5,600</span><span>3.1%</span><span class="pill pill-dn">-1.4%</span></div>
-                    </div>
-                  </div>
-                  <div class="analysis-card">
-                    <div class="analysis-title">Non-Branded SEO Findings</div>
-                    <div class="bar-list">
-                      <div class="bar-item"><div class="bar-item-label"><span>med spa services</span><span>Pos 3.2 · 8.1K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>botox savings cluster</span><span>Pos 4.1 · 12.4K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>dermal fillers</span><span>Pos 5.7 · 7.8K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>aesthetic clinic</span><span>Pos 7.2 · 4.2K impr</span></div><div class="bar-track"><div class="bar-fill" style="width:34%"></div></div></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="analysis-grid">
-                  <div class="analysis-card">
-                    <div class="analysis-title">Top Traffic Sources</div>
-                    <div class="bar-list">
-                      <div class="bar-item"><div class="bar-item-label"><span>google / organic</span><span>68.3%</span></div><div class="bar-track"><div class="bar-fill" style="width:68.3%"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>direct</span><span>14.1%</span></div><div class="bar-track"><div class="bar-fill" style="width:14.1%;background:linear-gradient(90deg,#6366f1,#818cf8)"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>instagram / social</span><span>9.7%</span></div><div class="bar-track"><div class="bar-fill" style="width:9.7%;background:linear-gradient(90deg,#ec4899,#f472b6)"></div></div></div>
-                      <div class="bar-item"><div class="bar-item-label"><span>facebook / social</span><span>4.8%</span></div><div class="bar-track"><div class="bar-fill" style="width:4.8%;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div></div></div>
-                    </div>
-                  </div>
-                  <div class="analysis-card">
-                    <div class="analysis-title">Content Performance Signal</div>
-                    <div class="cp-split">
-                      <div>
-                        <div class="cp-label cp-good">↑ High Performing</div>
-                        <div class="cp-item">patient-reviews <span>4.4% CTR</span></div>
-                        <div class="cp-item">med-spa-services <span>3.1% CTR</span></div>
-                        <div class="cp-item">before-after-gallery <span>2.9% CTR</span></div>
-                      </div>
-                      <div>
-                        <div class="cp-label cp-bad">↓ Underperforming</div>
-                        <div class="cp-item">botox-savings <span>1.9% ↓</span></div>
-                        <div class="cp-item">dermal-fillers <span>1.4% ↓</span></div>
-                        <div class="cp-item">about-us <span>0.8% ↓</span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="chart-card">
-                  <div class="chart-label">Weekly Session Trend — 8-Week View</div>
-                  <div class="chart-bars">
-                    <div class="cbar" style="height:38%;background:#e0e7ff"></div><div class="cbar" style="height:44%;background:#c4b5fd"></div>
-                    <div class="cbar" style="height:52%;background:#c4b5fd"></div><div class="cbar" style="height:65%;background:#a78bfa"></div>
-                    <div class="cbar" style="height:55%;background:#e0e7ff"></div><div class="cbar" style="height:72%;background:#a78bfa"></div>
-                    <div class="cbar" style="height:88%;background:#7c3aed"></div><div class="cbar" style="height:80%;background:#6d28d9"></div>
-                  </div>
-                  <div class="chart-x"><span>Apr 7</span><span>Apr 14</span><span>Apr 21</span><span>Apr 28</span><span>May 5</span><span>May 12</span><span>May 19</span><span>May 26</span></div>
-                </div>
+              <div class="create-card">
+                <strong>H1 + Opening Copy</strong>
+                <p>Rewrite the page introduction</p>
+                <button class="pf-btn">Create Draft</button>
               </div>
-
-              <!-- ── STRATEGY AGENT ─────────────────────────────── -->
-              <div class="app-panel" id="dt-strategy">
-                <div class="ia-badge-row">
-                  <span class="agent-pill agent-pill-strategy">⬡ Strategy Agent · Stage 3 of 5</span>
-                  <span style="font-size:10px;color:#6b7280">5 opportunities scored by impact × confidence ÷ effort</span>
-                </div>
-                <div class="opp-list">
-                  <div class="opp-card opp-crit">
-                    <div class="opp-head-row"><span class="opp-tag opp-seo">SEO Opportunity</span><span class="opp-rank">#1 Priority</span></div>
-                    <div class="opp-title">CTR Recovery — High-Impression Keyword Cluster</div>
-                    <div class="opp-desc">12,400 monthly impressions for "botox savings near me" yielding only 1.9% CTR vs 6.2% expected. Title tag mismatch and missing price signals are suppressing clicks. Conservative recovery: +520 clicks/month.</div>
-                    <div class="opp-scores">
-                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">9/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">2/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
-                    </div>
-                  </div>
-                  <div class="opp-card opp-high">
-                    <div class="opp-head-row"><span class="opp-tag opp-conv">Conversion Opportunity</span><span class="opp-rank">#2 Priority</span></div>
-                    <div class="opp-title">Booking Flow Friction Reduction</div>
-                    <div class="opp-desc">4m 48s average session, 1.2% conversion — 3.1× below industry median. Users are engaged but not converting. CTA placement, form complexity, and unclear next steps are primary friction points.</div>
-                    <div class="opp-scores">
-                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">10/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span></div><div class="osc-val">High</div></div>
-                    </div>
-                  </div>
-                  <div class="opp-card">
-                    <div class="opp-head-row"><span class="opp-tag opp-local">Local Visibility</span><span class="opp-rank">#3 Priority</span></div>
-                    <div class="opp-title">Local SEO Content Gap — Chicago Med Spa</div>
-                    <div class="opp-desc">Competitors rank for 14 high-intent local queries where this practice has zero presence. "Med spa Chicago," "aesthetic clinic near me," and "botox specials Chicago" are uncontested with strong commercial intent.</div>
-                    <div class="opp-scores">
-                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">5/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">Med</div></div>
-                    </div>
-                  </div>
-                  <div class="opp-card">
-                    <div class="opp-head-row"><span class="opp-tag opp-content">Content Gap</span><span class="opp-rank">#4 Priority</span></div>
-                    <div class="opp-title">AI Answer Visibility — FAQ &amp; Schema Gap</div>
-                    <div class="opp-desc">Zero appearances in AI-generated overviews for any target query. Competitors with structured FAQ schema are cited in Perplexity and Google AI Overviews. E-E-A-T signals are missing across top service pages.</div>
-                    <div class="opp-scores">
-                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">7/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill low"></span><span class="osd fill low"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">3/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
-                    </div>
-                  </div>
-                  <div class="opp-card">
-                    <div class="opp-head-row"><span class="opp-tag opp-social">Social</span><span class="opp-rank">#5 Priority</span></div>
-                    <div class="opp-title">IG Reels Scale — 3.8× Performance Gap</div>
-                    <div class="opp-desc">Reels outperform all other content types by 3.8× but comprise only 18% of the posting schedule. Shifting to 60% Reels focused on patient conversion could 2× overall social reach in 60 days.</div>
-                    <div class="opp-scores">
-                      <div class="opp-score"><div class="osc-label">Impact</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">6/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Effort</div><div class="osc-dots"><span class="osd fill med"></span><span class="osd fill med"></span><span class="osd"></span><span class="osd"></span><span class="osd"></span></div><div class="osc-val">4/10</div></div>
-                      <div class="opp-score"><div class="osc-label">Confidence</div><div class="osc-dots"><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd fill"></span><span class="osd"></span></div><div class="osc-val">High</div></div>
-                    </div>
-                  </div>
-                </div>
+              <div class="create-card">
+                <strong>FAQ Suggestions</strong>
+                <p>Surface relevant audience questions</p>
+                <button class="pf-btn">Create Draft</button>
               </div>
-
-              <!-- ── EXECUTION AGENT ────────────────────────────── -->
-              <div class="app-panel" id="dt-execution">
-                <div class="ia-badge-row">
-                  <span class="agent-pill agent-pill-exec">⬡ Execution Agent · Stage 4 of 5</span>
-                  <span style="font-size:10px;color:#6b7280">5 implementation briefs generated · All actions ready to assign</span>
-                </div>
-                <div class="rec-list">
-                  <div class="rec-card crit">
-                    <div class="rec-tag-row">
-                      <span class="rec-tag crit">Critical</span>
-                      <span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: 1–2 days</span></span>
-                    </div>
-                    <div class="rec-signal">Rewrite title tags on top-3 underperforming pages</div>
-                    <div class="rec-insight">Pages ranking 3–5 with CTR 2–4× below expected. Title tags lack price signals, urgency, and local modifiers users are actively searching for.</div>
-                    <div class="rec-action crit">Rewrite /botox-savings to "Botox from $X · Chicago Med Spa". Mirror pattern across /dermal-fillers and /med-spa-services. A/B test urgency modifier in meta description.</div>
-                  </div>
-                  <div class="rec-card crit">
-                    <div class="rec-tag-row">
-                      <span class="rec-tag crit">Critical</span>
-                      <span class="rec-meta-tags"><span class="rmt">Impact: Very High</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">Timeline: 1 week</span></span>
-                    </div>
-                    <div class="rec-signal">Move CTA above fold, reduce booking form to 3 fields</div>
-                    <div class="rec-insight">Users spending 4m 48s on-site but converting at 1.2% — 3.1× below median. Primary booking CTA is below the fold on all service pages.</div>
-                    <div class="rec-action crit">Move booking CTA above fold on all service pages. Simplify form: Name, Phone, Service. Add review count (social proof) adjacent to every CTA button.</div>
-                  </div>
-                  <div class="rec-card warn">
-                    <div class="rec-tag-row">
-                      <span class="rec-tag warn">High Priority</span>
-                      <span class="rec-meta-tags"><span class="rmt">Impact: High</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: 2–3 days</span></span>
-                    </div>
-                    <div class="rec-signal">Add FAQ schema to top 3 pages for AI answer eligibility</div>
-                    <div class="rec-insight">Zero AI Overview appearances for any target query. Structured FAQ markup is the fastest path to AI citation eligibility and featured snippet capture.</div>
-                    <div class="rec-action warn">Add 5-question FAQ blocks on /botox-savings, /dermal-fillers, /med-spa-services. Implement JSON-LD FAQ schema. Target: "How much does X cost in Chicago?"</div>
-                  </div>
-                  <div class="rec-card" style="border-left-color:#6366f1">
-                    <div class="rec-tag-row">
-                      <span class="rec-tag" style="background:#ede9fe;color:#5b21b6">Medium Priority</span>
-                      <span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-med">Effort: Medium</span><span class="rmt rmt-time">Timeline: 2 weeks</span></span>
-                    </div>
-                    <div class="rec-signal">Publish local landing page targeting Chicago med spa cluster</div>
-                    <div class="rec-insight">14 high-intent local queries uncontested. A dedicated local page captures this traffic without cannibalizing existing rankings.</div>
-                    <div class="rec-action">Draft /chicago-med-spa targeting "med spa Chicago" (9,100 impressions). Include LocalBusiness schema, map embed, 3 neighborhood testimonials.</div>
-                  </div>
-                  <div class="rec-card good">
-                    <div class="rec-tag-row">
-                      <span class="rec-tag good">Opportunity</span>
-                      <span class="rec-meta-tags"><span class="rmt">Impact: Medium</span><span class="rmt rmt-low">Effort: Low</span><span class="rmt rmt-time">Timeline: Ongoing</span></span>
-                    </div>
-                    <div class="rec-signal">Shift social calendar to 60% Reels, focus on patient conversion</div>
-                    <div class="rec-insight">IG Reels drive 7.1% ER vs 0.4% for static images. Current schedule is only 18% Reels — the highest-ROI social action available.</div>
-                    <div class="rec-action good">3 Reels / 1 Carousel / 1 Story Poll per week. Topic: before/after results, patient stories, price transparency. Retire low-ER educational static posts.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- ── EVALUATION AGENT ───────────────────────────── -->
-              <div class="app-panel" id="dt-evaluation">
-                <div class="ia-badge-row">
-                  <span class="agent-pill" style="background:#f3e5f5;color:#6a1b9a;border-color:#e1bee7">⬡ Evaluation Agent · Stage 5 of 5</span>
-                  <span style="font-size:10px;color:#6b7280">Executive report generated · Pipeline complete</span>
-                </div>
-                <div class="report-doc">
-                  <div class="report-header">
-                    <div>
-                      <div class="report-logo">InsightRx</div>
-                      <div class="report-title-line">Executive Marketing Intelligence Report</div>
-                      <div class="report-meta">Healthcare Practice · May 2026 · Generated by Evaluation Agent · Full pipeline run complete</div>
-                    </div>
-                    <div class="report-score-badge">
-                      <div style="font-size:9px;color:#6b7280;margin-bottom:2px">Opportunity Score</div>
-                      <div style="font-size:22px;font-weight:800;color:#6d28d9;font-family:'Bricolage Grotesque',sans-serif">5.37</div>
-                    </div>
-                  </div>
-                  <div class="report-section">
-                    <div class="report-section-title">Key Findings</div>
-                    <div class="report-finding"><span class="rf-dot rf-red"></span><strong>Critical CTR Gap:</strong> 12,400 monthly impressions for top keyword cluster yielding 1.9% CTR vs 6.2% benchmark — ~520 clicks/month unrealized from title tag mismatches alone.</div>
-                    <div class="report-finding"><span class="rf-dot rf-red"></span><strong>Conversion Underperformance:</strong> Strong engagement (4m 48s, 3.2 pages/visit) not translating to bookings — 1.2% conversion rate is 3.1× below industry median.</div>
-                    <div class="report-finding"><span class="rf-dot rf-yellow"></span><strong>Local Search Gap:</strong> Zero ranking presence across 14 high-intent local queries where competitors are established. Uncontested traffic available now.</div>
-                    <div class="report-finding"><span class="rf-dot rf-purple"></span><strong>AI Visibility Zero:</strong> No appearances in Google AI Overviews or Perplexity for any target query. Competitors with FAQ schema are being cited instead.</div>
-                    <div class="report-finding"><span class="rf-dot rf-green"></span><strong>Social Content Arbitrage:</strong> IG Reels outperforming all formats by 3.8× but only 18% of schedule. High ROI reallocation available at low incremental cost.</div>
-                  </div>
-                  <div class="report-section">
-                    <div class="report-section-title">Strategic Recommendations</div>
-                    <div class="report-rec-list">
-                      <div class="rrl-item"><span class="rrl-num">01</span><span>Rewrite title tags on top 3 pages with price signals and local modifiers → +520 clicks/month</span></div>
-                      <div class="rrl-item"><span class="rrl-num">02</span><span>Move booking CTA above fold and simplify form to 3 fields → target 3.7% conversion</span></div>
-                      <div class="rrl-item"><span class="rrl-num">03</span><span>Add FAQ schema to 3 service pages to qualify for AI answer citations</span></div>
-                      <div class="rrl-item"><span class="rrl-num">04</span><span>Publish Chicago local landing page with LocalBusiness schema for 14 uncontested queries</span></div>
-                      <div class="rrl-item"><span class="rrl-num">05</span><span>Shift social calendar to 60% Reels focused on patient conversion narratives</span></div>
-                    </div>
-                  </div>
-                  <div class="report-section">
-                    <div class="report-section-title">Expected Impact</div>
-                    <div class="report-impact-grid">
-                      <div class="ri-card"><div class="ri-metric">+520</div><div class="ri-label">organic clicks/month from CTR recovery</div></div>
-                      <div class="ri-card ri-green"><div class="ri-metric">2–3×</div><div class="ri-label">conversion rate improvement potential</div></div>
-                      <div class="ri-card ri-blue"><div class="ri-metric">14</div><div class="ri-label">new local queries within reach</div></div>
-                      <div class="ri-card ri-purple"><div class="ri-metric">2×</div><div class="ri-label">social reach within 60 days</div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div><!-- /app-content -->
-          </div><!-- /app-main -->
-        </div><!-- /app-shell -->
-      </div><!-- /mockup-desktop -->
-
-      <!-- ══ MOBILE ══ -->
-      <div class="mockup-mobile" id="viewMobile">
-        <div class="phone-wrap">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="phone-status"><span>9:41</span><span>●●●●</span></div>
-              <div class="phone-app-bar"><div class="phone-app-name">InsightRx</div><div class="phone-app-sub">Agent Pipeline · May 2026</div></div>
-              <div class="phone-tabs">
-                <button class="ph-tab active" data-phanel="ph-overview">Overview</button>
-                <button class="ph-tab" data-phanel="ph-insight">Insight</button>
-                <button class="ph-tab" data-phanel="ph-execution">Actions</button>
-                <button class="ph-tab" data-phanel="ph-evaluation">Report</button>
-              </div>
-              <div class="phone-content">
-                <div class="phone-panel active" id="ph-overview">
-                  <div class="ph-kpi-grid">
-                    <div class="ph-kpi"><div class="ph-kpi-label">Opp. Score</div><div class="ph-kpi-value">5.37</div><div class="ph-kpi-sub">↑ +0.4</div></div>
-                    <div class="ph-kpi" style="border-top-color:#dc2626"><div class="ph-kpi-label">CTR Gap</div><div class="ph-kpi-value">4.3%</div><div class="ph-kpi-sub">Below benchmark</div></div>
-                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Traffic</div><div class="ph-kpi-value">+12%</div><div class="ph-kpi-sub">vs prior avg</div></div>
-                    <div class="ph-kpi" style="border-top-color:#10b981"><div class="ph-kpi-label">Agents</div><div class="ph-kpi-value" style="font-size:13px">5/5</div><div class="ph-kpi-sub" style="color:#059669;font-weight:600">● Done</div></div>
-                  </div>
-                  <div class="ph-chart"><div class="ph-chart-label">Session Trend</div><div class="ph-bars"><div class="ph-bar" style="height:38%;background:#e0e7ff"></div><div class="ph-bar" style="height:52%;background:#c4b5fd"></div><div class="ph-bar" style="height:65%;background:#a78bfa"></div><div class="ph-bar" style="height:80%;background:#7c3aed"></div><div class="ph-bar" style="height:88%;background:#6d28d9"></div></div></div>
-                  <div class="ph-insight"><div class="ph-insight-label">Pipeline Status</div><div class="ph-insight-text">Data Intake ✓ → Insight ✓ → Strategy ✓ → Execution ✓ → Evaluation ✓ · All 5 agents complete</div></div>
-                </div>
-                <div class="phone-panel" id="ph-insight">
-                  <div class="ph-insight" style="border-left-color:#0369a1"><div class="ph-insight-label" style="color:#0369a1">⬡ Insight Agent</div><div class="ph-insight-text">47,210 data points analyzed · 12 insights detected</div></div>
-                  <div class="ph-insight"><div class="ph-insight-label">Top Traffic Source</div><div class="ph-insight-text">google/organic <strong>68.3%</strong> · direct <strong>14.1%</strong> · instagram <strong>9.7%</strong></div></div>
-                  <div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">High CTR Pages</div><div class="ph-insight-text">patient-reviews <strong>4.4%</strong> · med-spa-services <strong>3.1%</strong></div></div>
-                  <div class="ph-insight" style="border-left-color:#dc2626"><div class="ph-insight-label" style="color:#991b1b">Low CTR Pages</div><div class="ph-insight-text">botox-savings <strong>1.9%↓</strong> · dermal-fillers <strong>1.4%↓</strong></div></div>
-                  <div class="ph-chart"><div class="ph-chart-label">Keyword Impression Volume</div><div class="ph-bars"><div class="ph-bar" style="height:100%;background:#7c3aed"></div><div class="ph-bar" style="height:73%;background:#a78bfa"></div><div class="ph-bar" style="height:63%;background:#c4b5fd"></div><div class="ph-bar" style="height:45%;background:#ddd6fe"></div></div></div>
-                </div>
-                <div class="phone-panel" id="ph-execution">
-                  <div class="ph-insight" style="border-left-color:#059669"><div class="ph-insight-label" style="color:#065f46">⬡ Execution Agent · 5 Briefs Ready</div><div class="ph-insight-text">All actions implementation-ready</div></div>
-                  <div class="ph-rec"><div class="ph-rec-tag">🔴 Critical</div><div class="ph-rec-title">Rewrite title tags — 3 pages</div><div class="ph-rec-text">Add price signals + local modifiers.</div><div class="ph-rec-action">Est. +520 clicks/month · 1–2 days</div></div>
-                  <div class="ph-rec" style="border-left-color:#dc2626"><div class="ph-rec-tag">🔴 Critical</div><div class="ph-rec-title">Move CTA above fold</div><div class="ph-rec-text">1.2% conversion → target 3.7%.</div><div class="ph-rec-action" style="background:#fff5f5;border-left-color:#dc2626;color:#991b1b">Simplify form to 3 fields · 1 week</div></div>
-                  <div class="ph-rec" style="border-left-color:#d97706"><div class="ph-rec-tag" style="color:#92400e">🟡 High</div><div class="ph-rec-title">Add FAQ schema to 3 pages</div><div class="ph-rec-text">Qualify for AI Overview citations.</div><div class="ph-rec-action" style="background:#fffbeb;border-left-color:#d97706;color:#92400e">2–3 days · High confidence</div></div>
-                  <div class="ph-rec" style="border-left-color:#059669"><div class="ph-rec-tag" style="color:#065f46">🟢 Opportunity</div><div class="ph-rec-title">Shift to 60% IG Reels</div><div class="ph-rec-text">3.8× ER vs static — scale this.</div><div class="ph-rec-action" style="background:#f0fdf4;border-left-color:#059669;color:#065f46">Ongoing · Low effort</div></div>
-                </div>
-                <div class="phone-panel" id="ph-evaluation">
-                  <div class="ph-insight" style="border-left-color:#6a1b9a"><div class="ph-insight-label" style="color:#6a1b9a">⬡ Evaluation Agent</div><div class="ph-insight-text">Opportunity Score: <strong>5.37</strong> · Report complete</div></div>
-                  <div class="ph-kpi-grid">
-                    <div class="ph-kpi"><div class="ph-kpi-label">Clicks/mo</div><div class="ph-kpi-value" style="font-size:14px">+520</div><div class="ph-kpi-sub">CTR recovery</div></div>
-                    <div class="ph-kpi" style="border-top-color:#059669"><div class="ph-kpi-label">Conv. Lift</div><div class="ph-kpi-value" style="font-size:14px">2–3×</div><div class="ph-kpi-sub">potential</div></div>
-                    <div class="ph-kpi" style="border-top-color:#0369a1"><div class="ph-kpi-label">Local Gaps</div><div class="ph-kpi-value">14</div><div class="ph-kpi-sub">uncontested</div></div>
-                    <div class="ph-kpi" style="border-top-color:#7c3aed"><div class="ph-kpi-label">Social Reach</div><div class="ph-kpi-value">2×</div><div class="ph-kpi-sub">60 days</div></div>
-                  </div>
-                  <div class="ph-insight"><div class="ph-insight-label">Priority Actions</div><div class="ph-insight-text"><strong>1.</strong> Rewrite title tags · <strong>2.</strong> Move CTA above fold · <strong>3.</strong> Add FAQ schema · <strong>4.</strong> Local landing page · <strong>5.</strong> Scale IG Reels</div></div>
-                </div>
+              <div class="create-card">
+                <strong>Full Optimization Draft</strong>
+                <p>Create a complete page revision for review</p>
+                <button class="pf-btn">Create Draft</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-    </div><!-- /mockup-stage -->
-  </div><!-- /container -->
+      <!-- ═══ REPORTS ═══ -->
+      <div class="pf-page" data-page="reports">
+        <p class="pf-eyebrow-sm">📄 MARKETING PERFORMANCE REPORT</p>
+        <h1 class="pf-page-title" style="font-size:20px">Marketing Performance Report</h1>
+        <p class="pf-hint">Feb 23–May 14 · GA4 · GSC · Meta · SEMrush</p>
+        <div class="pf-card">
+          <h5 class="pf-card-title">✨ Executive Brief</h5>
+          <p class="pf-block-text">"headache oak lawn" is appearing in Google searches, but relatively few searchers are clicking it.</p>
+          <div class="pf-mini-cols">
+            <div><strong>What's Working</strong><p>Appearing in Google searches</p></div>
+            <div><strong>Needs Attention</strong><p>Clearer search-result messaging</p></div>
+            <div><strong>Best Next Move</strong><p>Improve title tag and meta description</p></div>
+          </div>
+        </div>
+        <div class="pf-card">
+          <h5 class="pf-card-title">Performance Snapshot</h5>
+          <div class="pf-mini-cols" style="grid-template-columns:1fr 1fr">
+            <div><strong>Website</strong><p>Sessions: 887 · Engagement Rate: 73.86%</p></div>
+            <div><strong>Search</strong><p>Impressions: 592 · CTR: 7.26%</p></div>
+            <div><strong>Social</strong><p>Reach: 565 · Views: 1.0K</p></div>
+            <div><strong>SEO / Competitive</strong><p>Keywords Analyzed: 150 · Opportunities: 10</p></div>
+          </div>
+        </div>
+        <div class="pf-btn-row">
+          <button class="pf-btn">Export PDF</button>
+          <button class="pf-btn">Export Markdown</button>
+          <button class="pf-btn">Export PowerPoint</button>
+        </div>
+      </div>
+
+      <!-- ═══ CHAT WITH AI AGENT (Pulse AI) ═══ -->
+      <div class="pf-page" data-page="chat">
+        <p class="pf-eyebrow-sm">✨ PULSE AI — AI MARKETING INTELLIGENCE ASSISTANT</p>
+        <p class="pf-pulse-greeting">Good afternoon.<br>What can Pulse help you uncover?</p>
+        <div class="pf-chip-row">
+          <span class="pf-chip">Analyze Performance</span>
+          <span class="pf-chip">Find Opportunities</span>
+          <span class="pf-chip">Explain Trends</span>
+          <span class="pf-chip">What Should I Do Next?</span>
+        </div>
+        <div class="pf-input-bar">Describe or ask for recommendations… <span>➤</span></div>
+        <div class="pf-card" style="margin-top:14px">
+          <h5 class="pf-card-title">Pulse Insights</h5>
+          <p class="pf-block-text"><strong>Low CTR Detected</strong> — headache oak lawn is getting visibility but not enough clicks.</p>
+          <p class="pf-block-text"><strong>Ranking Opportunity</strong> — the headache clinic is within striking distance and can likely move with focused optimization.</p>
+        </div>
+        <div class="pf-card">
+          <h5 class="pf-card-title">Pulse Recommendations</h5>
+          <p class="pf-block-text"><strong>Strong ranking but low CTR</strong> — high rankings without clicks represent missed traffic opportunities.</p>
+          <p class="pf-block-text"><strong>Non-branded search opportunity</strong> — one of the clearest ways to grow net-new discovery.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <div class="demo-final-cta fade-up">
+    <h3 class="section-title mx-auto" style="font-size:24px">Want to see how it works behind the interface?</h3>
+    <a class="hero-cta mx-auto" onclick="showTab('system');return false;">Explore the System →</a>
+  </div>
+
+</div>
 </section>
 </div>
 <div id="tab-learnings" class="tab-panel">
