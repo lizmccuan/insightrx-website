@@ -149,3 +149,42 @@ document.querySelectorAll('.accordion-header').forEach(function(hdr){
   // expose for the "See the AI Agents →" in-panel CTA
   window.showHiwTab = showHiwTab;
 })();
+
+// ── LEARNINGS TABS (Learnings page) ───────────────────────────────────────────
+(function(){
+  var tabs = document.querySelectorAll('.lrn-tab');
+  var panels = document.querySelectorAll('.lrn-panel');
+  if (!tabs.length) return;
+
+  function showLrnTab(id) {
+    tabs.forEach(function(t){
+      var isActive = t.dataset.lrn === id;
+      t.classList.toggle('active', isActive);
+      t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      t.tabIndex = isActive ? 0 : -1;
+      if (isActive) t.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    });
+    panels.forEach(function(p){
+      var isActive = p.id === 'lrn-panel-' + id;
+      p.classList.toggle('active', isActive);
+      p.hidden = !isActive;
+    });
+  }
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ showLrnTab(t.dataset.lrn); });
+    t.addEventListener('keydown', function(e){
+      var idx = Array.prototype.indexOf.call(tabs, t);
+      var target = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') target = tabs[(idx + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') target = tabs[(idx - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') target = tabs[0];
+      else if (e.key === 'End') target = tabs[tabs.length - 1];
+      if (target) {
+        e.preventDefault();
+        target.focus();
+        showLrnTab(target.dataset.lrn);
+      }
+    });
+  });
+})();

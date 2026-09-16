@@ -1581,166 +1581,200 @@
 </section>
 </div>
 <div id="tab-learnings" class="tab-panel">
-<!-- ═══ WHAT I LEARNED ═══ -->
-<section id="learned" class="section">
-  <div class="container">
 
+<!-- ═══ REFLECTION HERO ═══ -->
+<section id="learnings-hero" class="section">
+  <div class="container lrn-hero-grid">
     <div class="fade-up">
       <div class="eyebrow"><span class="eyebrow-line"></span>Reflection</div>
-      <h2 class="section-title">From Campaign Thinking<br/>to <span class="grad-text">Systems Thinking</span></h2>
-      <p class="section-sub">Building InsightRx in a production environment changed how I think about marketing, AI, and the intersection of both.</p>
+      <h1 class="section-title">Building InsightRx changed<br/><span class="grad-text">how I think about AI.</span></h1>
+      <p class="section-sub">I started this project thinking mostly about what AI could generate. I finished it thinking much more about systems, evidence, evaluation, efficiency, and where human judgment still matters.</p>
     </div>
-
-    <!-- Transformation cards -->
-    <div class="lrn-section-div fade-up">How my thinking shifted</div>
-    <div class="lrn-tx-grid fade-up">
-      <div class="lrn-tx-card">
-        <div class="lrn-tx-row">
-          <span class="lrn-tx-before">Campaign Thinking</span>
-          <span class="lrn-tx-arrow">&rarr;</span>
-          <span class="lrn-tx-after">Systems Thinking</span>
-        </div>
-        <div class="lrn-tx-bar"></div>
-        <p class="lrn-tx-note">Shifted from &ldquo;what should I do?&rdquo; to &ldquo;how do I architect a system that answers that automatically?&rdquo; Every strategy now looks like an optimization problem waiting to be built.</p>
+    <div class="lrn-hero-visual fade-up">
+      <div class="lrn-venn">
+        <div class="lrn-venn-circle lrn-venn-left">Marketing<br/>Strategy</div>
+        <div class="lrn-venn-circle lrn-venn-right">AI<br/>Systems</div>
+        <div class="lrn-venn-center">InsightRx</div>
+        <div class="lrn-venn-line"></div>
       </div>
-      <div class="lrn-tx-card">
-        <div class="lrn-tx-row">
-          <span class="lrn-tx-before">Prompt Engineering</span>
-          <span class="lrn-tx-arrow">&rarr;</span>
-          <span class="lrn-tx-after">AI System Design</span>
-        </div>
-        <div class="lrn-tx-bar"></div>
-        <p class="lrn-tx-note">Prompts alone are not enough. Production AI requires grounded data, structured outputs, agent orchestration, and evaluation frameworks. Prompts are one component of a larger system.</p>
-      </div>
-      <div class="lrn-tx-card">
-        <div class="lrn-tx-row">
-          <span class="lrn-tx-before">SEO</span>
-          <span class="lrn-tx-arrow">&rarr;</span>
-          <span class="lrn-tx-after">SEO &plus; AEO &plus; GEO</span>
-        </div>
-        <div class="lrn-tx-bar"></div>
-        <p class="lrn-tx-note">After auditing real brands against ChatGPT, Perplexity, and AI Overviews, it became clear: brands are already winning and losing in AI-mediated discovery &mdash; most don&rsquo;t know it yet.</p>
-      </div>
-      <div class="lrn-tx-card">
-        <div class="lrn-tx-row">
-          <span class="lrn-tx-before">Strategy</span>
-          <span class="lrn-tx-arrow">&rarr;</span>
-          <span class="lrn-tx-after">Strategy &plus; Engineering</span>
-        </div>
-        <div class="lrn-tx-bar"></div>
-        <p class="lrn-tx-note">The best strategy is only as useful as the system that can execute it. The best pipeline is worthless without real strategic questions. InsightRx forced me to hold both simultaneously.</p>
-      </div>
+      <p class="lrn-venn-caption">A more thoughtful approach to a more useful future.</p>
     </div>
-
-    <!-- Production AI stack -->
-    <div class="lrn-section-div fade-up">What production AI actually requires</div>
-    <div class="lrn-stack fade-up">
-      <div class="lrn-stack-header">
-        <div class="lrn-stack-title">Prompts are necessary &mdash; but not sufficient.</div>
-        <div class="lrn-stack-note">InsightRx required all seven layers to produce reliable, grounded output.</div>
-      </div>
-      <div class="lrn-chips">
-        <span class="lrn-chip">Grounded Data</span>
-        <span class="lrn-chip">Structured Outputs</span>
-        <span class="lrn-chip">Agent Orchestration</span>
-        <span class="lrn-chip">Evaluation Frameworks</span>
-        <span class="lrn-chip">Data Normalization</span>
-        <span class="lrn-chip">Reliable Workflows</span>
-        <span class="lrn-chip lrn-chip-blue">Prompt Engineering &uarr; one of seven</span>
-      </div>
-    </div>
-
-    <!-- 3 key takeaways -->
-    <div class="lrn-section-div fade-up">Key takeaways</div>
-    <div class="lrn-insights fade-up">
-      <div class="lrn-ins-card">
-        <div class="lrn-ins-icon">&#128279;</div>
-        <div class="lrn-ins-title">Grounding is the hardest part of AI</div>
-        <p class="lrn-ins-text">Getting agents to produce useful output is easy. Getting them grounded in live, clean, normalized data &mdash; handling authentication, rate limits, and schema mismatches &mdash; is where most AI projects fail.</p>
-        <span class="lrn-ins-tag">data_grounding</span>
-      </div>
-      <div class="lrn-ins-card">
-        <div class="lrn-ins-icon">&#10022;</div>
-        <div class="lrn-ins-title">AEO and GEO are already real</div>
-        <p class="lrn-ins-text">Brands are already winning and losing in AI-mediated discovery &mdash; they just don&rsquo;t know it yet. The window to build early advantage is narrow, and InsightRx is designed to identify it.</p>
-        <span class="lrn-ins-tag">aeo_geo_visibility</span>
-      </div>
-      <div class="lrn-ins-card">
-        <div class="lrn-ins-icon">&#127919;</div>
-        <div class="lrn-ins-title">Strategy and engineering are inseparable</div>
-        <p class="lrn-ins-text">InsightRx forced me to hold both simultaneously &mdash; strategic marketing questions grounding an AI pipeline, an AI pipeline making strategy executable. That intersection is where I want to work.</p>
-        <span class="lrn-ins-tag">systems_thinking</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
-
-<!-- ═══ ROADMAP ═══ -->
-<section id="roadmap" class="section">
+<!-- ═══ TABBED REFLECTION AREA ═══ -->
+<section id="learnings-tabs" class="section">
   <div class="container">
-    <div class="fade-up">
-      <div class="eyebrow"><span class="eyebrow-line"></span>Future Direction</div>
-      <h2 class="section-title">InsightRx<br/><span class="grad-text">Development Roadmap</span></h2>
-      <p class="section-sub">InsightRx is a working prototype with a clear path to production. Each phase extends the agent architecture, data coverage, and intelligence depth.</p>
+
+    <div class="lrn-tabbar" role="tablist" aria-label="Learnings sections">
+      <button class="lrn-tab active" role="tab" aria-selected="true" aria-controls="lrn-panel-key" id="lrn-tab-key" data-lrn="key" tabindex="0">Key Learnings</button>
+      <button class="lrn-tab" role="tab" aria-selected="false" aria-controls="lrn-panel-workflow" id="lrn-tab-workflow" data-lrn="workflow" tabindex="-1">My Workflow</button>
+      <button class="lrn-tab" role="tab" aria-selected="false" aria-controls="lrn-panel-trust" id="lrn-tab-trust" data-lrn="trust" tabindex="-1">Trust + AI Use</button>
+      <button class="lrn-tab" role="tab" aria-selected="false" aria-controls="lrn-panel-next" id="lrn-tab-next" data-lrn="next" tabindex="-1">What's Next</button>
     </div>
-    <div class="roadmap-phases">
-      <div class="phase fade-up">
-        <div class="phase-num">PHASE 01</div>
-        <div class="phase-title">Foundation</div>
-        <div class="phase-items">
-          <div class="pi"><span class="pi-check">✓</span>Six-agent pipeline architecture</div>
-          <div class="pi"><span class="pi-check">✓</span>GA4, GSC, search intelligence, Meta APIs</div>
-          <div class="pi"><span class="pi-check">✓</span>LangGraph A2A orchestration</div>
-          <div class="pi"><span class="pi-check">✓</span>Streamlit dashboard v1</div>
-          <div class="pi"><span class="pi-check">✓</span>Recommendation output layer</div>
-        </div>
-        <span class="phase-status ps-done">Complete</span>
+
+    <!-- ── KEY LEARNINGS ── -->
+    <div class="lrn-panel active" id="lrn-panel-key" role="tabpanel" aria-labelledby="lrn-tab-key">
+      <div class="lrn-panel-head fade-up">
+        <div class="eyebrow"><span class="eyebrow-line"></span>How My Thinking Changed</div>
+        <h2 class="section-title" style="font-size:clamp(26px,3.2vw,36px)">From using AI<br/><span class="grad-text">to designing with AI.</span></h2>
       </div>
-      <div class="phase fade-up">
-        <div class="phase-num">PHASE 02</div>
-        <div class="phase-title">Intelligence Depth</div>
-        <div class="phase-items">
-          <div class="pi"><span class="pi-dot">◐</span>AEO citation monitoring (Perplexity)</div>
-          <div class="pi"><span class="pi-dot">◐</span>GEO brand presence tracking</div>
-          <div class="pi"><span class="pi-dot">◐</span>Competitor agent integration</div>
-          <div class="pi"><span class="pi-dot">◐</span>Enhanced impact scoring model</div>
-          <div class="pi"><span class="pi-dot">◐</span>Historical trend memory</div>
+
+      <div class="lrn-key-grid fade-up">
+        <div class="lrn-key-card">
+          <div class="lrn-key-row"><span class="lrn-key-before">Prompting</span><span class="lrn-key-arrow">&rarr;</span><span class="lrn-key-after">System Design</span></div>
+          <p class="lrn-key-note">A strong prompt is only one part of a reliable AI workflow. Data, logic, evaluation, and UX matter just as much.</p>
         </div>
-        <span class="phase-status ps-active">In Progress</span>
+        <div class="lrn-key-card">
+          <div class="lrn-key-row"><span class="lrn-key-before">More Output</span><span class="lrn-key-arrow">&rarr;</span><span class="lrn-key-after">Better Decisions</span></div>
+          <p class="lrn-key-note">The goal is not to generate more recommendations. It is to surface the recommendations actually supported by the evidence.</p>
+        </div>
+        <div class="lrn-key-card">
+          <div class="lrn-key-row"><span class="lrn-key-before">Automation</span><span class="lrn-key-arrow">&rarr;</span><span class="lrn-key-after">Human-in-the-Loop</span></div>
+          <p class="lrn-key-note">The most useful system helps the marketer make a better decision rather than removing them from the process.</p>
+        </div>
+        <div class="lrn-key-card">
+          <div class="lrn-key-row"><span class="lrn-key-before">AI Confidence</span><span class="lrn-key-arrow">&rarr;</span><span class="lrn-key-after">Evidence Confidence</span></div>
+          <p class="lrn-key-note">Confidence should reflect the strength of the evidence, not how certain the AI sounds.</p>
+        </div>
       </div>
-      <div class="phase fade-up">
-        <div class="phase-num">PHASE 03</div>
-        <div class="phase-title">SaaS Architecture</div>
-        <div class="phase-items">
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Multi-brand workspace support</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Scheduled pipeline runs</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Email/Slack recommendation delivery</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>User authentication &amp; billing</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>API access for agency clients</div>
-        </div>
-        <span class="phase-status ps-next">Next</span>
+
+      <div class="lrn-callout fade-up"><span class="lrn-callout-icon">&#128161;</span><span><strong>The biggest shift:</strong> I stopped asking, &ldquo;What can AI generate?&rdquo; and started asking, &ldquo;How should the system make this decision?&rdquo;</span></div>
+    </div>
+
+    <!-- ── MY WORKFLOW ── -->
+    <div class="lrn-panel" id="lrn-panel-workflow" role="tabpanel" aria-labelledby="lrn-tab-workflow" hidden>
+      <div class="lrn-panel-head fade-up">
+        <div class="eyebrow"><span class="eyebrow-line"></span>How I Actually Worked</div>
+        <h2 class="section-title" style="font-size:clamp(26px,3.2vw,36px)">I wasn&rsquo;t just prompting AI.<br/><span class="grad-text">I was building, testing, and refining.</span></h2>
       </div>
-      <div class="phase fade-up">
-        <div class="phase-num">PHASE 04</div>
-        <div class="phase-title">M2M Intelligence</div>
-        <div class="phase-items">
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Agent-to-agent brand evaluation</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>AI ecosystem brand scoring</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Predictive opportunity forecasting</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>M2M readiness audit product</div>
-          <div class="pi"><span class="pi-dot" style="color:var(--text-3)">○</span>Commercial launch</div>
+
+      <div class="lrn-flow-row fade-up">
+        <div class="lrn-flow-step">
+          <div class="lrn-flow-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 4h11v16H4V9l5-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 4v5H4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="lrn-flow-title">Plan</div>
+          <div class="lrn-flow-desc">Define the marketing problem, required evidence, and expected output.</div>
         </div>
-        <span class="phase-status ps-future">Future</span>
+        <div class="lrn-flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="lrn-flow-step">
+          <div class="lrn-flow-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l4-11 4 6 3-4 5 9H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="lrn-flow-title">Build</div>
+          <div class="lrn-flow-desc">Develop rules, data workflows, AI roles, and product interactions.</div>
+        </div>
+        <div class="lrn-flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="lrn-flow-step">
+          <div class="lrn-flow-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="lrn-flow-title">Test</div>
+          <div class="lrn-flow-desc">Run the system against real marketing data and inspect where the logic breaks.</div>
+        </div>
+        <div class="lrn-flow-arrow" aria-hidden="true">&rarr;</div>
+        <div class="lrn-flow-step">
+          <div class="lrn-flow-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 1 1-2.34-5.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 4v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="lrn-flow-title">Refine</div>
+          <div class="lrn-flow-desc">Adjust scoring, safeguards, language, UX, and recommendation behavior.</div>
+        </div>
+      </div>
+
+      <div class="lrn-tools-panel fade-up">
+        <h3 class="lrn-tools-title">Different tools for different jobs</h3>
+        <p class="lrn-tools-copy">I used ChatGPT, Claude, Codex, and other AI tools based on the task rather than assuming one model was best for everything &mdash; weighing planning, coding, debugging, long-context review, and content generation against speed, capability, and cost.</p>
+      </div>
+
+      <div class="lrn-callout fade-up"><span class="lrn-callout-icon">&#9881;</span><span>The lesson was not which model is best. It was learning when more AI capability was actually necessary.</span></div>
+    </div>
+
+    <!-- ── TRUST + AI USE ── -->
+    <div class="lrn-panel" id="lrn-panel-trust" role="tabpanel" aria-labelledby="lrn-tab-trust" hidden>
+      <div class="lrn-panel-head fade-up">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Trust + Evaluation</div>
+        <h2 class="section-title" style="font-size:clamp(26px,3.2vw,36px)">AI can move faster.<br/><span class="grad-text">The evidence still has to hold up.</span></h2>
+        <p class="section-sub">InsightRx reinforced that faster analysis only matters if the evidence remains visible, uncertainty is handled honestly, and the marketer can still review the decision before acting.</p>
+      </div>
+
+      <div class="lrn-trust-grid fade-up">
+        <div class="trust-card">
+          <div class="ov-icon ov-icon-sm ov-icon-muted"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M4 9h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="7.5" stroke="#fff" stroke-width="1.5"/></svg></div>
+          <div class="trust-card-title">Missing &ne; Zero</div>
+          <div class="trust-card-desc">Unavailable data stays unknown.</div>
+        </div>
+        <div class="trust-card">
+          <div class="ov-icon ov-icon-sm ov-icon-muted"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.5 14.5 9 4l2 6 2.5-3 3 7.5H3.5z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div class="trust-card-title">Plausible &ne; Proven</div>
+          <div class="trust-card-desc">A convincing AI explanation can still be unsupported by the data.</div>
+        </div>
+        <div class="trust-card">
+          <div class="ov-icon ov-icon-sm ov-icon-muted"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="10" width="3" height="6" stroke="#fff" stroke-width="1.5"/><rect x="8.5" y="6" width="3" height="10" stroke="#fff" stroke-width="1.5"/><rect x="13" y="2.5" width="3" height="13.5" stroke="#fff" stroke-width="1.5"/></svg></div>
+          <div class="trust-card-title">Sample Size Matters</div>
+          <div class="trust-card-desc">Small signals should not carry the same weight as stronger evidence.</div>
+        </div>
+        <div class="trust-card">
+          <div class="ov-icon ov-icon-sm ov-icon-muted"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 16.5 4.6v4.9c0 4.2-2.8 7.4-6.5 8.2-3.7-.8-6.5-4-6.5-8.2V4.6L10 2z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.2 9.7 9.2 11.7 12.9 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="trust-card-title">Human Review Matters</div>
+          <div class="trust-card-desc">Recommendations and generated drafts remain reviewable before action.</div>
+        </div>
+      </div>
+
+      <div class="lrn-value-panel fade-up">
+        <h3 class="lrn-value-title">Where AI adds value</h3>
+        <p class="lrn-value-copy">InsightRx uses deterministic logic for repeatable calculations and evidence detection, while AI is used where interpretation, synthesis, strategy, and creation add value.</p>
+      </div>
+
+      <div class="lrn-note fade-up"><span class="lrn-note-tag">Next experiment</span><span class="lrn-note-text">Explore evaluation checkpoints between major agent handoffs, not only at the final execution stage.</span></div>
+
+      <p class="lrn-fineprint fade-up">More powerful models are not always necessary. Part of good AI system design is deciding where generative reasoning is worth the additional cost and complexity.</p>
+    </div>
+
+    <!-- ── WHAT'S NEXT ── -->
+    <div class="lrn-panel" id="lrn-panel-next" role="tabpanel" aria-labelledby="lrn-tab-next" hidden>
+      <div class="lrn-panel-head fade-up">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Future Direction</div>
+        <h2 class="section-title" style="font-size:clamp(26px,3.2vw,36px)">Where InsightRx<br/><span class="grad-text">could go next.</span></h2>
+        <div class="lrn-status-tag">Future Direction &mdash; Not Current Functionality</div>
+      </div>
+
+      <div class="lrn-next-grid fade-up">
+        <div class="lrn-next-col">
+          <div class="lrn-next-label">Near Term</div>
+          <ul class="lrn-next-list">
+            <li>Stronger evaluation checkpoints</li>
+            <li>Clearer recommendation lifecycle</li>
+            <li>Improved saved-run comparison</li>
+            <li>Better execution review</li>
+          </ul>
+        </div>
+        <div class="lrn-next-col">
+          <div class="lrn-next-label">Next</div>
+          <ul class="lrn-next-list">
+            <li>Live data integrations</li>
+            <li>Scheduled analysis runs</li>
+            <li>AI-answer monitoring</li>
+            <li>Cross-platform visibility tracking</li>
+          </ul>
+        </div>
+        <div class="lrn-next-col">
+          <div class="lrn-next-label">Long Term</div>
+          <ul class="lrn-next-list">
+            <li>Closed-loop measurement</li>
+            <li>Recommendation outcome tracking</li>
+            <li>Learning from implemented actions</li>
+            <li>Multi-client / SaaS architecture</li>
+          </ul>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- ═══ FINAL TAKEAWAY ═══ -->
+<section id="learnings-final" class="section">
+  <div class="container lrn-final fade-up">
+    <div class="eyebrow mx-auto" style="justify-content:center"><span class="eyebrow-line"></span>The Biggest Takeaway<span class="eyebrow-line"></span></div>
+    <h2 class="section-title mx-auto">AI is most valuable when it is built on strong strategy, trustworthy data, clear evaluation, and human judgment.</h2>
+  </div>
+</section>
 
 </div>
-
 <div id="tab-contact" class="tab-panel">
 <!-- ═══ CONTACT ═══ -->
 <section id="contact" class="section">
